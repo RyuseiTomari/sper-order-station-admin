@@ -1,0 +1,55 @@
+@import url("./reset.css");
+
+:root {
+  --primary-background-color: #f5f6fa;
+  --secondary-background-color: #fbfbfc;
+  --active-background-color: #3d4b65;
+  --primary-border-color: #dfe2f1;
+  --primary-font-color: #3d4b65;
+  --secondary-font-color: #fbfbfc;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 188px;
+  height: 100%;
+  background-color: var(--secondary-background-color);
+
+  .sidebar-title {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    font-weight: regular;
+    line-height: 1;
+    background-color: var(--active-background-color);
+    color: var(--secondary-font-color);
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  background-color: var(--primary-background-color);
+  border-bottom: 1px solid var(--primary-border-color);
+}
