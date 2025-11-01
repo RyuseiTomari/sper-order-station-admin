@@ -19,6 +19,7 @@ body {
 .container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -29,6 +30,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .sidebar-title {
@@ -92,16 +97,23 @@ body {
 }
 
 .main-content {
+  margin-left: 188px;
   flex: 1;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .navbar {
+  position: fixed;
+  left: 188px;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 188px);
   height: 70px;
   background-color: var(--primary-background-color);
   border-bottom: 1px solid var(--primary-border-color);
@@ -173,6 +185,9 @@ body {
 .content-area {
   width: 100%;
   padding: 20px 25px;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
 }
 
 .breadcrumb {
