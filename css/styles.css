@@ -16,6 +16,7 @@
   --btn-border-color: #fff;
   --colored-btn-text-color: #fbfbfc;
   --btn-hover-border-color: #fafbff;
+  --sidebar-width: 188px;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 }
 
 .sidebar {
-  width: 188px;
+  width: var(--sidebar-width);
   height: 100%;
   background-color: var(--secondary-background-color);
   display: flex;
@@ -103,7 +104,7 @@ body {
 }
 
 .main-content {
-  margin-left: 188px;
+  margin-left: var(--sidebar-width);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -113,13 +114,13 @@ body {
 
 .navbar {
   position: fixed;
-  left: 188px;
+  left: var(--sidebar-width);
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 188px);
+  width: calc(100% - var(--sidebar-width));
   height: 70px;
   background-color: var(--primary-background-color);
   border-bottom: 1px solid var(--primary-border-color);
@@ -323,7 +324,7 @@ body {
 }
 
 .store-management-footer {
-  width: calc(100% - 188px);
+  width: calc(100% - var(--sidebar-width));
   height: 70px;
   display: flex;
   align-items: center;
