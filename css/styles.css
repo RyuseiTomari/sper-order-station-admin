@@ -17,6 +17,7 @@
   --colored-btn-text-color: #fbfbfc;
   --btn-hover-border-color: #fafbff;
   --sidebar-width: 188px;
+  --attention-color: #ad2c2e;
 }
 
 body {
@@ -446,6 +447,14 @@ body {
   line-height: 1.25;
 }
 
+.input-container input:hover {
+  background-color: var(--btn-hover-background-color);
+}
+
+.input-asterisk {
+  color: var(--attention-color);
+}
+
 .floor-list {
   display: flex;
   flex-direction: column;
@@ -510,10 +519,6 @@ body {
 .floor-list-body-row:hover {
   background-color: var(--btn-hover-background-color);
   cursor: pointer;
-}
-
-.input-container input:hover {
-  background-color: var(--btn-hover-background-color);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
