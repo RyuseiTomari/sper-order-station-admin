@@ -2,14 +2,19 @@
 
 :root {
   --key-color: #3d4b65;
+  --key-color-hover: #253451;
   --primary-background-color: #f5f6fa;
   --secondary-background-color: #fbfbfc;
+  --submit-btn-background-color: #269c85;
+  --submit-btn-hover-background-color: #098169;
   --primary-border-color: #dfe2f1;
+  --input-border-color: #c2c6cf;
   --secondary-font-color: #fbfbfc;
   --primary-font-family: "Noto Sans JP", sans-serif;
   --secondary-font-family: "Bebas Neue", sans-serif;
   --btn-hover-background-color: #eef0fa;
   --btn-border-color: #fff;
+  --colored-btn-text-color: #fbfbfc;
   --btn-hover-border-color: #fafbff;
 }
 
@@ -197,6 +202,9 @@ body {
   margin-top: 70px;
   height: calc(100vh - 70px);
   overflow-y: auto;
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 90px;
 }
 
 .breadcrumb {
@@ -206,6 +214,7 @@ body {
 .breadcrumb-link {
   display: flex;
   align-items: center;
+  width: fit-content;
   gap: 10px;
   color: var(--key-color);
   font-family: var(--primary-font-family);
@@ -303,6 +312,135 @@ body {
   height: 250px;
   grid-column: span 4;
   font-size: 34px;
+}
+
+.store-management-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.store-management-footer {
+  width: calc(100% - 188px);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--primary-border-color);
+  margin-top: auto;
+  background-color: var(--primary-background-color);
+  position: fixed;
+  bottom: 0;
+  left: 188px;
+  right: 0;
+  z-index: 20;
+}
+
+.store-management-footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  gap: 15px;
+  border-right: 1px solid var(--primary-border-color);
+  height: 100%;
+  margin-left: 25px;
+}
+
+.store-management-footer-left a {
+  color: var(--colored-btn-text-color);
+  font-family: var(--primary-font-family);
+  background-color: var(--key-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  height: 40px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 23px;
+  border-radius: 5px;
+}
+
+.store-management-footer-left a:hover {
+  background-color: var(--key-color-hover);
+  cursor: pointer;
+}
+
+.store-management-footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.store-management-footer-right button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--submit-btn-background-color);
+  color: var(--colored-btn-text-color);
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.store-management-footer-right button:hover {
+  background-color: var(--submit-btn-hover-background-color);
+  cursor: pointer;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container label {
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 4px;
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  z-index: 2;
+  background-color: var(--primary-background-color);
+  padding: 0 5px;
+}
+
+.input-container label img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.input-container input {
+  width: 100%;
+  height: 64px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--secondary-background-color);
+  border-radius: 15px;
+  padding: 20px;
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.input-container input:hover {
+  background-color: var(--btn-hover-background-color);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
