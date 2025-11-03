@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return p.replace(/\/+$/, "") || "/";
   };
 
-  const currentPath = normalize(location.pathname);
+  const currentPath = normalize(location.pathname).split("/").slice(0, 2).join("/") || "/";
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!href || href === "#") return;
 
     try {
-      const targetPath = normalize(new URL(href, location.origin).pathname);
+      const targetPath = normalize(new URL(href, location.origin).pathname).split("/").slice(0, 2).join("/") || "/";
       if (targetPath === currentPath) {
         btn.classList.add("active");
       }
