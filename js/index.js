@@ -38,16 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // 戻る履歴の有無で backBtn の状態を更新
     if (window.history.length > 1) {
       backBtn?.removeAttribute("disabled");
-      backImg.src = "./images/back-active.png";
+      backImg.src = "/images/back-active.png";
 
       forwardBtn?.removeAttribute("disabled");
-      forwardImg.src = "./images/forward-active.png";
+      forwardImg.src = "/images/forward-active.png";
     } else {
       backBtn?.setAttribute("disabled", "true");
-      backImg.src = "./images/back-inactive.png";
+      backImg.src = "/images/back-inactive.png";
 
       forwardBtn?.setAttribute("disabled", "true");
-      forwardImg.src = "./images/forward-inactive.png";
+      forwardImg.src = "/images/forward-inactive.png";
     }
   };
 
