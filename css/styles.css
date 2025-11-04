@@ -558,6 +558,12 @@ form {
   line-height: 1;
 }
 
+.form-multi-lang-inputs {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .form-footer {
   width: calc(100% - var(--sidebar-width));
   height: 70px;

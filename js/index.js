@@ -60,4 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
   forwardBtn?.addEventListener("click", () => {
     history.forward();
   });
+
+  // 多言語入力切り替えスイッチの制御
+  const toggleSwitches = document.querySelectorAll(".form-toggle-switch");
+  toggleSwitches.forEach((toggle) => {
+    toggle.addEventListener("click", (e) => {
+      const checked = toggle.checked;
+      const categoryContainer = toggle.closest(".form-category-input-container");
+      const multiLangInputs = categoryContainer.querySelector(".form-multi-lang-inputs");
+      const monolingualInput = categoryContainer.querySelector(".monolingual-input");
+
+      if (checked) {
+        multiLangInputs.style.display = "flex";
+        monolingualInput.style.display = "none";
+      } else {
+        multiLangInputs.style.display = "none";
+        monolingualInput.style.display = "block";
+      }
+    });
+  });
 });
