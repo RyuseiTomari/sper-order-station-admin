@@ -82,6 +82,8 @@ body {
   font-weight: 500;
   line-height: 1.25;
   padding: 15px;
+  transition: background-color 150ms ease-in-out;
+  border-radius: 25px;
 }
 
 .sidebar-btn-icon {
@@ -91,7 +93,6 @@ body {
 
 .sidebar-btn:hover {
   background-color: var(--btn-hover-background-color);
-  border-radius: 25px;
   cursor: pointer;
 }
 
@@ -158,6 +159,7 @@ body {
   justify-content: center;
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
+  transition: background-color 150ms ease-in-out;
 }
 
 .navbar-tips-btn:hover {
@@ -184,6 +186,7 @@ body {
   line-height: 1.25;
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
+  transition: background-color 150ms ease-in-out;
 }
 
 .navbar-user-btn img {
@@ -278,6 +281,7 @@ body {
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
   box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+  transition: background-color 150ms ease-in-out;
 }
 
 .menu-btn:hover {
@@ -396,6 +400,7 @@ form {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
+  transition: background-color 150ms ease-in-out;
 }
 
 .input-container input::placeholder {
@@ -427,15 +432,19 @@ form {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 40px 40px;
+  transition: background-color 150ms ease-in-out;
 }
 
-.input-container input:focus,
+.input-container input[type="text"]:focus,
+.form-category input[type="text"]:focus,
 .input-container select:focus {
   outline: none;
   border: 2px solid var(--key-color);
+  background-color: var(--secondary-background-color) !important;
 }
 
-.input-container input:hover,
+.input-container input[type="text"]:hover,
+.form-category input[type="text"]:hover,
 .input-container select:hover {
   background-color: var(--btn-hover-background-color);
 }
@@ -493,10 +502,7 @@ form {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
-}
-
-.form-category input:hover {
-  background-color: var(--btn-hover-background-color);
+  transition: background-color 150ms ease-in-out;
 }
 
 .form-switch-container {
@@ -682,6 +688,7 @@ form {
   font-weight: 400;
   line-height: 1.25;
   box-shadow: 0px 4px 4px 0px rgba(61, 75, 101, 0.08);
+  transition: background-color 150ms ease-in-out;
 }
 
 .list-body-row:hover {
