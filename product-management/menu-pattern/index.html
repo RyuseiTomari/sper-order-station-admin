@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ORDERSTATION | 商品管理</title>
+    <title>ORDERSTATION | メニューパターン登録</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/styles.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
@@ -84,37 +83,39 @@
           </div>
         </div>
         <div class="content-area">
-          <div class="breadcrumb">
-            <a class="breadcrumb-link" href="/product-management/index.html"
-              ><img class="sidebar-btn-icon" src="/images/sidemenu-product-icon.png" alt="product-icon" />
-              <p>商品管理</p></a
-            >
+          <div class="content-area-header">
+            <div class="breadcrumb">
+              <a class="breadcrumb-link" href="/product-management/index.html"
+                ><img class="sidebar-btn-icon" src="/images/sidemenu-product-icon.png" alt="table-icon" />
+                <p>商品管理</p></a
+              >
+              <img src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
+              <a class="breadcrumb-link" href="/product-management/menu-pattern/index.html">メニューパターン登録</a>
+            </div>
+            <button class="primary-btn">新規追加</button>
           </div>
-          <div class="product-management-menu-btns">
-            <a class="menu-btn product-management-manu-btn" href="#">
-              <img src="/images/menu-btn-subject-icon.png" alt="subject-icon" />
-              <p>科目登録</p>
-            </a>
-            <a class="menu-btn product-management-manu-btn" href="#">
-              <img src="/images/menu-btn-department-icon.png" alt="department-icon" />
-              <p>部門登録</p>
-            </a>
-            <a class="menu-btn product-management-manu-btn" href="#">
-              <img src="/images/menu-btn-product-registar-icon.png" alt="product-registar-icon" />
-              <p>商品登録</p>
-            </a>
-            <a class="menu-btn product-management-manu-btn" href="/product-management/menu-pattern/index.html">
-              <img src="/images/menu-btn-menu-pattern-icon.png" alt="menu-pattern-icon" />
-              <p>メニューパターン登録</p>
-            </a>
-            <a class="menu-btn product-management-manu-btn" href="#">
-              <img src="/images/menu-btn-hierarchy-icon.png" alt="hierarchy-icon" />
-              <p>階層グループ登録</p>
-            </a>
-            <a class="menu-btn product-management-manu-btn" href="#">
-              <img src="/images/menu-btn-comment-icon.png" alt="menu-btn-forms-icon" />
-              <p>コメントグループ登録</p>
-            </a>
+          <div class="floor-list">
+            <div class="floor-list-header">
+              <div class="floor-code-label">コード</div>
+              <div class="floor-name-label">名称</div>
+              <div class="floor-action-label"></div>
+            </div>
+            <div class="floor-list-body">
+              <a class="floor-list-body-row" href="/product-management/menu-pattern/edit.html">
+                <div class="floor-code">0</div>
+                <div class="floor-name">ランチ</div>
+                <div class="floor-action">
+                  <button class="primary-btn">編集</button>
+                </div>
+              </a>
+              <a class="floor-list-body-row" href="/product-management/menu-pattern/edit.html">
+                <div class="floor-code">1</div>
+                <div class="floor-name">ディナー</div>
+                <div class="floor-action">
+                  <button class="primary-btn">編集</button>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
