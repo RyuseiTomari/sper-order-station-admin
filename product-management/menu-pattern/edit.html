@@ -90,33 +90,61 @@
                 <p>商品管理</p></a
               >
               <img src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
-              <a class="breadcrumb-link" href="/product-management/menu-pattern.html">メニューパターン登録</a>
-            </div>
-            <button class="primary-btn">新規追加</button>
-          </div>
-          <div class="list">
-            <div class="list-header">
-              <div class="list-label-code">コード</div>
-              <div class="list-label-name">名称</div>
-              <div class="list-label-action"></div>
-            </div>
-            <div class="list-body">
-              <a class="list-body-row" href="#">
-                <div class="list-value-code">0</div>
-                <div class="list-value-name">ランチ</div>
-                <div class="list-value-action">
-                  <button class="primary-btn">編集</button>
-                </div>
-              </a>
-              <a class="list-body-row" href="#">
-                <div class="list-value-code">1</div>
-                <div class="list-value-name">ディナー</div>
-                <div class="list-value-action">
-                  <button class="primary-btn">編集</button>
-                </div>
-              </a>
+              <a class="breadcrumb-link" href="/product-management/menu-pattern/index.html">メニューパターン登録</a>
+              <img src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
+              <a class="breadcrumb-link" href="/product-management/menu-pattern/edit.html">ランチ</a>
             </div>
           </div>
+          <form id="form">
+            <div class="form-inputs">
+              <div class="input-container">
+                <label for="patternCode"
+                  >パターンコード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="patternCode" id="patternCode" value="1" />
+              </div>
+              <div class="input-container">
+                <label for="patternName"
+                  >パターン名称<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="patternName" id="patternName" value="ランチ" />
+              </div>
+              <div class="input-container">
+                <label for="autoSwitchTime"
+                  >自動切替時刻<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="autoSwitchTime" id="autoSwitchTime" />
+              </div>
+            </div>
+            <button class="primary-btn menu-pattern-delete-btn" href="#">削除</button>
+            <div class="form-categories">
+              <div class="form-category">
+                <label for="category0"
+                  >カテゴリー0<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="form-category-input-container">
+                  <input type="text" id="category0" value="肉" />
+                  <div class="form-switch-container">
+                    <label class="form-switch">
+                      <input
+                        class="form-toggle-switch"
+                        type="checkbox"
+                        name="multiLanguageSwitch0"
+                        id="multiLanguageSwitch0"
+                      />
+                      <span class="switch-slider"></span>
+                    </label>
+                    <label for="multiLanguageSwitch0">多言語で登録</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <footer class="form-footer">
+            <div class="form-footer-left">
+              <a class="primary-btn" href="#">メニュー</a>
+            </div>
+            <div class="form-footer-right">
+              <button type="submit" form="form">登録</button>
+            </div>
+          </footer>
         </div>
       </div>
     </div>

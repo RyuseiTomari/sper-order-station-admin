@@ -89,56 +89,58 @@
               <p>店舗情報</p></a
             >
           </div>
-          <div class="store-management-inputs">
-            <div class="input-container">
-              <label for="companyName">会社名<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="companyName" id="companyName" />
+          <form id="form">
+            <div class="form-inputs">
+              <div class="input-container">
+                <label for="companyName">会社名<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="companyName" id="companyName" />
+              </div>
+              <div class="input-container">
+                <label for="storeCode">店舗コード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="storeCode" id="storeCode" />
+              </div>
+              <div class="input-container">
+                <label for="storeName"
+                  >店舗名 <span class="input-asterisk">※</span
+                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="storeName" id="storeName" />
+              </div>
+              <div class="input-container">
+                <label for="zipCode">郵便番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="zipCode" id="zipCode" />
+              </div>
+              <div class="input-container">
+                <label for="address">住所<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="address" id="address" />
+              </div>
+              <div class="input-container">
+                <label for="buildingName">建物名称<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="buildingName" id="buildingName" />
+              </div>
+              <div class="input-container">
+                <label for="faxNumber">FAX番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="faxNumber" id="faxNumber" />
+              </div>
+              <div class="input-container">
+                <label for="businessDayChangeTime"
+                  >営業日変更時刻<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="businessDayChangeTime" id="businessDayChangeTime" />
+              </div>
+              <div class="input-container">
+                <label for="businessOperatorNumber"
+                  >事業者番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="businessOperatorNumber" id="businessOperatorNumber" />
+              </div>
             </div>
-            <div class="input-container">
-              <label for="storeCode">店舗コード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="storeCode" id="storeCode" />
-            </div>
-            <div class="input-container">
-              <label for="storeName"
-                >店舗名 <span class="input-asterisk">※</span
-                ><img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="storeName" id="storeName" />
-            </div>
-            <div class="input-container">
-              <label for="zipCode">郵便番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="zipCode" id="zipCode" />
-            </div>
-            <div class="input-container">
-              <label for="address">住所<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="address" id="address" />
-            </div>
-            <div class="input-container">
-              <label for="buildingName">建物名称<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="buildingName" id="buildingName" />
-            </div>
-            <div class="input-container">
-              <label for="faxNumber">FAX番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="faxNumber" id="faxNumber" />
-            </div>
-            <div class="input-container">
-              <label for="businessDayChangeTime"
-                >営業日変更時刻<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="businessDayChangeTime" id="businessDayChangeTime" />
-            </div>
-            <div class="input-container">
-              <label for="businessOperatorNumber"
-                >事業者番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-              ><input type="text" name="businessOperatorNumber" id="businessOperatorNumber" />
-            </div>
-          </div>
-          <footer class="store-management-footer">
-            <div class="store-management-footer-left">
+          </form>
+          <footer class="form-footer">
+            <div class="form-footer-left">
               <a class="primary-btn" href="#">MOP設定</a>
               <a class="primary-btn" href="#">MenuPAD設定</a>
               <a class="primary-btn" href="#">券売機設定</a>
             </div>
-            <div class="store-management-footer-right">
-              <button>登録</button>
+            <div class="form-footer-right">
+              <button type="submit" form="form">登録</button>
             </div>
           </footer>
         </div>
