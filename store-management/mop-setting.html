@@ -109,37 +109,54 @@
                   </div>
                 </div>
               </div>
+
               <div class="input-container">
                 <label for="newMemberPoints"
                   >新規会員ポイント<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
                 ><input type="text" name="newMemberPoints" id="newMemberPoints" value="200.00" />
               </div>
+
               <div class="input-container">
                 <label for="reviewPoints"
-                  >レビューポイント <span class="input-asterisk">※</span
-                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                  >レビューポイント<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
                 ><input type="text" name="reviewPoints" id="reviewPoints" value="20.00" />
               </div>
+
               <div class="input-container">
                 <label for="visitingPoints"
                   >来店ポイント<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
                 ><input type="text" name="visitingPoints" id="visitingPoints" value="0.00" />
               </div>
+
               <div class="input-container">
                 <label for="currencyFormat"
                   >通貨形式<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
                 ><input type="text" name="currencyFormat" id="currencyFormat" value="¥ {0:#,0}" />
               </div>
+
+              <div class="input-container">
+                <label for="departmentSelect"
+                  >税表示 <span class="input-asterisk">※</span
+                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><select name="departmentName" id="departmentSelect" required>
+                  <option value="" disabled selected>選択をしてください</option>
+                  <option value="1">なし</option>
+                  <option value="2">あり</option>
+                </select>
+              </div>
+
               <div class="input-container">
                 <label for="urlPassword"
                   >URLパスワード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
                 ><input type="text" name="urlPassword" id="urlPassword" />
               </div>
+
               <div class="input-container">
                 <label for="orderStaffCode"
                   >オーダースタッフコード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
                 ><input type="text" name="orderStaffCode" id="orderStaffCode" value="99" />
               </div>
+
               <div class="input-container">
                 <label for="partnerWebsite"
                   >提携会社ウェブサイト<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
@@ -147,10 +164,11 @@
               </div>
             </div>
           </form>
+
           <footer class="form-footer border-top">
             <div class="form-footer-left"></div>
             <div class="form-footer-right">
-              <button type="submit" form="form">登録</button>
+              <button class="submit-btn" type="submit" form="form">登録</button>
             </div>
           </footer>
         </div>

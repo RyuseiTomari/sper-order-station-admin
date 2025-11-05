@@ -90,16 +90,16 @@ body {
   padding: 15px;
   transition: background-color 150ms ease-in-out;
   border-radius: 25px;
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+    cursor: pointer;
+  }
 }
 
 .sidebar-btn-icon {
   width: 14px;
   height: 14px;
-}
-
-.sidebar-btn:hover {
-  background-color: var(--btn-hover-background-color);
-  cursor: pointer;
 }
 
 .sidebar-btn.active {
@@ -165,13 +165,13 @@ body {
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
   transition: background-color 150ms ease-in-out;
-}
 
-.navbar-tips-btn:hover {
-  background-color: var(--btn-hover-background-color);
-  cursor: pointer;
-  outline: 1px solid var(--btn-hover-border-color);
-  outline-offset: -1px;
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+    cursor: pointer;
+    outline: 1px solid var(--btn-hover-border-color);
+    outline-offset: -1px;
+  }
 }
 
 .navbar-user-btn {
@@ -192,19 +192,19 @@ body {
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
   transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+    cursor: pointer;
+    outline: 1px solid var(--btn-hover-border-color);
+    outline-offset: -1px;
+  }
 }
 
 .navbar-user-btn img {
   width: 10px;
   height: 8px;
   margin-top: 3px;
-}
-
-.navbar-user-btn:hover {
-  background-color: var(--btn-hover-background-color);
-  cursor: pointer;
-  outline: 1px solid var(--btn-hover-border-color);
-  outline-offset: -1px;
 }
 
 .content-area {
@@ -258,11 +258,11 @@ body {
   padding: 12px 23px;
   border-radius: 5px;
   transition: background-color 150ms ease-in-out;
-}
 
-.primary-btn:hover {
-  background-color: var(--key-color-hover);
-  cursor: pointer;
+  &:hover {
+    background-color: var(--key-color-hover);
+    cursor: pointer;
+  }
 }
 
 .menu-btns {
@@ -288,13 +288,13 @@ body {
   outline-offset: -1px;
   box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
   transition: background-color 150ms ease-in-out;
-}
 
-.menu-btn:hover {
-  background-color: var(--btn-hover-background-color);
-  cursor: pointer;
-  outline: 1px solid var(--btn-hover-border-color);
-  outline-offset: -1px;
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+    cursor: pointer;
+    outline: 1px solid var(--btn-hover-border-color);
+    outline-offset: -1px;
+  }
 }
 
 .menu-btn img {
@@ -408,6 +408,16 @@ form {
   font-weight: 400;
   line-height: 1.25;
   transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--key-color);
+    background-color: var(--secondary-background-color) !important;
+  }
 }
 
 .input-container .number-input-container {
@@ -463,10 +473,6 @@ form {
   color: var(--placeholder-color);
 }
 
-.input-container input:hover {
-  background-color: var(--btn-hover-background-color);
-}
-
 .input-container select {
   width: 100%;
   height: 64px;
@@ -485,25 +491,20 @@ form {
   background-position: right 10px center;
   background-size: 40px 40px;
   transition: background-color 150ms ease-in-out;
-}
 
-.input-container select:invalid {
-  color: var(--placeholder-color);
-}
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+  }
 
-.input-container input[type="text"]:focus,
-.input-container input[type="number"]:focus,
-.form-category input[type="text"]:focus,
-.input-container select:focus {
-  outline: none;
-  border: 2px solid var(--key-color);
-  background-color: var(--secondary-background-color) !important;
-}
+  &:focus {
+    outline: none;
+    border: 2px solid var(--key-color);
+    background-color: var(--secondary-background-color) !important;
+  }
 
-.input-container input[type="text"]:hover,
-.form-category input[type="text"]:hover,
-.input-container select:hover {
-  background-color: var(--btn-hover-background-color);
+  &:invalid {
+    color: var(--placeholder-color);
+  }
 }
 
 .input-asterisk {
@@ -563,6 +564,16 @@ form {
   font-weight: 400;
   line-height: 1.25;
   transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--key-color);
+    background-color: var(--secondary-background-color) !important;
+  }
 }
 
 .form-details {
@@ -629,6 +640,14 @@ form {
   background-color: var(--secondary-background-color);
   position: relative;
   transition: 0.3s all ease-out;
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+  }
+
+  &:hover + .switch-slider {
+    background-color: var(--btn-hover-background-color);
+  }
 }
 
 .form-radio-container input[type="radio"]:checked::before {
@@ -641,14 +660,6 @@ form {
   position: absolute;
   top: 4px;
   left: 4px;
-}
-
-.form-radio-container input[type="radio"]:hover {
-  background-color: var(--btn-hover-background-color);
-}
-
-.form-radio-container input[type="radio"]:checked::before:hover {
-  background-color: var(--key-color-hover);
 }
 
 .form-switch-container {
@@ -760,7 +771,7 @@ form {
   margin-right: 25px;
 }
 
-.form-footer-right button {
+.submit-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -774,11 +785,11 @@ form {
   font-weight: 400;
   line-height: 1;
   transition: background-color 150ms ease-in-out;
-}
 
-.form-footer-right button:hover {
-  background-color: var(--submit-btn-hover-background-color);
-  cursor: pointer;
+  &:hover {
+    background-color: var(--submit-btn-hover-background-color);
+    cursor: pointer;
+  }
 }
 
 .list {
@@ -844,11 +855,11 @@ form {
   line-height: 1.25;
   box-shadow: 0px 4px 4px 0px rgba(61, 75, 101, 0.08);
   transition: background-color 150ms ease-in-out;
-}
 
-.list-body-row:hover {
-  background-color: var(--btn-hover-background-color);
-  cursor: pointer;
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+    cursor: pointer;
+  }
 }
 
 .search {
