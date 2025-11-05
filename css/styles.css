@@ -492,6 +492,7 @@ form {
 }
 
 .input-container input[type="text"]:focus,
+.input-container input[type="number"]:focus,
 .form-category input[type="text"]:focus,
 .input-container select:focus {
   outline: none;
