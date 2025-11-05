@@ -95,7 +95,7 @@
             <a class="breadcrumb-link" href="/store-management/mop-setting.html">MOP設定</a>
           </div>
           <form id="form">
-            <div class="form-inputs">
+            <div class="form-inputs border-bottom">
               <div class="input-container">
                 <label for="patternCode"
                   >パターンコード <span class="input-asterisk">※</span
@@ -163,6 +163,49 @@
                 ><input type="text" name="partnerWebsite" id="partnerWebsite" value="#" />
               </div>
             </div>
+
+            <div class="form-category border-bottom">
+              <label for="freeComment"
+                >店舗情報におけるフリーコメント<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+              /></label>
+              <div class="form-category-input-container">
+                <div class="form-monolingual-input">
+                  <input type="text" id="freeComment" value="" />
+                </div>
+                <div class="form-multi-lang-inputs">
+                  <div class="input-container">
+                    <label for="freeComment-ja">ja</label>
+                    <input type="text" id="freeComment-ja" />
+                  </div>
+                  <div class="input-container">
+                    <label for="freeComment-en">en</label>
+                    <input type="text" id="freeComment-en" />
+                  </div>
+                  <div class="input-container">
+                    <label for="freeComment-zh">zh</label>
+                    <input type="text" id="freeComment-zh" />
+                  </div>
+                  <div class="input-container">
+                    <label for="freeComment-ko">ko</label>
+                    <input type="text" id="freeComment-ko" />
+                  </div>
+                </div>
+                <div class="form-switch-container">
+                  <label class="form-switch">
+                    <input
+                      class="form-toggle-switch"
+                      type="checkbox"
+                      name="multiLanguageSwitch"
+                      id="multiLanguageSwitch"
+                    />
+                    <span class="switch-slider"></span>
+                  </label>
+                  <label for="multiLanguageSwitch">多言語で登録</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-inputs border-bottom"></div>
           </form>
 
           <footer class="form-footer border-top">
