@@ -394,7 +394,8 @@ form {
   margin-left: 4px;
 }
 
-.input-container input[type="text"] {
+.input-container input[type="text"],
+.input-container input[type="number"] {
   width: 100%;
   height: 64px;
   border: 1px solid var(--input-border-color);
@@ -407,6 +408,51 @@ form {
   font-weight: 400;
   line-height: 1.25;
   transition: background-color 150ms ease-in-out;
+}
+
+.input-container .number-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-container input[type="number"] {
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+
+.input-container input[type="number"]::-webkit-inner-spin-button,
+.input-container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-container .number-stepper {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.input-container .number-stepper button {
+  width: 40px;
+  height: 40px;
+  background: var(--key-color);
+  color: var(--colored-btn-text-color);
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 150ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  &:hover {
+    background-color: var(--key-color-hover);
+  }
 }
 
 .input-container input::placeholder {

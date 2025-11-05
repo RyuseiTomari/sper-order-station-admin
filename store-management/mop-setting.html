@@ -91,57 +91,64 @@
               ><img class="sidebar-btn-icon" src="/images/sidemenu-store-info-icon.png" alt="store-info-icon" />
               <p>店舗情報</p></a
             >
+            <img src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
+            <a class="breadcrumb-link" href="/store-management/mop-setting.html">MOP設定</a>
           </div>
           <form id="form">
             <div class="form-inputs">
               <div class="input-container">
-                <label for="companyName">会社名<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="companyName" id="companyName" />
+                <label for="patternCode"
+                  >パターンコード <span class="input-asterisk">※</span
+                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="number-input-container">
+                  <input type="number" name="patternCode" id="patternCode" value="0" min="0" />
+                  <div class="number-stepper">
+                    <button type="button" class="stepper-minus">−</button>
+                    <button type="button" class="stepper-plus">＋</button>
+                  </div>
+                </div>
               </div>
               <div class="input-container">
-                <label for="storeCode">店舗コード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="storeCode" id="storeCode" />
+                <label for="newMemberPoints"
+                  >新規会員ポイント<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="newMemberPoints" id="newMemberPoints" value="200.00" />
               </div>
               <div class="input-container">
-                <label for="storeName"
-                  >店舗名 <span class="input-asterisk">※</span
+                <label for="reviewPoints"
+                  >レビューポイント <span class="input-asterisk">※</span
                   ><img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="storeName" id="storeName" />
+                ><input type="text" name="reviewPoints" id="reviewPoints" value="20.00" />
               </div>
               <div class="input-container">
-                <label for="zipCode">郵便番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="zipCode" id="zipCode" />
+                <label for="visitingPoints"
+                  >来店ポイント<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="visitingPoints" id="visitingPoints" value="0.00" />
               </div>
               <div class="input-container">
-                <label for="address">住所<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="address" id="address" />
+                <label for="currencyFormat"
+                  >通貨形式<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="currencyFormat" id="currencyFormat" value="¥ {0:#,0}" />
               </div>
               <div class="input-container">
-                <label for="buildingName">建物名称<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="buildingName" id="buildingName" />
+                <label for="urlPassword"
+                  >URLパスワード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="urlPassword" id="urlPassword" />
               </div>
               <div class="input-container">
-                <label for="faxNumber">FAX番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="faxNumber" id="faxNumber" />
+                <label for="orderStaffCode"
+                  >オーダースタッフコード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="orderStaffCode" id="orderStaffCode" value="99" />
               </div>
               <div class="input-container">
-                <label for="businessDayChangeTime"
-                  >営業日変更時刻<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="businessDayChangeTime" id="businessDayChangeTime" />
-              </div>
-              <div class="input-container">
-                <label for="businessOperatorNumber"
-                  >事業者番号<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="businessOperatorNumber" id="businessOperatorNumber" />
+                <label for="partnerWebsite"
+                  >提携会社ウェブサイト<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="partnerWebsite" id="partnerWebsite" value="#" />
               </div>
             </div>
           </form>
           <footer class="form-footer border-top">
-            <div class="form-footer-left">
-              <a class="primary-btn" href="/store-management/mop-setting.html">MOP設定</a>
-              <a class="primary-btn" href="#">MenuPAD設定</a>
-              <a class="primary-btn" href="#">券売機設定</a>
-            </div>
+            <div class="form-footer-left"></div>
             <div class="form-footer-right">
               <button type="submit" form="form">登録</button>
             </div>
