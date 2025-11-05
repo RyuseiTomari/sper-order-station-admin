@@ -29,6 +29,14 @@ body {
   overflow: hidden;
 }
 
+.border-top {
+  border-top: 1px solid var(--primary-border-color);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--primary-border-color);
+}
+
 .sidebar {
   width: var(--sidebar-width);
   height: 100%;
@@ -124,7 +132,6 @@ body {
   width: calc(100% - var(--sidebar-width));
   height: 70px;
   background-color: var(--primary-background-color);
-  border-bottom: 1px solid var(--primary-border-color);
 }
 
 .navbar-left-content {
@@ -459,7 +466,6 @@ form {
 .form-categories {
   margin-top: 40px;
   padding: 25px 0;
-  border-top: 1px solid var(--primary-border-color);
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -469,7 +475,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-bottom: 1px solid var(--primary-border-color);
   padding-bottom: 25px;
 }
 
@@ -519,7 +524,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  border-top: 1px solid var(--primary-border-color);
 }
 
 .form-details-label-container {
@@ -550,8 +554,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-top: 1px solid var(--primary-border-color);
-  border-bottom: 1px solid var(--primary-border-color);
   padding: 25px 0;
   margin-top: 40px;
 }
@@ -682,7 +684,6 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--primary-border-color);
   margin-top: auto;
   background-color: var(--primary-background-color);
   position: fixed;
@@ -808,7 +809,6 @@ form {
   flex-direction: column;
   margin-top: 40px;
   gap: 20px;
-  border-bottom: 1px solid var(--primary-border-color);
   padding-bottom: 20px;
 }
 
