@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const checked = toggle.checked;
       const categoryContainer = toggle.closest(".form-category-input-container");
       const multiLangInputs = categoryContainer.querySelector(".form-multi-lang-inputs");
-      const monolingualInput = categoryContainer.querySelector(".monolingual-input");
+      const monolingualInput = categoryContainer.querySelector(".form-monolingual-input");
 
       if (checked) {
         multiLangInputs.style.display = "flex";

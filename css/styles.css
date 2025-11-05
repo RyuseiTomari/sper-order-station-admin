@@ -471,6 +471,11 @@ form {
   padding-bottom: 25px;
 }
 
+.form-category:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 .form-category label {
   font-family: var(--primary-font-family);
   color: var(--key-color);
@@ -534,6 +539,7 @@ form {
   border-radius: 15px;
   background-color: var(--secondary-background-color);
   border: 1px solid var(--input-border-color);
+  transition: background-color 150ms ease-in-out;
 }
 
 .switch-slider:before {
@@ -544,8 +550,16 @@ form {
   left: 4px;
   bottom: 3px;
   background-color: var(--input-border-color);
-  transition: 0.3s;
+  transition: 0.5s;
   border-radius: 50%;
+}
+
+.form-switch input[type="checkbox"]:hover + .switch-slider {
+  background-color: var(--btn-hover-background-color);
+}
+
+.form-switch input[type="checkbox"]:checked:hover + .switch-slider {
+  background-color: var(--key-color-hover);
 }
 
 .form-switch input[type="checkbox"]:checked + .switch-slider {
