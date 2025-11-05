@@ -79,4 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  const formDetailsToggleLink = document.querySelector(".form-details-toggle-link");
+  formDetailsToggleLink.addEventListener("click", (e) => {
+    const formDetailsContent = document.querySelector(".form-details-content");
+    formDetailsContent.classList.toggle("hidden");
+    formDetailsToggleLink.textContent = formDetailsContent.classList.contains("hidden")
+      ? "[ 詳細を表示 ]"
+      : "[ 詳細を非表示 ]";
+  });
 });
