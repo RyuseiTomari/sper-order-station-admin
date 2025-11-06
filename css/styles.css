@@ -504,7 +504,7 @@ form {
   }
 }
 
-.input-asterisk {
+.input-required {
   color: var(--attention-color);
 }
 
