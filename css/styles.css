@@ -391,6 +391,11 @@ form {
   margin-left: 4px;
 }
 
+input:disabled {
+  background-color: var(--primary-background-color) !important;
+  cursor: not-allowed;
+}
+
 .input-container input[type="text"],
 .input-container input[type="number"] {
   width: 100%;
