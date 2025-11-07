@@ -673,6 +673,42 @@ input:disabled {
   cursor: pointer;
 }
 
+.input-details-content {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-name: inputFieldFadeIn;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+.input-details-content.hidden {
+  animation-name: inputFieldFadeOut;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+@keyframes inputFieldFadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: auto;
+  }
+}
+
+@keyframes inputFieldFadeOut {
+  from {
+    opacity: 1;
+    max-height: auto;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
 .input-details-tax-container {
   display: flex;
   flex-direction: column;
@@ -1029,7 +1065,9 @@ input:disabled {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  height: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
