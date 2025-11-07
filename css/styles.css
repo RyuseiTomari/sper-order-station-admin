@@ -102,6 +102,25 @@ body {
   height: 14px;
 }
 
+.sidebar-regi-icon,
+.sidebar-product-icon,
+.sidebar-setting-icon,
+.sidebar-guide-icon {
+  height: 15px !important;
+}
+
+.sidebar-table-icon {
+  height: 12px !important;
+}
+
+.sidebar-staff-icon {
+  height: 10px !important;
+}
+
+.sidebar-calc-icon {
+  height: 16px !important;
+}
+
 .sidebar-btn.active {
   background-color: var(--key-color);
   border-radius: 25px;
@@ -147,6 +166,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  img {
+    width: 18px;
+    height: 16px;
+  }
 }
 
 .navbar-right-content {
@@ -165,6 +189,11 @@ body {
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
   transition: background-color 150ms ease-in-out;
+
+  img {
+    width: 9px;
+    height: 14.5px;
+  }
 
   &:hover {
     background-color: var(--btn-hover-background-color);
@@ -243,6 +272,11 @@ body {
   line-height: 1.25;
 }
 
+.breadcrumb-arrow {
+  width: 5.6px;
+  height: 10px;
+}
+
 .primary-btn {
   height: 40px;
   width: fit-content;
@@ -299,7 +333,35 @@ body {
 
 .menu-btn img {
   width: 20px;
-  height: 23px;
+  height: 21px;
+}
+
+.menu-btn-store-info-icon,
+.menu-btn-forms-icon {
+  height: 20px !important;
+}
+
+.menu-btn-table-icon {
+  height: 17px !important;
+}
+
+.menu-btn-staff-icon {
+  height: 14px !important;
+}
+
+.menu-btn-calc-icon,
+.menu-btn-subject-icon,
+.menu-btn-department-icon,
+.menu-btn-menu-pattern-icon {
+  height: 23px !important;
+}
+
+.menu-btn-product-registar-icon {
+  height: 19px !important;
+}
+
+.menu-btn-comment-icon {
+  height: 18px !important;
 }
 
 .menu-large-btns {
