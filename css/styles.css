@@ -355,15 +355,11 @@ body {
   font-size: 34px;
 }
 
-form {
-  padding-top: 40px;
-}
-
 .form-inputs {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
 .input-container {
@@ -561,7 +557,6 @@ input:disabled {
   padding: 25px 0;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 .form-details-label-container {
@@ -713,6 +708,90 @@ input:disabled {
   display: none;
   flex-direction: column;
   gap: 30px;
+}
+
+.input-checkbox-hierarchy {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+.input-checkbox-child {
+  margin-left: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 20px;
+    height: 30px;
+    border-left: 1px solid var(--input-border-color);
+    border-bottom: 1px solid var(--input-border-color);
+  }
+}
+
+.input-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-checkbox-container input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  background-color: var(--secondary-background-color);
+  position: relative;
+  transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+  }
+
+  &:checked {
+    background-color: var(--key-color);
+  }
+
+  &:checked:hover {
+    background-color: var(--key-color-hover);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("/images/check-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:checked::after {
+    display: block;
+    width: 18px;
+    height: 13.5px;
+  }
+}
+
+.input-checkbox-container label {
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.input-checkbox-container label img {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
 }
 
 .form-footer {

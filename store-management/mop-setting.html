@@ -205,7 +205,28 @@
               </div>
             </div>
 
-            <div class="form-inputs border-bottom"></div>
+            <div class="form-inputs border-bottom">
+              <div class="input-checkbox-hierarchy">
+                <div class="input-checkbox-container input-checkbox-parent">
+                  <input type="checkbox" name="cloudOrderEnabled" id="cloudOrderEnabled" />
+                  <label for="cloudOrderEnabled"
+                    >クラウドオーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-checkbox-container input-checkbox-child">
+                  <input type="checkbox" name="orderAdditionEnabled" id="orderAdditionEnabled" />
+                  <label for="orderAdditionEnabled"
+                    >オーダーを追加する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+              </div>
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="receiptQrCodeEnabled" id="receiptQrCodeEnabled" />
+                <label for="receiptQrCodeEnabled"
+                  >会計用のQRコードを印刷する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+            </div>
           </form>
 
           <footer class="form-footer border-top">
