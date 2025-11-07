@@ -393,7 +393,7 @@ input:disabled {
 }
 
 .input-container input[type="text"],
-.form-category input[type="text"],
+.input-category input[type="text"],
 .input-container input[type="number"] {
   width: 100%;
   height: 64px;
@@ -510,7 +510,7 @@ input:disabled {
   color: var(--attention-color);
 }
 
-.form-categories {
+.input-categories {
   margin-top: 40px;
   padding: 25px 0;
   display: flex;
@@ -518,22 +518,22 @@ input:disabled {
   gap: 25px;
 }
 
-.form-category {
+.input-category {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-bottom: 25px;
 }
 
-.form-category:last-child {
+.input-category:last-child {
   border-bottom: none;
 }
 
-:not(.form-categories) > .form-category {
+:not(.input-categories) > .input-category {
   margin-top: 25px;
 }
 
-.form-category label {
+.input-category label {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 16px;
@@ -541,31 +541,31 @@ input:disabled {
   line-height: 1;
 }
 
-.form-category label img {
+.input-category label img {
   width: 16px;
   height: 16px;
   margin-left: 4px;
 }
 
-.form-category-input-container {
+.input-category-input-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.form-details {
+.input-details {
   padding: 25px 0;
   display: flex;
   flex-direction: column;
 }
 
-.form-details-label-container {
+.input-details-label-container {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.form-details-label {
+.input-details-label {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 16px;
@@ -573,7 +573,7 @@ input:disabled {
   line-height: 1.25;
 }
 
-.form-details-toggle-link {
+.input-details-toggle-link {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 14px;
@@ -583,20 +583,20 @@ input:disabled {
   cursor: pointer;
 }
 
-.form-details-tax-container {
+.input-details-tax-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 25px 0;
 }
 
-.form-radio-container {
+.input-radio-container {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.form-radio-container label {
+.input-radio-container label {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 16px;
@@ -605,7 +605,7 @@ input:disabled {
   margin-left: 12px;
 }
 
-.form-radio-container input[type="radio"] {
+.input-radio-container input[type="radio"] {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -624,7 +624,7 @@ input:disabled {
   }
 }
 
-.form-radio-container input[type="radio"]:checked::before {
+.input-radio-container input[type="radio"]:checked::before {
   content: "";
   display: block;
   width: 20px;
@@ -636,20 +636,20 @@ input:disabled {
   left: 4px;
 }
 
-.form-switch-container {
+.input-switch-container {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.form-switch {
+.input-switch {
   position: relative;
   width: 57px;
   height: 30px;
   cursor: pointer;
 }
 
-.form-switch input[type="checkbox"] {
+.input-switch input[type="checkbox"] {
   opacity: 0;
   width: 0;
   height: 0;
@@ -679,24 +679,24 @@ input:disabled {
   border-radius: 50%;
 }
 
-.form-switch input[type="checkbox"]:hover + .switch-slider {
+.input-switch input[type="checkbox"]:hover + .switch-slider {
   background-color: var(--btn-hover-background-color);
 }
 
-.form-switch input[type="checkbox"]:checked:hover + .switch-slider {
+.input-switch input[type="checkbox"]:checked:hover + .switch-slider {
   background-color: var(--key-color-hover);
 }
 
-.form-switch input[type="checkbox"]:checked + .switch-slider {
+.input-switch input[type="checkbox"]:checked + .switch-slider {
   background-color: var(--key-color);
 }
 
-.form-switch input[type="checkbox"]:checked + .switch-slider:before {
+.input-switch input[type="checkbox"]:checked + .switch-slider:before {
   background-color: var(--secondary-background-color);
   transform: translateX(25px);
 }
 
-.form-switch-container label {
+.input-switch-container label {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 16px;
@@ -704,7 +704,7 @@ input:disabled {
   line-height: 1;
 }
 
-.form-multi-lang-inputs {
+.multi-lang-inputs {
   display: none;
   flex-direction: column;
   gap: 30px;

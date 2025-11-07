@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleSwitches.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
       const checked = toggle.checked;
-      const categoryContainer = toggle.closest(".form-category-input-container");
-      const multiLangInputs = categoryContainer.querySelector(".form-multi-lang-inputs");
+      const categoryContainer = toggle.closest(".input-category-input-container");
+      const multiLangInputs = categoryContainer.querySelector(".multi-lang-inputs");
       const monolingualInput = categoryContainer.querySelector(".form-monolingual-input");
 
       if (checked) {
@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const formDetailsToggleLink = document.querySelector(".form-details-toggle-link");
+  const formDetailsToggleLink = document.querySelector(".input-details-toggle-link");
   formDetailsToggleLink?.addEventListener("click", (e) => {
-    const formDetailsContent = document.querySelector(".form-details-content");
+    const formDetailsContent = document.querySelector(".input-details-content");
     formDetailsContent.classList.toggle("hidden");
     formDetailsToggleLink.textContent = formDetailsContent.classList.contains("hidden")
       ? "[ 詳細を表示 ]"
