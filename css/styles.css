@@ -171,6 +171,10 @@ body {
     width: 18px;
     height: 16px;
   }
+
+  &:hover {
+    background-color: var(--btn-hover-background-color);
+  }
 }
 
 .navbar-right-content {
