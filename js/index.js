@@ -107,17 +107,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const minusBtn = wrapper.querySelector(".stepper-minus");
     const plusBtn = wrapper.querySelector(".stepper-plus");
 
+    const stepAttr = input.getAttribute("data-step");
+    const step = stepAttr ? parseInt(stepAttr, 10) || 1 : 1;
+
     minusBtn?.addEventListener("click", () => {
       let val = parseInt(input.value, 10) || 0;
-      if (val > 0) {
-        input.value = val - 1;
+      if (val - step >= (parseInt(input.min, 10) || 0)) {
+        input.value = val - step;
         input.dispatchEvent(new Event("input"));
       }
     });
 
     plusBtn?.addEventListener("click", () => {
       let val = parseInt(input.value, 10) || 0;
-      input.value = val + 1;
+      input.value = val + step;
       input.dispatchEvent(new Event("input"));
     });
   });

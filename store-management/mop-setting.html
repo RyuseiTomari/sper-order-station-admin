@@ -231,10 +231,200 @@
                   /></label>
                 </div>
               </div>
+
               <div class="input-checkbox-container">
                 <input type="checkbox" name="receiptQrCodeEnabled" id="receiptQrCodeEnabled" />
                 <label for="receiptQrCodeEnabled"
                   >会計用のQRコードを印刷する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="customerSlipBottomCommercial"
+                  >Customer Slip Bottom Commercial<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <textarea name="customerSlipBottomCommercial" id="customerSlipBottomCommercial" rows="5">
+本日中にお召し上がりください
+-----------------------------
+MOM(モバイルオーダーシステム)
+開発元：エスパー株式会社
+www.sper.jp
+                </textarea>
+              </div>
+
+              <div class="input-container">
+                <label for="mqttServerNameIp"
+                  >MQTT Server Name/IP<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="mqttServerNameIp" id="mqttServerNameIp" value="www.mobileorderonline.com" />
+              </div>
+
+              <div class="input-container">
+                <label for="mqttServerPort"
+                  >MQTT Server Port<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="mqttServerPort" id="mqttServerPort" value="1883" />
+              </div>
+
+              <div class="input-container">
+                <label for="mqttClientUsername"
+                  >MQTT Client Username<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="mqttClientUsername" id="mqttClientUsername" value="sper01" />
+              </div>
+
+              <div class="input-container">
+                <label for="mqttClientPassword"
+                  >MQTT Client Password<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="mqttClientPassword" id="mqttClientPassword" value="sper01" />
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="simplifiedLoginEnabled" id="simplifiedLoginEnabled" />
+                <label for="simplifiedLoginEnabled"
+                  >簡易ログインを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="useQrCodesForMemberInfo" id="useQrCodesForMemberInfo" />
+                <label for="useQrCodesForMemberInfo"
+                  >会員情報でQRを使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="useQrCodeForMemberCodeOnly" id="useQrCodeForMemberCodeOnly" />
+                <label for="useQrCodeForMemberCodeOnly"
+                  >会員コードのみのQRを使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="nameRequired" id="nameRequired" />
+                <label for="nameRequired"
+                  >名前必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="zipCodeRequired" id="zipCodeRequired" />
+                <label for="zipCodeRequired"
+                  >郵便番号必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="addressRequired" id="addressRequired" />
+                <label for="addressRequired"
+                  >住所必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="phoneNumberRequired" id="phoneNumberRequired" />
+                <label for="phoneNumberRequired"
+                  >電話番号必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="emailRequired" id="emailRequired" />
+                <label for="emailRequired"
+                  >メール必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="dateOfBirthRequired" id="dateOfBirthRequired" />
+                <label for="dateOfBirthRequired"
+                  >生年月日必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="terminateService" id="terminateService" />
+                <label for="terminateService"
+                  >サービスを停止する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="prepaymentEnable" id="prepaymentEnable" />
+                <label for="prepaymentEnable"
+                  >前払いを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="creditCardPaymentsEnable" id="creditCardPaymentsEnable" />
+                <label for="creditCardPaymentsEnable"
+                  >クレジット決済を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="paymentService"
+                  >決済サービス<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="input-select-container">
+                  <select name="paymentService" id="paymentService">
+                    <option value="1">Alpha Note</option>
+                    <option value="2">Alpha Note</option>
+                    <option value="3">Alpha Note</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-container">
+                <label for="creditCardPaymentSiteId"
+                  >クレジット決済用サイトID<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="creditCardPaymentSiteId" id="creditCardPaymentSiteId" value="0" />
+              </div>
+
+              <div class="input-container">
+                <label for="creditCardPaymentPassword"
+                  >クレジット決済用サイトパスワード<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon" /></label
+                ><input type="text" name="creditCardPaymentPassword" id="creditCardPaymentPassword" value="0" />
+              </div>
+
+              <div class="input-container">
+                <label for="creditCardPaymentApiServer"
+                  >クレジット決済用APIサーバ<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="creditCardPaymentApiServer" id="creditCardPaymentApiServer" value="" />
+              </div>
+
+              <div class="input-container">
+                <label for="minimumCreditCardPaymentAmount"
+                  >クレジット決済最低額 <span class="input-required">※</span
+                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="number-input-container">
+                  <input
+                    type="number"
+                    name="minimumCreditCardPaymentAmount"
+                    id="minimumCreditCardPaymentAmount"
+                    value="0"
+                    min="0"
+                    data-step="100"
+                  />
+                  <div class="number-stepper">
+                    <button type="button" class="stepper-minus">−</button>
+                    <button type="button" class="stepper-plus">＋</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="paymentMethodSelectionEnable" id="paymentMethodSelectionEnable" />
+                <label for="paymentMethodSelectionEnable"
+                  >支払い方法の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="pointPaymentsEnable" id="pointPaymentsEnable" />
+                <label for="pointPaymentsEnable"
+                  >ポイント払いを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
                 /></label>
               </div>
             </div>
