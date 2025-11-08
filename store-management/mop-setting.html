@@ -217,14 +217,14 @@
             </div>
 
             <div class="form-inputs border-bottom">
-              <div class="input-checkbox-hierarchy">
-                <div class="input-checkbox-container input-checkbox-parent">
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="cloudOrderEnabled" id="cloudOrderEnabled" />
                   <label for="cloudOrderEnabled"
                     >クラウドオーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
                   /></label>
                 </div>
-                <div class="input-checkbox-container input-checkbox-child">
+                <div class="input-checkbox-container input-hierarchy-child">
                   <input type="checkbox" name="orderAdditionEnabled" id="orderAdditionEnabled" />
                   <label for="orderAdditionEnabled"
                     >オーダーを追加する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
@@ -426,6 +426,386 @@ www.sper.jp
                 <label for="pointPaymentsEnable"
                   >ポイント払いを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
                 /></label>
+              </div>
+
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
+                  <input type="checkbox" name="lineFriendsRequired" id="lineFriendsRequired" />
+                  <label for="lineFriendsRequired"
+                    >LINE友だち必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-hierarchy-child">
+                  <div class="input-container">
+                    <label for="lineFriendsAddUrl"
+                      >LINE友だち追加URL<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                    ><input type="text" name="lineFriendsAddUrl" id="lineFriendsAddUrl" value="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-container">
+                <label for="lineLiffId">LineLiffId<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="lineLiffId" id="lineLiffId" value="" />
+              </div>
+
+              <div class="input-container">
+                <label for="lineChannelId"
+                  >LineChannelId<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="lineChannelId" id="lineChannelId" value="" />
+              </div>
+
+              <div class="input-with-btn">
+                <div class="input-container">
+                  <label for="lineNotifyAccessToken"
+                    >LineNotifyAccessToken<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                  ><input type="text" name="lineNotifyAccessToken" id="lineNotifyAccessToken" value="" />
+                </div>
+                <button type="button" class="primary-btn">確認</button>
+              </div>
+
+              <div class="input-container">
+                <label for="lineMessagingApiAccessToken"
+                  >LineMessagingApiAccessToken<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="lineMessagingApiAccessToken" id="lineMessagingApiAccessToken" value="" />
+              </div>
+
+              <div class="input-with-note">
+                <div class="input-container">
+                  <label for="lineOrderReceptionMessage"
+                    >LINE注文受付メッセージ<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                  ><input type="text" name="lineOrderReceptionMessage" id="lineOrderReceptionMessage" value="" />
+                </div>
+                <div class="input-hierarchy">
+                  <p class="input-hierarchy-parent">( {0} お客様名、{1} 注文番号、{2} 注文内容、{3} 注文金額 )</p>
+                  <div class="input-checkbox-container input-hierarchy-child">
+                    <input
+                      type="checkbox"
+                      name="lineOrderReceptionMessageAfterPayment"
+                      id="lineOrderReceptionMessageAfterPayment"
+                    />
+                    <label for="lineOrderReceptionMessageAfterPayment"
+                      >会計後<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-with-note">
+                <div class="input-container">
+                  <label for="lineOrderCompletionMessage"
+                    >LINE出来上がり通知メッセージ<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                  ><input type="text" name="lineOrderCompletionMessage" id="lineOrderCompletionMessage" value="" />
+                </div>
+                <p>( {0} お客様名、{1} 注文番号、{2} 注文内容、{3} 注文金額 )</p>
+              </div>
+
+              <div class="input-container">
+                <label for="countryCode">国コード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="countryCode" id="countryCode" value="JP" />
+              </div>
+
+              <div class="input-container">
+                <label for="phoneNumberDigits"
+                  >電話番号の桁数 <span class="input-required">※</span
+                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="number-input-container">
+                  <input type="number" name="phoneNumberDigits" id="phoneNumberDigits" value="11" min="0" />
+                  <div class="number-stepper">
+                    <button type="button" class="stepper-minus">−</button>
+                    <button type="button" class="stepper-plus">＋</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-container">
+                <label for="zipCodeDigits"
+                  >郵便番号の桁数 <span class="input-required">※</span
+                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="number-input-container">
+                  <input type="number" name="zipCodeDigits" id="zipCodeDigits" value="7" min="0" />
+                  <div class="number-stepper">
+                    <button type="button" class="stepper-minus">−</button>
+                    <button type="button" class="stepper-plus">＋</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="productImageDisabled" id="productImageDisabled" />
+                <label for="productImageDisabled"
+                  >商品写真を無効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="welcomeCode"
+                  >ウェルカムコード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="welcomeCode" id="welcomeCode" value="" />
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="membershipRequired" id="membershipRequired" />
+                <label for="membershipRequired"
+                  >会員登録必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="orderTypeEnabled" id="orderTypeEnabled" />
+                <label for="orderTypeEnabled"
+                  >オーダー種類を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="categoryFolderEnabled" id="categoryFolderEnabled" />
+                <label for="categoryFolderEnabled"
+                  >カテゴリーをフォルダとして扱うことを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="twoColumnDisplayEnabled" id="twoColumnDisplayEnabled" />
+                <label for="twoColumnDisplayEnabled"
+                  >2列表示を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
+                  <input type="checkbox" name="productInfoEnabled" id="productInfoEnabled" />
+                  <label for="productInfoEnabled"
+                    >商品情報を表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-checkbox-container input-hierarchy-child">
+                  <input type="checkbox" name="displayUnderProductName" id="displayUnderProductName" />
+                  <label for="displayUnderProductName"
+                    >商品名称の下に表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="setProductTwoColumnDisplayEnabled"
+                  id="setProductTwoColumnDisplayEnabled"
+                />
+                <label for="setProductTwoColumnDisplayEnabled"
+                  >セット商品の2列表示を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="displayTableEnabled" id="displayTableEnabled" />
+                <label for="displayTableEnabled"
+                  >テーブルを表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
+                  <input type="checkbox" name="callEnabled" id="callEnabled" />
+                  <label for="callEnabled"
+                    >呼出を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-hierarchy-children">
+                  <div class="input-checkbox-container input-hierarchy-child">
+                    <input type="checkbox" name="newOrderCallEnabled" id="newOrderCallEnabled" />
+                    <label for="newOrderCallEnabled"
+                      >新規オーダー時も呼出を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                  <div class="input-container input-hierarchy-child">
+                    <label for="callProductCode"
+                      >呼出商品コード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                    ><input type="text" name="callProductCode" id="callProductCode" value="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="startPageEnabled" id="startPageEnabled" />
+                <label for="startPageEnabled"
+                  >スタートページを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="newOrderEnabled" id="newOrderEnabled" />
+                <label for="newOrderEnabled"
+                  >新規オーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="newOrderOrAddOrderEnabled" id="newOrderOrAddOrderEnabled" />
+                <label for="newOrderOrAddOrderEnabled"
+                  >新規オーダーまたは追加オーダーの選択を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="newOrderTableId"
+                  >新規オーダーテーブルID<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="newOrderTableId" id="newOrderTableId" value="0" />
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="tableIdRequired" id="tableIdRequired" />
+                <label for="tableIdRequired"
+                  >テーブルID必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="nameInputEnabled" id="nameInputEnabled" />
+                <label for="nameInputEnabled"
+                  >名前入力欄<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="selectingOrderTypeFirstEnabled" id="selectingOrderTypeFirstEnabled" />
+                <label for="selectingOrderTypeFirstEnabled"
+                  >オーダー種類を最初に選択することを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="storeEntryProductCode"
+                  >入店商品コード<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="storeEntryProductCode" id="storeEntryProductCode" value="" />
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryPersonCountEnabled" id="storeEntryPersonCountEnabled" />
+                <label for="storeEntryPersonCountEnabled"
+                  >入店人数を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryPersonCountDisplayType" id="storeEntryPersonCountDisplayType" />
+                <label for="storeEntryPersonCountDisplayType"
+                  >人数を「大人・子供」表示にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryRoomSearchEnabled" id="storeEntryRoomSearchEnabled" />
+                <label for="storeEntryRoomSearchEnabled"
+                  >入店部屋検索を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryTableStatusEnabled" id="storeEntryTableStatusEnabled" />
+                <label for="storeEntryTableStatusEnabled"
+                  >入店テーブル状況表示を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryOutOfStockEnabled" id="storeEntryOutOfStockEnabled" />
+                <label for="storeEntryOutOfStockEnabled"
+                  >品切れを非表示にすることを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="storeEntryOutOfStockHighlightEnabled"
+                  id="storeEntryOutOfStockHighlightEnabled"
+                />
+                <label for="storeEntryOutOfStockHighlightEnabled"
+                  >品切れを強調して表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="storeEntryHierarchyItemCountEnabled"
+                  id="storeEntryHierarchyItemCountEnabled"
+                />
+                <label for="storeEntryHierarchyItemCountEnabled"
+                  >階層商品の数量カウンターを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="storeEntryHierarchyItemCountCaptionEnabled"
+                  id="storeEntryHierarchyItemCountCaptionEnabled"
+                />
+                <label for="storeEntryHierarchyItemCountCaptionEnabled"
+                  >階層商品の数量カウンター上のキャプションを無効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="storeEntryPhoneNumberInputEnabled"
+                  id="storeEntryPhoneNumberInputEnabled"
+                />
+                <label for="storeEntryPhoneNumberInputEnabled"
+                  >電話番号の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryZipCodeInputEnabled" id="storeEntryZipCodeInputEnabled" />
+                <label for="storeEntryZipCodeInputEnabled"
+                  >郵便番号の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="deliveryAreaZipCode"
+                  >配達可能エリア (郵便番号)<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="deliveryAreaZipCode" id="deliveryAreaZipCode" value="" />
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="storeEntryAddressInputEnabled" id="storeEntryAddressInputEnabled" />
+                <label for="storeEntryAddressInputEnabled"
+                  >住所の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="deliveryAreaAddress"
+                  >配達可能エリア (住所)<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="deliveryAreaAddress" id="deliveryAreaAddress" value="" />
+              </div>
+
+              <div class="input-container">
+                <label for="deliveryAreaDistance"
+                  >配達可能距離(km)<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="deliveryAreaDistance" id="deliveryAreaDistance" value="" />
+              </div>
+
+              <div class="input-container">
+                <label for="googleMapsApiKey"
+                  >Google Maps API Key<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="googleMapsApiKey" id="googleMapsApiKey" value="" />
               </div>
             </div>
           </form>
