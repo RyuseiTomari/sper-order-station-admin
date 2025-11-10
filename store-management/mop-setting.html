@@ -1636,6 +1636,280 @@ www.sper.jp
                 </div>
               </div>
             </div>
+
+            <div class="form-inputs border-bottom">
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
+                  <input type="checkbox" name="orderHistoryEnabled" id="orderHistoryEnabled" />
+                  <label for="orderHistoryEnabled"
+                    >注文履歴を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-hierarchy-children-checkboxes">
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="hideEmptyOrderHistory" id="hideEmptyOrderHistory" />
+                    <label for="hideEmptyOrderHistory"
+                      >注文履歴の0件商品を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="hidePaymentBarcode" id="hidePaymentBarcode" />
+                    <label for="hidePaymentBarcode"
+                      >注文履歴の会計用バーコードを非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="hideFirstOrderOnHistory" id="hideFirstOrderOnHistory" />
+                    <label for="hideFirstOrderOnHistory"
+                      >注文履歴に最初の注文を表示しない<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="hideOrderTotalInCompletionMessage"
+                  id="hideOrderTotalInCompletionMessage"
+                />
+                <label for="hideOrderTotalInCompletionMessage"
+                  >注文完了メッセージの合計金額を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="hideOrderTotalInConfirmationMessage"
+                  id="hideOrderTotalInConfirmationMessage"
+                />
+                <label for="hideOrderTotalInConfirmationMessage"
+                  >注文確認画面の注文合計を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="hideHierarchicalProductImages" id="hideHierarchicalProductImages" />
+                <label for="hideHierarchicalProductImages"
+                  >階層商品の画像を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="orderCompletionMessage"
+                  >注文完了メッセージ<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="orderCompletionMessage" id="orderCompletionMessage" value="" />
+              </div>
+
+              <div class="input-container">
+                <label for="delayedMessageUnsettledCount"
+                  >遅延メッセージ表示未精算伝票件数<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+                <div class="number-input-container">
+                  <input
+                    type="number"
+                    name="delayedMessageUnsettledCount"
+                    id="delayedMessageUnsettledCount"
+                    value="0"
+                    min="0"
+                  />
+                  <div class="number-stepper">
+                    <button type="button" class="stepper-minus">−</button>
+                    <button type="button" class="stepper-plus">＋</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="paymentBarcodeButtonEnabled" id="paymentBarcodeButtonEnabled" />
+                <label for="paymentBarcodeButtonEnabled"
+                  >会計用バーコードボタンを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="paymentBarcodeMessage"
+                  >会計用バーコードメッセージ<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input type="text" name="paymentBarcodeMessage" id="paymentBarcodeMessage" value="" />
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="oneTimeOrderEnabled" id="oneTimeOrderEnabled" />
+                <label for="oneTimeOrderEnabled"
+                  >ワンタイムオーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="reservationSelectingOrderTypeFirstEnabled"
+                  id="reservationSelectingOrderTypeFirstEnabled"
+                />
+                <label for="reservationSelectingOrderTypeFirstEnabled"
+                  >(予約注文)オーダー種類を最初に選択することを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="orderTypeFirstEnabled" id="orderTypeFirstEnabled" />
+                <label for="orderTypeFirstEnabled"
+                  >(予約注文)オーダー種類を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="reservationNameInputEnabled" id="reservationNameInputEnabled" />
+                <label for="reservationNameInputEnabled"
+                  >(予約注文)名前入力欄<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="reservationEntryPhoneNumberInputEnabled"
+                  id="reservationEntryPhoneNumberInputEnabled"
+                />
+                <label for="reservationEntryPhoneNumberInputEnabled"
+                  >(予約注文)電話番号の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input
+                  type="checkbox"
+                  name="reservationEntryAddressInputEnabled"
+                  id="reservationEntryAddressInputEnabled"
+                />
+                <label for="reservationEntryAddressInputEnabled"
+                  >(予約注文)住所の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
+                  <input
+                    type="checkbox"
+                    name="reservationEmailAddressInputEnabled"
+                    id="reservationEmailAddressInputEnabled"
+                  />
+                  <label for="reservationEmailAddressInputEnabled"
+                    >(予約注文)メールアドレスの入力を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-checkbox-container input-hierarchy-child">
+                  <input
+                    type="checkbox"
+                    name="reservationOrderCompletionEmailEnabled"
+                    id="reservationOrderCompletionEmailEnabled"
+                  />
+                  <label for="reservationOrderCompletionEmailEnabled"
+                    >(予約注文)注文完了メールを送信する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="reservationTimeSelectionEnabled" id="reservationTimeSelectionEnabled" />
+                <label for="reservationTimeSelectionEnabled"
+                  >(予約注文)時間の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-container">
+                <label for="reservationOrderCompletionMessage"
+                  >(予約注文)注文完了メッセージ<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
+                ><input
+                  type="text"
+                  name="reservationOrderCompletionMessage"
+                  id="reservationOrderCompletionMessage"
+                  value=""
+                />
+              </div>
+
+              <div class="input-hierarchy">
+                <div class="input-checkbox-container input-hierarchy-parent">
+                  <input type="checkbox" name="languageSelectionEnabled" id="languageSelectionEnabled" />
+                  <label for="languageSelectionEnabled"
+                    >言語の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  /></label>
+                </div>
+                <div class="input-hierarchy-children-checkboxes">
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="japaneseEnabled" id="japaneseEnabled" />
+                    <label for="japaneseEnabled"
+                      >日本語を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="englishEnabled" id="englishEnabled" />
+                    <label for="englishEnabled"
+                      >英語を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="simplifiedChineseEnabled" id="simplifiedChineseEnabled" />
+                    <label for="simplifiedChineseEnabled"
+                      >中国語（簡体）を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                  <div class="input-checkbox-container input-hierarchy-child-checkbox">
+                    <input type="checkbox" name="koreanEnabled" id="koreanEnabled" />
+                    <label for="koreanEnabled"
+                      >韓国語を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    /></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="useMomCloudRp" id="useMomCloudRp" />
+                <label for="useMomCloudRp"
+                  >MOMクラウドRPを使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                /></label>
+              </div>
+
+              <div class="input-checkbox-container">
+                <input type="checkbox" name="cloudPrinterOnlineCheckDisabled" id="cloudPrinterOnlineCheckDisabled" />
+                <label for="cloudPrinterOnlineCheckDisabled"
+                  >CloudPrinterオンラインチェックを無効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                /></label>
+              </div>
+            </div>
+
+            <div class="form-inputs border-bottom">
+              <div class="horizontal-input-container">
+                <p>ロゴ画像<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></p>
+                <div class="horizontal-btn-container">
+                  <label class="primary-btn">
+                    ファイルを選択
+                    <input type="file" name="logoImage" style="display: none" />
+                  </label>
+                  <button class="primary-btn" type="button">確認</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-inputs border-bottom">
+              <div class="horizontal-input-container">
+                <p>スタート画面画像<img src="/images/input-hint-icon.png" alt="input-hint-icon" /></p>
+                <div class="horizontal-btn-container">
+                  <label class="primary-btn">
+                    ファイルを選択
+                    <input type="file" name="logoImage" style="display: none" />
+                  </label>
+                  <button class="primary-btn" type="button">確認</button>
+                </div>
+              </div>
+            </div>
           </form>
 
           <footer class="form-footer border-top">
