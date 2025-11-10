@@ -163,10 +163,10 @@
               </div>
 
               <div class="input-container">
-                <label for="departmentSelect"
-                  >部門 <span class="input-required">※</span
-                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon"
-                /></label>
+                <div class="input-label-container">
+                  <label for="departmentSelect">部門 <span class="input-required">※</span></label>
+                  <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                </div>
                 <div class="input-select-container">
                   <select name="departmentName" id="departmentSelect" required>
                     <option value="" selected>選択をしてください</option>
@@ -179,10 +179,11 @@
               </div>
 
               <div class="input-container">
-                <label for="price"
-                  >価格(¥) <span class="input-required">※</span
-                  ><img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                ><input type="text" name="price" id="price" placeholder="0以上の整数を設定してください" />
+                <div class="input-label-container">
+                  <label for="price">価格(¥) <span class="input-required">※</span></label>
+                  <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                </div>
+                <input type="text" name="price" id="price" placeholder="0以上の整数を設定してください" />
               </div>
             </div>
 
@@ -195,31 +196,43 @@
               <div class="input-details-content hidden">
                 <div class="form-inputs">
                   <div class="input-container">
-                    <label for="abbreviation"
-                      >略称 <img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                    ><input type="text" name="abbreviation" id="abbreviation" />
+                    <div class="input-label-container">
+                      <label for="abbreviation">略称</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <input type="text" name="abbreviation" id="abbreviation" />
                   </div>
 
                   <div class="input-container">
-                    <label for="discount">割引(¥) <img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                    ><input type="text" name="discount" id="discount" placeholder="0以上の整数を設定してください" />
+                    <div class="input-label-container">
+                      <label for="discount">割引(¥)</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <input type="text" name="discount" id="discount" placeholder="0以上の整数を設定してください" />
                   </div>
 
                   <div class="input-container">
-                    <label for="cost">原価 <img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                    ><input type="text" name="cost" id="cost" placeholder="0以上の整数を設定してください" />
+                    <div class="input-label-container">
+                      <label for="cost">原価</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <input type="text" name="cost" id="cost" placeholder="0以上の整数を設定してください" />
                   </div>
 
                   <div class="input-container">
-                    <label for="minimumOrderQuantity"
-                      >最低注文数 <img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                    ><input type="text" name="minimumOrderQuantity" id="minimumOrderQuantity" />
+                    <div class="input-label-container">
+                      <label for="minimumOrderQuantity">最低注文数</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <input type="text" name="minimumOrderQuantity" id="minimumOrderQuantity" />
                   </div>
 
                   <div class="input-container">
-                    <label for="maximumOrderQuantity"
-                      >一人当たりの最大注文数 <img src="/images/input-hint-icon.png" alt="input-hint-icon" /></label
-                    ><input type="text" name="maximumOrderQuantity" id="maximumOrderQuantity" />
+                    <div class="input-label-container">
+                      <label for="maximumOrderQuantity">一人当たりの最大注文数</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <input type="text" name="maximumOrderQuantity" id="maximumOrderQuantity" />
                   </div>
                 </div>
 
