@@ -1133,6 +1133,55 @@ input:disabled {
   opacity: 0 !important;
 }
 
+.horizontal-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.horizontal-input-container p {
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-input-container p img {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}
+
+.time-selection-input-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.time-selection-input {
+  grid-column: span 3;
+}
+
+.weekdays-checkbox-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.weekdays-checkbox {
+  grid-column: span 1;
+  min-width: 132px;
+}
+
+.service-usage-time-input-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 @keyframes inputFieldFadeIn {
   from {
     opacity: 0;
@@ -1164,6 +1213,14 @@ input:disabled {
     width: 188px;
     grid-column: auto;
   }
+
+  .time-selection-input {
+    grid-column: span 6;
+  }
+
+  .weekdays-checkbox {
+    grid-column: span 3;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1174,5 +1231,18 @@ input:disabled {
   .menu-small-btn {
     width: 188px;
     grid-column: auto;
+  }
+
+  .time-selection-input {
+    grid-column: span 12;
+  }
+
+  .weekdays-checkbox {
+    grid-column: span 6;
+  }
+
+  .service-usage-time-input-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
