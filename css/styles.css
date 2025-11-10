@@ -448,7 +448,7 @@ body {
   padding: 0 5px;
 } */
 
-.input-label-container {
+.input-container > .input-label-container {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -674,19 +674,33 @@ input:disabled {
   margin-top: 25px;
 }
 
-.input-category label {
-  font-family: var(--primary-font-family);
-  color: var(--key-color);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
+.input-category > .input-label-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+  background-color: var(--primary-background-color);
+  position: inherit;
+
+  label {
+    font-family: var(--primary-font-family);
+    color: var(--key-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
-.input-category label img {
+/* .input-category label img {
   width: 16px;
   height: 16px;
   margin-left: 4px;
-}
+} */
 
 .input-multi-lang-input-container {
   display: flex;
