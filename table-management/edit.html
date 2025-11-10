@@ -104,31 +104,79 @@
                 />
                 <p>テーブル管理</p></a
               >
+              <img class="breadcrumb-arrow" src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
+              <a class="breadcrumb-link" href="/table-management/edit.html">1F</a>
             </div>
-            <button class="primary-btn">新規追加</button>
+            <button class="attention-btn">削除</button>
           </div>
-          <div class="list">
+          <form id="form">
+            <div class="table-management-container">
+              <div class="table-management-area-info">
+                <div class="input-container">
+                  <div class="input-label-container">
+                    <label for="areaCode">エリアコード</label
+                    ><img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                  </div>
+                  <input type="text" name="areaCode" id="areaCode" value="1" disabled />
+                </div>
+
+                <div class="input-container">
+                  <div class="input-label-container">
+                    <label for="areaName">エリア名称 <span class="input-required">※</span></label>
+                    <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                  </div>
+                  <input type="text" name="areaName" id="areaName" value="1F" />
+                </div>
+              </div>
+
+              <div class="input-container">
+                <div class="input-label-container">
+                  <label for="menuPattern">切替メニューパターン <span class="input-required">※</span></label>
+                  <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                </div>
+                <div class="input-select-container">
+                  <select name="menuPattern" id="menuPattern" required>
+                    <option value="1">通常のメニューランチ有</option>
+                    <option value="2">ランチ無し</option>
+                    <option value="3">ディナー</option>
+                  </select>
+                </div>
+              </div>
+
+              <div></div>
+            </div>
+          </form>
+
+          <footer class="form-footer border-top">
+            <div class="form-footer-left">
+              <a href="#" class="primary-btn">エリア配置</a>
+            </div>
+            <div class="form-footer-right">
+              <button class="submit-btn" type="submit" form="form">登録</button>
+            </div>
+          </footer>
+          <!-- <div class="list">
             <div class="list-header">
               <div class="list-label-code">コード</div>
               <div class="list-label-name">名称</div>
               <div class="list-label-action"></div>
             </div>
             <div class="list-body">
-              <a class="list-body-row" href="/table-management/edit.html">
+              <a class="list-body-row" href="#">
                 <div class="list-value-code">1</div>
                 <div class="list-value-name">1F</div>
                 <div class="list-value-action">
                   <button class="primary-btn">編集</button>
                 </div>
               </a>
-              <a class="list-body-row" href="/table-management/edit.html">
+              <a class="list-body-row" href="#">
                 <div class="list-value-code">2</div>
                 <div class="list-value-name">2F</div>
                 <div class="list-value-action">
                   <button class="primary-btn">編集</button>
                 </div>
               </a>
-              <a class="list-body-row" href="/table-management/edit.html">
+              <a class="list-body-row" href="#">
                 <div class="list-value-code">3</div>
                 <div class="list-value-name">3F</div>
                 <div class="list-value-action">
@@ -136,7 +184,7 @@
                 </div>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

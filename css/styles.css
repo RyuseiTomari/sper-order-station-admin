@@ -16,6 +16,7 @@
   --btn-hover-border-color: #fafbff;
   --sidebar-width: 188px;
   --attention-color: #ad2c2e;
+  --attention-color-hover: #931114;
   --placeholder-color: #a7a7a7;
 }
 
@@ -299,7 +300,27 @@ body {
 
   &:hover {
     background-color: var(--key-color-hover);
-    cursor: pointer;
+  }
+}
+
+.attention-btn {
+  height: 40px;
+  width: fit-content;
+  color: var(--colored-btn-text-color);
+  font-family: var(--primary-font-family);
+  background-color: var(--attention-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--attention-color-hover);
   }
 }
 
@@ -1252,6 +1273,19 @@ input:disabled {
 }
 
 .service-usage-time-input-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.table-management-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 40px 0;
+}
+
+.table-management-area-info {
   display: flex;
   align-items: center;
   gap: 20px;
