@@ -455,20 +455,6 @@ body {
   flex: 1;
 }
 
-/* .input-container label {
-  font-family: var(--primary-font-family);
-  color: var(--key-color);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  position: absolute;
-  top: -10px;
-  left: 14px;
-  z-index: 2;
-  background-color: var(--primary-background-color);
-  padding: 0 5px;
-} */
-
 .input-container > .input-label-container {
   display: flex;
   align-items: center;
