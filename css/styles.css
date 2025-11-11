@@ -1181,6 +1181,43 @@ input:disabled {
   }
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--primary-border-color);
+  text-align: left;
+  vertical-align: middle;
+
+  img {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+}
+
+td {
+  padding: 20px 0 20px 10px;
+  border-bottom: 1px solid var(--primary-border-color);
+  vertical-align: middle;
+}
+
+.id-cell {
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
 .search {
   display: flex;
   flex-direction: column;
