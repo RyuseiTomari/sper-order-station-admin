@@ -1329,6 +1329,7 @@ td {
   align-items: center;
   justify-content: center;
   padding: 40px 0;
+  margin-top: 25px;
   gap: 25px;
 }
 
