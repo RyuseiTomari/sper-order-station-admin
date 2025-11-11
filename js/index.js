@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", (e) => {
       const checked = toggle.checked;
       const categoryContainer = toggle.closest(".input-multi-lang-input-container");
-      const multiLangInputs = categoryContainer.querySelector(".multi-lang-inputs");
+      const multiLangInputs = categoryContainer.querySelector(".multi-lang-input-container");
       const monolingualInput = categoryContainer.querySelector(".monolingual-input");
 
       if (checked) {

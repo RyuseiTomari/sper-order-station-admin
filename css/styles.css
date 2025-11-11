@@ -885,7 +885,7 @@ input:disabled {
   line-height: 1;
 }
 
-.multi-lang-inputs {
+.multi-lang-input-container {
   display: none;
   flex-direction: column;
   gap: 30px;
@@ -1243,7 +1243,7 @@ td {
   line-height: 1.25;
 }
 
-.search-inputs {
+.search-input-container {
   display: flex;
   align-items: center;
   width: 100%;
