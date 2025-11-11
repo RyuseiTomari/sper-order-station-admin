@@ -1323,6 +1323,28 @@ td {
   gap: 20px;
 }
 
+.area-layout-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.area-layout-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 4;
+}
+
+.area-layout-grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 6;
+}
+
 @keyframes inputFieldFadeIn {
   from {
     opacity: 0;
