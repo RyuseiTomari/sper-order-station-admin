@@ -84,9 +84,19 @@
             </button>
           </div>
           <div class="navbar-right-content">
-            <div class="navbar-user-btn">
-              <p>Username</p>
-              <img src="/images/navbar-pulldown-icon.png" alt="down-arrow" />
+            <div class="user-menu-container">
+              <input type="checkbox" id="userMenuToggle" class="menu-toggle" />
+
+              <label for="userMenuToggle" class="navbar-user-btn">
+                <span>Username</span>
+                <img src="/images/navbar-pulldown-icon.png" alt="down-arrow" />
+              </label>
+
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">アカウント設定</a>
+                <a href="#" class="dropdown-item">ホーム画面設定</a>
+                <a href="#" class="dropdown-item logout">ログアウト</a>
+              </div>
             </div>
           </div>
         </header>
