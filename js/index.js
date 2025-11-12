@@ -135,4 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
       tipsDialog.classList.remove("closing");
     }, 150);
   });
+
+  tipsDialog?.addEventListener("click", (e) => {
+    if (e.target === tipsDialog) {
+      tipsDialog.classList.add("closing");
+      setTimeout(() => {
+        tipsDialog.close();
+        tipsDialog.classList.remove("closing");
+      }, 150);
+    }
+  });
 });
