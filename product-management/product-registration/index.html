@@ -185,6 +185,8 @@
     </div>
 
     <dialog id="tips-dialog">
+      <div tabindex="0" class="dummy-focusable-content"></div>
+
       <div class="dialog-header">
         <p>タイトルテキスト</p>
         <div class="dialog-close-btn">
@@ -193,13 +195,25 @@
       </div>
 
       <div class="dialog-content">
-        <p>ダイアログのコンテンツがここに入ります。</p>
+        <div class="dialog-title">タイトルテキスト</div>
+        <p>
+          ここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定です
+        </p>
+        <div class="dialog-2column">
+          <img src="/images/dialog-2column-sample-img.png" alt="dialog-2column-sample-img" />
+          <p>
+            ここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定です
+          </p>
+        </div>
+        <div class="dialog-img">
+          <img src="/images/dialog-sample-img.png" alt="dialog-sample-img" />
+        </div>
       </div>
 
       <div class="dialog-footer">
-        <button class="attention-btn">テキスト</button>
-        <button class="primary-btn">テキスト</button>
-        <button class="accent-btn">テキスト</button>
+        <button type="button" class="attention-btn">テキスト</button>
+        <button type="button" class="primary-btn">テキスト</button>
+        <button type="button" class="accent-btn">テキスト</button>
       </div>
     </dialog>
 

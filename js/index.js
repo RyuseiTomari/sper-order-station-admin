@@ -126,9 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const tipsDialog = document.getElementById("tips-dialog");
-  const closeBtn = tipsDialog.querySelector(".dialog-close-btn");
+  const closeBtn = tipsDialog?.querySelector(".dialog-close-btn");
 
-  closeBtn.addEventListener("click", () => {
+  closeBtn?.addEventListener("click", () => {
     tipsDialog.classList.add("closing");
     setTimeout(() => {
       tipsDialog.close();
