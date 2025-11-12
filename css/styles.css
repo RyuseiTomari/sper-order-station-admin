@@ -381,6 +381,28 @@ body {
   }
 }
 
+.accent-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 40px;
+  border-radius: 5px;
+  padding: 12px 23px;
+  background-color: var(--accent-color);
+  color: var(--colored-btn-text-color);
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--accent-color-hover);
+    cursor: pointer;
+  }
+}
+
 .menu-btns {
   display: flex;
   flex-direction: column;
@@ -759,12 +781,6 @@ input:disabled {
   }
 }
 
-/* .input-category label img {
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
-} */
-
 .input-multi-lang-input-container {
   display: flex;
   flex-direction: column;
@@ -1090,7 +1106,6 @@ input:disabled {
     transform: translate(-50%, -50%);
     background-image: url("/images/check-icon.png");
     background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
     width: 18px;
     height: 13.5px;
@@ -1144,26 +1159,9 @@ input:disabled {
   height: 100%;
   margin-left: 25px;
   margin-right: 25px;
-}
 
-.submit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: var(--accent-color);
-  color: var(--colored-btn-text-color);
-  font-family: var(--primary-font-family);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  transition: background-color 150ms ease-in-out;
-
-  &:hover {
-    background-color: var(--accent-color-hover);
-    cursor: pointer;
+  .accent-btn {
+    width: 150px !important;
   }
 }
 
@@ -1514,6 +1512,79 @@ td {
   right: -9px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+dialog.closing {
+  animation: backdropFadeOut 150ms ease-out;
+}
+
+dialog::backdrop {
+  background-color: var(--key-color-hover);
+  opacity: 0.95;
+  animation: backdropFadeIn 150ms ease-in;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#tips-dialog {
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+  padding: 0;
+
+  .dialog-header {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: var(--primary-border-color);
+
+    p {
+      font-family: var(--primary-font-family);
+      color: var(--key-color);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dialog-close-btn {
+      img {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  .dialog-content {
+    padding: 40px;
+    background-color: var(--secondary-background-color);
+  }
+
+  .dialog-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    border-top: 1px solid var(--primary-border-color);
+    padding: 15px 30px;
+  }
 }
 
 @keyframes inputFieldFadeIn {

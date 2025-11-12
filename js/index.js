@@ -124,4 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
       input.dispatchEvent(new Event("input"));
     });
   });
+
+  const tipsDialog = document.getElementById("tips-dialog");
+  const closeBtn = tipsDialog.querySelector(".dialog-close-btn");
+
+  closeBtn.addEventListener("click", () => {
+    tipsDialog.classList.add("closing");
+    setTimeout(() => {
+      tipsDialog.close();
+      tipsDialog.classList.remove("closing");
+    }, 150);
+  });
 });
