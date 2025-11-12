@@ -3,8 +3,8 @@
   --key-color-hover: #253451;
   --primary-background-color: #f5f6fa;
   --secondary-background-color: #fbfbfc;
-  --submit-btn-background-color: #269c85;
-  --submit-btn-hover-background-color: #098169;
+  --accent-color: #269c85;
+  --accent-color-hover: #098169;
   --primary-border-color: #dfe2f1;
   --input-border-color: #c2c6cf;
   --secondary-font-color: #fbfbfc;
@@ -1104,7 +1104,7 @@ input:disabled {
   width: 150px;
   height: 40px;
   border-radius: 5px;
-  background-color: var(--submit-btn-background-color);
+  background-color: var(--accent-color);
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
   font-size: 16px;
@@ -1113,7 +1113,7 @@ input:disabled {
   transition: background-color 150ms ease-in-out;
 
   &:hover {
-    background-color: var(--submit-btn-hover-background-color);
+    background-color: var(--accent-color-hover);
     cursor: pointer;
   }
 }
@@ -1327,7 +1327,7 @@ td {
 .area-layout-container {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 40px 0;
   margin-top: 25px;
@@ -1346,6 +1346,12 @@ td {
   align-items: center;
   justify-content: center;
   flex: 6;
+  background-image: url("/images/area-layout-grid.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 617px;
+  height: 617px;
 }
 
 .area-layout-reset-btn {
@@ -1355,6 +1361,110 @@ td {
 
 .area-layout-apply-btn {
   flex: 2;
+}
+
+.area-layout-shape-container {
+  position: relative;
+  display: inline-block;
+}
+
+.area-layout-shape {
+  font-family: var(--primary-font-family);
+  color: var(--key-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: var(--secondary-background-color);
+  border: 1px solid var(--input-border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.selected-area-layout-shape {
+  position: absolute;
+  border: 1px solid var(--accent-color);
+  border-radius: 0;
+  display: none;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+.area-layout-ellipse {
+  width: 300px;
+  height: 150px;
+  border-radius: 84px;
+}
+
+.selected-area-layout-shape.active {
+  display: block;
+}
+
+.corner-handle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: var(--secondary-background-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.edge-handle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: var(--secondary-background-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.corner-handle.top-left {
+  top: -9px;
+  left: -9px;
+}
+
+.corner-handle.top-right {
+  top: -9px;
+  right: -9px;
+}
+
+.corner-handle.bottom-left {
+  bottom: -9px;
+  left: -9px;
+}
+
+.corner-handle.bottom-right {
+  bottom: -9px;
+  right: -9px;
+}
+
+.edge-handle.top {
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.edge-handle.bottom {
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.edge-handle.left {
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.edge-handle.right {
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @keyframes inputFieldFadeIn {

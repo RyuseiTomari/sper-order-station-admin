@@ -112,11 +112,11 @@
               <div class="area-layout-input-container">
                 <div class="input-container">
                   <div class="input-label-container">
-                    <label for="departmentSelect">テーブル名称</label>
+                    <label for="tableNameSelect">テーブル名称</label>
                     <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
                   </div>
                   <div class="input-select-container">
-                    <select name="departmentName" id="departmentSelect">
+                    <select name="tableName" id="tableNameSelect">
                       <option value="101">101</option>
                       <option value="102">102</option>
                     </select>
@@ -127,13 +127,13 @@
 
                 <div class="input-container">
                   <div class="input-label-container">
-                    <label for="departmentSelect">テーブル形状</label>
+                    <label for="tableShapeSelect">テーブル形状</label>
                     <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
                   </div>
                   <div class="input-select-container">
-                    <select name="departmentName" id="departmentSelect">
+                    <select name="tableShape" id="tableShapeSelect">
                       <option value="circle">円</option>
-                      <option value="ellipse">楕円</option>
+                      <option value="ellipse" selected>楕円</option>
                       <option value="rectangle">長方形</option>
                     </select>
                   </div>
@@ -235,7 +235,12 @@
                   <button type="button" class="primary-btn area-layout-apply-btn">図に反映</button>
                 </div>
               </div>
-              <div class="area-layout-grid-container"></div>
+
+              <div class="area-layout-grid-container">
+                <div class="area-layout-shape-container">
+                  <div class="area-layout-shape area-layout-ellipse">101</div>
+                </div>
+              </div>
             </div>
           </form>
 
@@ -250,5 +255,6 @@
     </div>
 
     <script src="/js/index.js"></script>
+    <script src="/js/area-layout.js"></script>
   </body>
 </html>
