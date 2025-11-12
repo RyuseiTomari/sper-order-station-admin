@@ -38,6 +38,13 @@ body {
   border-bottom: 1px solid var(--primary-border-color) !important;
 }
 
+.vertical-separator-line {
+  width: 1px;
+  min-height: 40px;
+  height: 100%;
+  background-color: var(--primary-border-color);
+}
+
 .sidebar {
   width: var(--sidebar-width);
   height: 100%;
@@ -1243,13 +1250,6 @@ td {
   line-height: 1.25;
 }
 
-.search-input-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 20px;
-}
-
 .hidden {
   max-height: 0 !important;
   opacity: 0 !important;
@@ -1257,11 +1257,18 @@ td {
 
 .horizontal-input-container {
   display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.vertical-input-container {
+  display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.horizontal-input-container p {
+.vertical-input-container p {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 16px;
@@ -1271,13 +1278,13 @@ td {
   align-items: center;
 }
 
-.horizontal-input-container p img {
+.vertical-input-container p img {
   width: 16px;
   height: 16px;
   margin-left: 4px;
 }
 
-.horizontal-btn-container {
+.vertical-btn-container {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1317,12 +1324,6 @@ td {
   margin: 40px 0;
 }
 
-.table-management-area-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .area-layout-container {
   width: 100%;
   display: flex;
@@ -1345,6 +1346,15 @@ td {
   align-items: center;
   justify-content: center;
   flex: 6;
+}
+
+.area-layout-reset-btn {
+  flex: 1;
+  padding: 12px;
+}
+
+.area-layout-apply-btn {
+  flex: 2;
 }
 
 @keyframes inputFieldFadeIn {

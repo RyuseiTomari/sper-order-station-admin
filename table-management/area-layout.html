@@ -109,7 +109,132 @@
           </div>
           <form id="form">
             <div class="area-layout-container">
-              <div class="area-layout-input-container"></div>
+              <div class="area-layout-input-container">
+                <div class="input-container">
+                  <div class="input-label-container">
+                    <label for="departmentSelect">テーブル名称</label>
+                    <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                  </div>
+                  <div class="input-select-container">
+                    <select name="departmentName" id="departmentSelect">
+                      <option value="101">101</option>
+                      <option value="102">102</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="border-bottom"></div>
+
+                <div class="input-container">
+                  <div class="input-label-container">
+                    <label for="departmentSelect">テーブル形状</label>
+                    <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                  </div>
+                  <div class="input-select-container">
+                    <select name="departmentName" id="departmentSelect">
+                      <option value="circle">円</option>
+                      <option value="ellipse">楕円</option>
+                      <option value="rectangle">長方形</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="horizontal-input-container">
+                  <div class="input-container">
+                    <div class="input-label-container">
+                      <label for="coordinateX">座標X</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <div class="number-input-container">
+                      <input type="number" name="coordinateX" id="coordinateX" value="0" min="0" />
+                      <div class="number-stepper">
+                        <button type="button" class="stepper-minus">−</button>
+                        <button type="button" class="stepper-plus">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-container">
+                    <div class="input-label-container">
+                      <label for="coordinateY">座標Y</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <div class="number-input-container">
+                      <input type="number" name="coordinateY" id="coordinateY" value="0" min="0" />
+                      <div class="number-stepper">
+                        <button type="button" class="stepper-minus">−</button>
+                        <button type="button" class="stepper-plus">＋</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="horizontal-input-container">
+                  <div class="input-container">
+                    <div class="input-label-container">
+                      <label for="sizeX">サイズX <span class="input-required">※</span></label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <div class="number-input-container">
+                      <input type="number" name="sizeX" id="sizeX" value="0" min="0" />
+                      <div class="number-stepper">
+                        <button type="button" class="stepper-minus">−</button>
+                        <button type="button" class="stepper-plus">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-container">
+                    <div class="input-label-container">
+                      <label for="sizeY">サイズY <span class="input-required">※</span></label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <div class="number-input-container">
+                      <input type="number" name="sizeY" id="sizeY" value="0" min="0" />
+                      <div class="number-stepper">
+                        <button type="button" class="stepper-minus">−</button>
+                        <button type="button" class="stepper-plus">＋</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="horizontal-input-container">
+                  <div class="input-container">
+                    <div class="input-label-container">
+                      <label for="radius">半径</label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <div class="number-input-container">
+                      <input type="number" name="radius" id="radius" value="0" min="0" />
+                      <div class="number-stepper">
+                        <button type="button" class="stepper-minus">−</button>
+                        <button type="button" class="stepper-plus">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-container">
+                    <div class="input-label-container">
+                      <label for="fontSize">文字サイズ <span class="input-required">※</span></label>
+                      <img src="/images/input-hint-icon.png" alt="input-hint-icon" />
+                    </div>
+                    <div class="number-input-container">
+                      <input type="number" name="fontSize" id="fontSize" value="0" min="0" />
+                      <div class="number-stepper">
+                        <button type="button" class="stepper-minus">−</button>
+                        <button type="button" class="stepper-plus">＋</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="horizontal-input-container">
+                  <button type="button" class="attention-btn area-layout-reset-btn">数値リセット</button>
+                  <div class="vertical-separator-line"></div>
+                  <button type="button" class="primary-btn area-layout-apply-btn">図に反映</button>
+                </div>
+              </div>
               <div class="area-layout-grid-container"></div>
             </div>
           </form>
