@@ -1101,7 +1101,7 @@ input:disabled {
   margin-left: 4px;
 }
 
-.form-footer {
+.footer {
   width: calc(100% - var(--sidebar-width));
   height: 70px;
   display: flex;
@@ -1116,7 +1116,7 @@ input:disabled {
   z-index: 20;
 }
 
-.form-footer-left {
+.footer-left {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1127,7 +1127,7 @@ input:disabled {
   margin-left: 25px;
 }
 
-.form-footer-right {
+.footer-right {
   display: flex;
   align-items: center;
   justify-content: center;
