@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ORDERSTATION | メニューパターン登録</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar-title"><a href="/">ORDERSTATION.NET</a></div>
+        <div class="sidebar-btns">
+          <a class="sidebar-btn" href="/"
+            ><img class="sidebar-btn-icon" src="/images/sidemenu-home-icon.png" alt="home-icon" />
+            <p>ホーム</p></a
+          >
+          <a class="sidebar-btn" href="#"
+            ><img class="sidebar-btn-icon sidebar-regi-icon" src="/images/sidemenu-regi-icon.png" alt="regi-icon" />
+            <p>レジ画面</p></a
+          >
+          <a class="sidebar-btn" href="/product-management/index.html"
+            ><img
+              class="sidebar-btn-icon sidebar-product-icon"
+              src="/images/sidemenu-product-icon.png"
+              alt="product-icon"
+            />
+            <p>商品管理</p></a
+          >
+          <a class="sidebar-btn" href="/store-management/index.html"
+            ><img class="sidebar-btn-icon" src="/images/sidemenu-store-info-icon.png" alt="store-info-icon" />
+            <p>店舗情報</p></a
+          >
+          <a class="sidebar-btn" href="/table-management/index.html"
+            ><img class="sidebar-btn-icon sidebar-table-icon" src="/images/sidemenu-table-icon.png" alt="table-icon" />
+            <p>テーブル管理</p></a
+          >
+          <a class="sidebar-btn" href="#"
+            ><img class="sidebar-btn-icon sidebar-staff-icon" src="/images/sidemenu-staff-icon.png" alt="staff-icon" />
+            <p>スタッフ管理</p></a
+          >
+          <a class="sidebar-btn" href="#"
+            ><img class="sidebar-btn-icon" src="/images/sidemenu-forms-icon.png" alt="forms-icon" />
+            <p>帳票印刷</p></a
+          >
+          <a class="sidebar-btn" href="#"
+            ><img class="sidebar-btn-icon sidebar-calc-icon" src="/images/sidemenu-calc-icon.png" alt="calc-icon" />
+            <p>締め作業</p></a
+          >
+          <a class="sidebar-btn" href="#"
+            ><img
+              class="sidebar-btn-icon sidebar-setting-icon"
+              src="/images/sidemenu-setting-icon.png"
+              alt="setting-icon"
+            />
+            <p>システム設定</p></a
+          >
+          <a class="sidebar-btn" href="#"
+            ><img class="sidebar-btn-icon sidebar-guide-icon" src="/images/sidemenu-guide-icon.png" alt="guide-icon" />
+            <p>使い方ガイド</p></a
+          >
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="navbar border-bottom">
+          <div class="navbar-left-content">
+            <button class="navbar-back-btn">
+              <img src="/images/back-inactive.png" alt="back-inactive" />
+            </button>
+            <button class="navbar-forward-btn">
+              <img src="/images/forward-inactive.png" alt="forward-inactive" />
+            </button>
+          </div>
+          <div class="navbar-right-content">
+            <div class="user-menu-container">
+              <input type="checkbox" id="userMenuToggle" class="menu-toggle" />
+
+              <label for="userMenuToggle" class="navbar-user-btn">
+                <span>Username</span>
+                <img src="/images/navbar-pulldown-icon.png" alt="down-arrow" />
+              </label>
+
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">アカウント設定</a>
+                <a href="#" class="dropdown-item">ホーム画面設定</a>
+                <a href="#" class="dropdown-item logout">ログアウト</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="content-area-header">
+            <div class="breadcrumb">
+              <a class="breadcrumb-link" href="/product-management/index.html"
+                ><img
+                  class="sidebar-btn-icon sidebar-product-icon"
+                  src="/images/sidemenu-product-icon.png"
+                  alt="table-icon"
+                />
+                <p>商品管理</p></a
+              >
+              <img class="breadcrumb-arrow" src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
+              <a class="breadcrumb-link" href="/product-management/menu-pattern/index.html">メニューパターン登録</a>
+              <img class="breadcrumb-arrow" src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
+              <a class="breadcrumb-link" href="/product-management/menu-pattern/edit.html">通常のメニューランチ有</a>
+            </div>
+          </div>
+
+          <div class="tab-container">
+            <ul class="tab-list">
+              <li class="tab-item active">
+                <button id="tab-1">通常のメニューランチ有</button>
+              </li>
+              <li class="tab-item">
+                <button id="tab-2">ランチ無し</button>
+              </li>
+              <li class="tab-item">
+                <button id="tab-3">ディナー</button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="panel-1" class="tab-panel active"></div>
+              <div id="panel-2" class="tab-panel"></div>
+              <div id="panel-3" class="tab-panel"></div>
+            </div>
+          </div>
+
+          <footer class="form-footer border-top">
+            <div class="form-footer-left"></div>
+            <div class="form-footer-right">
+              <button class="accent-btn" type="submit" form="form">登録</button>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="tips-dialog">
+      <div tabindex="0" class="dummy-focusable-content"></div>
+
+      <div class="dialog-header">
+        <p>タイトルテキスト</p>
+        <div class="dialog-close-btn">
+          <img src="/images/dialog-close.png" alt="close" />
+        </div>
+      </div>
+
+      <div class="dialog-content">
+        <div class="dialog-title">タイトルテキスト</div>
+        <p>
+          ここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定です
+        </p>
+        <div class="dialog-2column">
+          <img src="/images/dialog-2column-sample-img.png" alt="dialog-2column-sample-img" />
+          <p>
+            ここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定ですここに説明文が入る想定です
+          </p>
+        </div>
+        <div class="dialog-img">
+          <img src="/images/dialog-sample-img.png" alt="dialog-sample-img" />
+        </div>
+      </div>
+
+      <div class="dialog-footer">
+        <button type="button" class="attention-btn">テキスト</button>
+        <button type="button" class="primary-btn">テキスト</button>
+        <button type="button" class="accent-btn">テキスト</button>
+      </div>
+    </dialog>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
