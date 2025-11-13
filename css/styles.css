@@ -1500,29 +1500,42 @@ dialog::backdrop {
 }
 .tab-container {
   margin-top: 47px;
+  margin-left: -25px;
+  margin-right: -25px;
 
   .tab-list {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     border-bottom: 1px solid var(--key-color);
 
-    .tab-item button {
-      position: relative;
-      width: fit-content;
-      height: 45px;
-      padding: 14.5px 10px;
-      background-color: var(--secondary-background-color);
-      font-family: var(--primary-font-family);
-      color: var(--key-color);
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 1;
-      transition: background-color 150ms ease-in-out;
+    .tab-item {
+      &:first-child {
+        margin-left: 25px;
+      }
 
-      &:hover {
-        background-color: var(--btn-hover-background-color);
+      &:last-child {
+        margin-right: 25px;
+      }
+
+      button {
+        position: relative;
+        width: fit-content;
+        height: 45px;
+        padding: 14.5px 35px;
+        background-color: var(--secondary-background-color);
+        font-family: var(--primary-font-family);
+        color: var(--key-color);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        transition: background-color 150ms ease-in-out;
+        clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+        /* border-top-right-radius: 30px;
+        border-top-left-radius: 30px; */
+
+        &:hover {
+          background-color: var(--btn-hover-background-color);
+        }
       }
     }
 
