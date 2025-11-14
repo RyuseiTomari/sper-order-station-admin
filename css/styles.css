@@ -962,24 +962,23 @@ input:disabled {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  position: relative;
 }
 
 .input-hierarchy-children {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  position: relative;
   margin-left: 45px;
 
   .input-hierarchy-child {
     margin-left: 0;
+    position: relative;
 
     &:first-child:before {
       content: "";
       position: absolute;
-      top: -14.5px;
       left: -30px;
+      bottom: 50%;
       width: 20px;
       height: 30px;
       border-left: 1px solid var(--input-border-color);
@@ -1006,7 +1005,7 @@ input:disabled {
       content: "";
       position: absolute;
       left: -30px;
-      bottom: 15px;
+      bottom: 50%;
       width: 20px;
       height: 30px;
       border-left: 1px solid var(--input-border-color);
@@ -1021,12 +1020,13 @@ input:disabled {
 
 .input-hierarchy-child {
   margin-left: 45px;
+  position: relative;
 
   &:has(input[type="checkbox"])::before {
     content: "";
     position: absolute;
-    left: 15px;
-    bottom: 15px;
+    left: -30px;
+    bottom: 50%;
     width: 20px;
     height: 30px;
     border-left: 1px solid var(--input-border-color);
@@ -1036,8 +1036,8 @@ input:disabled {
   &:has(input[type="text"])::before {
     content: "";
     position: absolute;
-    left: 15px;
-    bottom: 30px;
+    left: -30px;
+    bottom: 50%;
     width: 20px;
     height: 47px;
     border-left: 1px solid var(--input-border-color);
@@ -1595,7 +1595,6 @@ dialog::backdrop {
 
       .input-hierarchy {
         gap: 30px;
-        position: inherit;
 
         .input-hierarchy-child {
           margin-left: 40px;
