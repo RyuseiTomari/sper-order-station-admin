@@ -133,18 +133,578 @@
 
             <div class="tab-content">
               <div class="tab-panel active" data-panel="1">
-                <h2>通常のメニューランチ有</h2>
-                <p>ランチタイムは11:30～14:00まで営業しております。日替わりランチや定食メニューをご用意しています。</p>
+                <div class="registered-menu-container">
+                  <div class="vertical-input-container">
+                    <p>
+                      登録済みの商品<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="document.getElementById('tips-dialog').showModal()"
+                      />
+                    </p>
+
+                    <div class="input-container">
+                      <div class="input-label-container">
+                        <label for="categorySelect1">カテゴリー</label>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          onclick="document.getElementById('tips-dialog').showModal()"
+                        />
+                      </div>
+                      <div class="input-select-container">
+                        <select name="categoryName" id="categorySelect1" required>
+                          <option value="1">肉</option>
+                          <option value="2">食物</option>
+                          <option value="3">飲物</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>画像</th>
+                          <th>名称</th>
+                          <th>単価</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒牛</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV1</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒豚</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV1</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鶏肉</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV1</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">牛肉</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV1</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">牛ホルモン</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV1</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">豚ホルモン</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV1</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="registerable-menu-container">
+                  <div class="vertical-input-container">
+                    <p>
+                      登録可能な商品<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="document.getElementById('tips-dialog').showModal()"
+                      />
+                    </p>
+
+                    <div class="input-container">
+                      <div class="input-label-container">
+                        <label for="departmentSelect1">部門</label>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          onclick="document.getElementById('tips-dialog').showModal()"
+                        />
+                      </div>
+                      <div class="input-select-container">
+                        <select name="departmentName" id="departmentSelect1" required>
+                          <option value="1">全部門</option>
+                          <option value="2">部門A</option>
+                          <option value="3">部門B</option>
+                          <option value="4">部門C</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>画像</th>
+                          <th>名称</th>
+                          <th>単価</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="/images/menu-sirloin-sample.png" alt="menu-sirloin-sample" /></td>
+                          <td class="table-text">サーロイン</td>
+                          <td class="table-text">1650</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">上カルビ</td>
+                          <td class="table-text">1375</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">並カルビ</td>
+                          <td class="table-text">935</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚カルビ</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚ロース</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚肩ロース</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">トントロ</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">和牛ハラミ</td>
+                          <td class="table-text">1430</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">和牛ロース</td>
+                          <td class="table-text">957</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">サイコロステーキ（国産）</td>
+                          <td class="table-text">1320</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒牛</td>
+                          <td class="table-text"></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒豚</td>
+                          <td class="table-text"></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
+
               <div class="tab-panel" data-panel="2">
-                <h2>ランチ無し</h2>
-                <p>本日はランチ営業を休止しております。ディナータイムは17:00より営業いたします。</p>
+                <div class="registered-menu-container">
+                  <div class="vertical-input-container">
+                    <p>
+                      登録済みの商品<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="document.getElementById('tips-dialog').showModal()"
+                      />
+                    </p>
+
+                    <div class="input-container">
+                      <div class="input-label-container">
+                        <label for="categorySelect2">カテゴリー</label>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          onclick="document.getElementById('tips-dialog').showModal()"
+                        />
+                      </div>
+                      <div class="input-select-container">
+                        <select name="categoryName" id="categorySelect2" required>
+                          <option value="1">肉</option>
+                          <option value="2">食物</option>
+                          <option value="3">飲物</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>画像</th>
+                          <th>名称</th>
+                          <th>単価</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="/images/menu-sirloin-sample.png" alt="menu-sirloin-sample" /></td>
+                          <td class="table-text">サーロイン</td>
+                          <td class="table-text">1650</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">上カルビ</td>
+                          <td class="table-text">1375</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">並カルビ</td>
+                          <td class="table-text">935</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">下層フォルダ</td>
+                          <td class="table-text"></td>
+                          <td>
+                            <button type="button" class="primary-btn">LV2</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="registerable-menu-container">
+                  <div class="vertical-input-container">
+                    <p>
+                      登録可能な商品<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="document.getElementById('tips-dialog').showModal()"
+                      />
+                    </p>
+
+                    <div class="input-container">
+                      <div class="input-label-container">
+                        <label for="departmentSelect2">部門</label>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          onclick="document.getElementById('tips-dialog').showModal()"
+                        />
+                      </div>
+                      <div class="input-select-container">
+                        <select name="departmentName" id="departmentSelect2" required>
+                          <option value="1">全部門</option>
+                          <option value="2">部門A</option>
+                          <option value="3">部門B</option>
+                          <option value="4">部門C</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>画像</th>
+                          <th>名称</th>
+                          <th>単価</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="/images/menu-sirloin-sample.png" alt="menu-sirloin-sample" /></td>
+                          <td class="table-text">サーロイン</td>
+                          <td class="table-text">1650</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">上カルビ</td>
+                          <td class="table-text">1375</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">並カルビ</td>
+                          <td class="table-text">935</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚カルビ</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚ロース</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚肩ロース</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">トントロ</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">和牛ハラミ</td>
+                          <td class="table-text">1430</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">和牛ロース</td>
+                          <td class="table-text">957</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">サイコロステーキ（国産）</td>
+                          <td class="table-text">1320</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒牛</td>
+                          <td class="table-text"></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒豚</td>
+                          <td class="table-text"></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
+
               <div class="tab-panel" data-panel="3">
-                <h2>ディナー</h2>
-                <p>
-                  ディナータイムは17:00～22:00まで営業しております。アラカルトやコースメニューをお楽しみいただけます。
-                </p>
+                <div class="registered-menu-container">
+                  <div class="vertical-input-container">
+                    <p>
+                      登録済みの商品<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="document.getElementById('tips-dialog').showModal()"
+                      />
+                    </p>
+
+                    <div class="input-container">
+                      <div class="input-label-container">
+                        <label for="categorySelect3">カテゴリー</label>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          onclick="document.getElementById('tips-dialog').showModal()"
+                        />
+                      </div>
+                      <div class="input-select-container">
+                        <select name="categoryName" id="categorySelect3" required>
+                          <option value="1">肉</option>
+                          <option value="2">食物</option>
+                          <option value="3">飲物</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>画像</th>
+                          <th>名称</th>
+                          <th>単価</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">商品名01</td>
+                          <td class="table-text">1650</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">商品名02</td>
+                          <td class="table-text">1375</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">商品名03</td>
+                          <td class="table-text">935</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="registerable-menu-container">
+                  <div class="vertical-input-container">
+                    <p>
+                      登録可能な商品<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="document.getElementById('tips-dialog').showModal()"
+                      />
+                    </p>
+
+                    <div class="input-container">
+                      <div class="input-label-container">
+                        <label for="departmentSelect3">部門</label>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          onclick="document.getElementById('tips-dialog').showModal()"
+                        />
+                      </div>
+                      <div class="input-select-container">
+                        <select name="departmentName" id="departmentSelect3" required>
+                          <option value="1">全部門</option>
+                          <option value="2">部門A</option>
+                          <option value="3">部門B</option>
+                          <option value="4">部門C</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>画像</th>
+                          <th>名称</th>
+                          <th>単価</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="/images/menu-sirloin-sample.png" alt="menu-sirloin-sample" /></td>
+                          <td class="table-text">サーロイン</td>
+                          <td class="table-text">1650</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">上カルビ</td>
+                          <td class="table-text">1375</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">並カルビ</td>
+                          <td class="table-text">935</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚カルビ</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚ロース</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">黒豚肩ロース</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">トントロ</td>
+                          <td class="table-text">726</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">和牛ハラミ</td>
+                          <td class="table-text">1430</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">和牛ロース</td>
+                          <td class="table-text">957</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-no-image.png" alt="menu-no-image" /></td>
+                          <td class="table-text">サイコロステーキ（国産）</td>
+                          <td class="table-text">1320</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒牛</td>
+                          <td class="table-text"></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td><img src="/images/menu-category.png" alt="menu-category" /></td>
+                          <td class="table-text">鹿児島黒豚</td>
+                          <td class="table-text"></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

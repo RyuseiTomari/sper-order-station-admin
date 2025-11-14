@@ -1247,13 +1247,15 @@ td {
   }
 }
 
-.id-cell {
+.table-text {
   font-family: var(--primary-font-family);
   color: var(--key-color);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
   min-width: 50px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .search {
@@ -1578,7 +1580,7 @@ dialog::backdrop {
   }
 
   .tab-content {
-    padding: 60px 25px;
+    padding: 40px 25px;
     width: 100%;
 
     .tab-panel {
@@ -1586,7 +1588,48 @@ dialog::backdrop {
     }
 
     .tab-panel.active {
-      display: block;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 60px;
+
+      .registered-menu-container,
+      .registerable-menu-container {
+        flex: 1;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .vertical-input-container {
+          gap: 30px;
+        }
+      }
+
+      .registerable-menu-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        border: 1px solid var(--primary-border-color);
+        border-radius: 15px;
+        background-color: rgba(194, 198, 207, 0.1);
+      }
+
+      table {
+        td {
+          padding: 10px 10px;
+
+          &:first-child {
+            width: 60px;
+          }
+        }
+
+        .table-text {
+          min-width: 150px;
+        }
+
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
     }
   }
 }
