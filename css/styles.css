@@ -1593,6 +1593,31 @@ dialog::backdrop {
       justify-content: flex-start;
       gap: 60px;
 
+      .input-hierarchy {
+        gap: 30px;
+        position: inherit;
+
+        .input-hierarchy-child {
+          margin-left: 40px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            bottom: 50%;
+            width: 20px;
+            height: 52px;
+            border-left: 1px solid var(--input-border-color);
+            border-bottom: 1px solid var(--input-border-color);
+          }
+
+          &:nth-child(3) {
+            margin-left: 80px;
+          }
+        }
+      }
+
       .registered-menu-container,
       .registerable-menu-container {
         flex: 1;
