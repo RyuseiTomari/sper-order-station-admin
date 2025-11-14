@@ -120,21 +120,32 @@
 
           <div class="tab-container">
             <ul class="tab-list">
-              <li class="tab-item active">
+              <li class="tab-button active" data-tab="1">
                 <button id="tab-1">通常のメニューランチ有</button>
               </li>
-              <li class="tab-item">
+              <li class="tab-button" data-tab="2">
                 <button id="tab-2">ランチ無し</button>
               </li>
-              <li class="tab-item">
+              <li class="tab-button" data-tab="3">
                 <button id="tab-3">ディナー</button>
               </li>
             </ul>
 
             <div class="tab-content">
-              <div id="panel-1" class="tab-panel active"></div>
-              <div id="panel-2" class="tab-panel"></div>
-              <div id="panel-3" class="tab-panel"></div>
+              <div class="tab-panel active" data-panel="1">
+                <h2>通常のメニューランチ有</h2>
+                <p>ランチタイムは11:30～14:00まで営業しております。日替わりランチや定食メニューをご用意しています。</p>
+              </div>
+              <div class="tab-panel" data-panel="2">
+                <h2>ランチ無し</h2>
+                <p>本日はランチ営業を休止しております。ディナータイムは17:00より営業いたします。</p>
+              </div>
+              <div class="tab-panel" data-panel="3">
+                <h2>ディナー</h2>
+                <p>
+                  ディナータイムは17:00～22:00まで営業しております。アラカルトやコースメニューをお楽しみいただけます。
+                </p>
+              </div>
             </div>
           </div>
 

@@ -1505,23 +1505,24 @@ dialog::backdrop {
 
   .tab-list {
     display: flex;
+    gap: 50px;
     list-style: none;
     border-bottom: 1px solid var(--key-color);
 
-    .tab-item {
+    .tab-button {
       &:first-child {
-        margin-left: 25px;
+        margin-left: 50px;
       }
 
       &:last-child {
-        margin-right: 25px;
+        margin-right: 50px;
       }
 
       button {
         position: relative;
         width: fit-content;
         height: 45px;
-        padding: 14.5px 35px;
+        padding: 14.5px 10px;
         background-color: var(--secondary-background-color);
         font-family: var(--primary-font-family);
         color: var(--key-color);
@@ -1529,25 +1530,64 @@ dialog::backdrop {
         font-weight: 500;
         line-height: 1;
         transition: background-color 150ms ease-in-out;
-        clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
-        /* border-top-right-radius: 30px;
-        border-top-left-radius: 30px; */
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -25px;
+          width: 25px;
+          height: 45px;
+          background-color: var(--secondary-background-color);
+          transition: background-color 150ms ease-in-out;
+          clip-path: path("M25 45H0L11.15 11.5375C13.48 4.55 18.94 0 25 0V45Z");
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: -25px;
+          width: 25px;
+          height: 45px;
+          background-color: var(--secondary-background-color);
+          transition: background-color 150ms ease-in-out;
+          clip-path: path("M0 45H25L13.85 11.5375C11.52 4.55 6.06 0 0 0V45Z");
+        }
 
         &:hover {
           background-color: var(--btn-hover-background-color);
+
+          &::before,
+          &::after {
+            background-color: var(--btn-hover-background-color);
+          }
         }
       }
     }
 
-    .tab-item.active button {
+    .tab-button.active button {
       background-color: var(--key-color);
       color: var(--secondary-background-color);
+
+      &::before,
+      &::after {
+        background-color: var(--key-color);
+      }
     }
   }
 
   .tab-content {
-    padding-top: 60px;
+    padding: 60px 25px;
     width: 100%;
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
   }
 }
 
