@@ -1500,6 +1500,7 @@ dialog::backdrop {
   opacity: 0.95;
   animation: backdropFadeIn 150ms ease-in;
 }
+
 .tab-container {
   margin-top: 47px;
   margin-left: -25px;
@@ -1542,7 +1543,7 @@ dialog::backdrop {
           height: 45px;
           background-color: var(--secondary-background-color);
           transition: background-color 150ms ease-in-out;
-          clip-path: path("M25 45H0L11.15 11.5375C13.48 4.55 18.94 0 25 0V45Z");
+          clip-path: path("M25 46H0L11.15 11.5375C13.48 4.55 18.94 0 25 0V46Z");
         }
 
         &::after {
@@ -1554,7 +1555,7 @@ dialog::backdrop {
           height: 45px;
           background-color: var(--secondary-background-color);
           transition: background-color 150ms ease-in-out;
-          clip-path: path("M0 45H25L13.85 11.5375C11.52 4.55 6.06 0 0 0V45Z");
+          clip-path: path("M0 46H25L13.85 11.5375C11.52 4.55 6.06 0 0 0V46Z");
         }
 
         &:hover {
