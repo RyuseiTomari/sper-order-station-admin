@@ -17,16 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let selectedRow = null;
   const currentPanel = document.querySelector(".tab-panel.active");
-  const rows = currentPanel.querySelectorAll("tbody tr");
 
-  console.log(rows);
+  const registeredMenu = currentPanel.querySelector(".registered-menu-container");
+  const registerableMenu = currentPanel.querySelector(".registerable-menu-container");
 
-  rows.forEach((row) => {
+  const registeredMenuRows = registeredMenu.querySelectorAll("tbody tr");
+  const registerableMenuRows = registerableMenu.querySelectorAll("tbody tr");
+
+  registeredMenuRows.forEach((row) => {
     row.addEventListener("click", function (e) {
       if (selectedRow === this) {
         this.classList.remove("selected");
         selectedRow = null;
-        // updateArrowVisibility();
+        updateArrowVisibility(this);
         return;
       }
 
@@ -36,7 +39,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       this.classList.add("selected");
       selectedRow = this;
-      // updateArrowVisibility();
+      updateArrowVisibility(this);
     });
   });
+
+  function updateArrowVisibility(tr) {
+    if (!selectedRow) return;
+
+    const tbody = tr.parentElement;
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const selectedIndex = rows.indexOf(selectedRow);
+
+    var upBtn = selectedRow.querySelector(".arrow-up");
+    var downBtn = selectedRow.querySelector(".arrow-down");
+
+    if (selectedIndex === 0) {
+      upBtn.style.display = "none";
+    } else {
+      upBtn.style.display = "flex";
+    }
+
+    if (selectedIndex === rows.length - 1) {
+      downBtn.style.display = "none";
+    } else {
+      downBtn.style.display = "flex";
+    }
+  }
+
+  updateArrowVisibility();
 });

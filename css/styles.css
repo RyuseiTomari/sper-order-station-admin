@@ -1641,6 +1641,8 @@ dialog::backdrop {
         tbody {
           tr {
             transition: background-color 150ms ease-out;
+            position: relative;
+
             &:hover {
               background-color: var(--btn-hover-background-color);
               cursor: pointer;
@@ -1669,6 +1671,43 @@ dialog::backdrop {
           img {
             width: 60px;
             height: 60px;
+          }
+
+          .arrow-btn {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--key-color);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+          }
+
+          .arrow-up {
+            top: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .arrow-right {
+            top: 50%;
+            right: -50px;
+            transform: translateY(-50%);
+          }
+
+          .arrow-down {
+            bottom: -30px;
+            left: 50%;
+            transform: translate(-50%, 50%);
           }
         }
       }
