@@ -37,17 +37,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     registeredMenuSortable = new Sortable(registeredMenuTbody, {
       group: "shared",
-      animation: 300,
+      animation: 150,
       onSort: onSort,
     });
 
     registerableMenuSortable = new Sortable(registerableMenuTbody, {
       group: "shared",
-      animation: 300,
+      animation: 150,
       onSort: onSort,
     });
 
     rows.forEach((row) => {
+      let hoverTimer = null;
+      const arrowBtns = row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left");
+
       row.addEventListener("click", function (e) {
         e.stopPropagation();
 
@@ -67,12 +70,71 @@ document.addEventListener("DOMContentLoaded", () => {
         updateArrowVisibility(this);
       });
 
-      row.addEventListener("mouseleave", function () {
-        if (selectedRow) {
-          clearArrowVisibility(selectedRow);
-          selectedRow.classList.remove("selected");
-          selectedRow = null;
-        }
+      function hideArrowsWithDelay() {
+        clearTimeout(hoverTimer);
+        hoverTimer = setTimeout(() => {
+          // マウスがtrにもボタンにも乗っていなければ非表示
+          if (!row.matches(":hover") && !Array.from(arrowBtns).some((btn) => btn.matches(":hover"))) {
+            clearArrowVisibility(row);
+            row.classList.remove("selected");
+            if (selectedRow === row) selectedRow = null;
+          }
+        }, 300); // 遅延で誤動作防止
+      }
+
+      row.addEventListener("mouseleave", hideArrowsWithDelay);
+      arrowBtns.forEach((btn) => {
+        btn.addEventListener("mouseleave", hideArrowsWithDelay);
+
+        btn.addEventListener("click", (e) => {
+          console.log(`clicked`);
+          e.stopPropagation();
+
+          const tr = btn.closest("tr");
+          const tbody = tr.parentElement;
+
+          if (btn.classList.contains("arrow-up")) {
+            const prev = tr.previousElementSibling;
+            if (prev) {
+              tbody.insertBefore(tr, prev);
+              updateArrowVisibility(tr);
+              onSort({ item: tr });
+            }
+          }
+
+          if (btn.classList.contains("arrow-down")) {
+            const next = tr.nextElementSibling;
+            if (next) {
+              tbody.insertBefore(next, tr);
+              updateArrowVisibility(tr);
+              onSort({ item: tr });
+            }
+          }
+
+          // 右ボタン：登録済み→登録可能へ
+          if (btn.classList.contains("arrow-right")) {
+            const registerableTbody =
+              document.querySelector(".registerable-menu-container.active tbody") ||
+              document.querySelector(".registerable-menu-container tbody");
+            if (registerableTbody) {
+              registerableTbody.appendChild(tr);
+              updateArrowVisibility(tr);
+              onSort({ item: tr });
+            }
+          }
+
+          // 左ボタン：登録可能→登録済みへ
+          if (btn.classList.contains("arrow-left")) {
+            const registeredTbody =
+              document.querySelector(".registered-menu-container.active tbody") ||
+              document.querySelector(".registered-menu-container tbody");
+            if (registeredTbody) {
+              registeredTbody.appendChild(tr);
+              updateArrowVisibility(tr);
+              onSort({ item: tr });
+            }
+          }
+        });
       });
     });
   }
