@@ -12,41 +12,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
       button.classList.add("active");
       document.querySelector(`[data-panel="${targetTab}"]`).classList.add("active");
+
+      initSortableTable();
     });
   });
 
+  // D&Dによる並び替え
   let selectedRow = null;
-  const currentPanel = document.querySelector(".tab-panel.active");
-  const rows = currentPanel.querySelectorAll("tbody tr");
+  let registeredMenuSortable = null;
+  let registerableMenuSortable = null;
 
-  rows.forEach((row) => {
-    row.addEventListener("click", function (e) {
-      e.stopPropagation();
+  initSortableTable();
 
-      if (selectedRow === this) {
-        this.classList.remove("selected");
-        selectedRow = null;
+  updateArrowVisibility();
+
+  function initSortableTable() {
+    const currentPanel = document.querySelector(".tab-panel.active");
+    const registeredMenuTbody = currentPanel.querySelector(".registered-menu-container tbody");
+    const registerableMenuTbody = currentPanel.querySelector(".registerable-menu-container tbody");
+    const rows = currentPanel.querySelectorAll("tbody tr");
+
+    if (registeredMenuSortable) registeredMenuSortable.destroy();
+    if (registerableMenuSortable) registerableMenuSortable.destroy();
+
+    registeredMenuSortable = new Sortable(registeredMenuTbody, {
+      group: "shared",
+      animation: 300,
+      onSort: onSort,
+    });
+
+    registerableMenuSortable = new Sortable(registerableMenuTbody, {
+      group: "shared",
+      animation: 300,
+      onSort: onSort,
+    });
+
+    rows.forEach((row) => {
+      row.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        if (selectedRow === this) {
+          this.classList.remove("selected");
+          selectedRow = null;
+          updateArrowVisibility(this);
+          return;
+        }
+
+        if (selectedRow) {
+          selectedRow.classList.remove("selected");
+        }
+
+        this.classList.add("selected");
+        selectedRow = this;
         updateArrowVisibility(this);
-        return;
-      }
+      });
 
-      if (selectedRow) {
-        selectedRow.classList.remove("selected");
-      }
-
-      this.classList.add("selected");
-      selectedRow = this;
-      updateArrowVisibility(this);
+      row.addEventListener("mouseleave", function () {
+        if (selectedRow) {
+          clearArrowVisibility(selectedRow);
+          selectedRow.classList.remove("selected");
+          selectedRow = null;
+        }
+      });
     });
+  }
 
-    row.addEventListener("mouseleave", function () {
-      if (selectedRow) {
-        clearArrowVisibility(selectedRow);
-        selectedRow.classList.remove("selected");
-        selectedRow = null;
-      }
-    });
-  });
+  // ソート完了時の処理(ここでAPIコールなどを行う)
+  function onSort(e) {
+    console.log("Sorted:", e);
+  }
 
   function updateArrowVisibility(tr) {
     if (!selectedRow) return;
@@ -93,6 +127,4 @@ document.addEventListener("DOMContentLoaded", () => {
       btn?.classList.remove("arrow-btn-visible");
     });
   }
-
-  updateArrowVisibility();
 });
