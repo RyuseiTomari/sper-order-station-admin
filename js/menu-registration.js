@@ -65,23 +65,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (isRegisterableRow(selectedRow)) {
-      leftBtn.style.display = "flex";
+      leftBtn?.classList.add("arrow-btn-visible");
       return;
     }
 
     if (selectedIndex === 0) {
-      upBtn.style.display = "none";
+      upBtn?.classList.remove("arrow-btn-visible");
     } else {
-      upBtn.style.display = "flex";
+      upBtn?.classList.add("arrow-btn-visible");
     }
 
     if (selectedIndex === rows.length - 1) {
-      downBtn.style.display = "none";
+      downBtn?.classList.remove("arrow-btn-visible");
     } else {
-      downBtn.style.display = "flex";
+      downBtn?.classList.add("arrow-btn-visible");
     }
 
-    rightBtn.style.display = "flex";
+    rightBtn?.classList.add("arrow-btn-visible");
   }
 
   function isRegisterableRow(tr) {
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function clearArrowVisibility(row) {
     row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left").forEach((btn) => {
-      btn.style.display = "none";
+      btn?.classList.remove("arrow-btn-visible");
     });
   }
 

@@ -1640,7 +1640,7 @@ dialog::backdrop {
       table {
         tbody {
           tr {
-            transition: background-color 150ms ease-out;
+            transition: background-color 300ms ease-out;
             position: relative;
 
             &:hover {
@@ -1681,15 +1681,23 @@ dialog::backdrop {
             border: none;
             border-radius: 50%;
             cursor: pointer;
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             z-index: 20;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 300ms ease-out;
 
             img {
               width: 16px;
               height: 16px;
             }
+          }
+
+          .arrow-btn-visible {
+            opacity: 1;
+            pointer-events: auto;
           }
 
           .arrow-up {
