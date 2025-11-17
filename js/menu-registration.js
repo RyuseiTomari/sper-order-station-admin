@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
       this.classList.add("selected");
       selectedRow = this;
       updateArrowVisibility(this);
+    });
 
-      row.addEventListener("mouseleave", function () {
-        if (selectedRow) {
-          clearArrowVisibility(selectedRow);
-          selectedRow.classList.remove("selected");
-          selectedRow = null;
-        }
-      });
+    row.addEventListener("mouseleave", function () {
+      if (selectedRow) {
+        clearArrowVisibility(selectedRow);
+        selectedRow.classList.remove("selected");
+        selectedRow = null;
+      }
     });
   });
 

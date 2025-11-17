@@ -1641,7 +1641,6 @@ dialog::backdrop {
         tbody {
           tr {
             transition: background-color 300ms ease-out;
-            position: relative;
 
             &:hover {
               background-color: var(--btn-hover-background-color);
@@ -1658,6 +1657,7 @@ dialog::backdrop {
 
           td {
             padding: 10px 10px;
+            position: relative;
 
             &:first-child {
               width: 60px;
@@ -1702,13 +1702,13 @@ dialog::backdrop {
 
           .arrow-up {
             top: -30px;
-            left: 50%;
+            left: 0;
             transform: translate(-50%, -50%);
           }
 
           .arrow-down {
             bottom: -30px;
-            left: 50%;
+            left: 0;
             transform: translate(-50%, 50%);
           }
 
