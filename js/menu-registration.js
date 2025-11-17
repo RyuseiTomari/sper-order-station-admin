@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     rows.forEach((row) => {
-      let hoverTimer = null;
       const arrowBtns = row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left");
 
       row.addEventListener("click", function (e) {
@@ -63,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (selectedRow) {
           selectedRow.classList.remove("selected");
+          clearArrowVisibility(selectedRow);
         }
 
         this.classList.add("selected");
@@ -70,24 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
         updateArrowVisibility(this);
       });
 
-      function hideArrowsWithDelay() {
-        clearTimeout(hoverTimer);
-        hoverTimer = setTimeout(() => {
-          // マウスがtrにもボタンにも乗っていなければ非表示
-          if (!row.matches(":hover") && !Array.from(arrowBtns).some((btn) => btn.matches(":hover"))) {
-            clearArrowVisibility(row);
-            row.classList.remove("selected");
-            if (selectedRow === row) selectedRow = null;
-          }
-        }, 300); // 遅延で誤動作防止
-      }
-
-      row.addEventListener("mouseleave", hideArrowsWithDelay);
       arrowBtns.forEach((btn) => {
-        btn.addEventListener("mouseleave", hideArrowsWithDelay);
-
         btn.addEventListener("click", (e) => {
-          console.log(`clicked`);
           e.stopPropagation();
 
           const tr = btn.closest("tr");
@@ -189,4 +173,12 @@ document.addEventListener("DOMContentLoaded", () => {
       btn?.classList.remove("arrow-btn-visible");
     });
   }
+
+  document.addEventListener("click", function (e) {
+    if (selectedRow) {
+      clearArrowVisibility(selectedRow);
+      selectedRow.classList.remove("selected");
+      selectedRow = null;
+    }
+  });
 });
