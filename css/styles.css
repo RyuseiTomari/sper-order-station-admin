@@ -1698,16 +1698,22 @@ dialog::backdrop {
             transform: translate(-50%, -50%);
           }
 
+          .arrow-down {
+            bottom: -30px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+          }
+
           .arrow-right {
             top: 50%;
             right: -50px;
             transform: translateY(-50%);
           }
 
-          .arrow-down {
-            bottom: -30px;
-            left: 50%;
-            transform: translate(-50%, 50%);
+          .arrow-left {
+            top: 50%;
+            left: -50px;
+            transform: translateY(-50%);
           }
         }
       }

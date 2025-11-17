@@ -17,15 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let selectedRow = null;
   const currentPanel = document.querySelector(".tab-panel.active");
+  const rows = currentPanel.querySelectorAll("tbody tr");
 
-  const registeredMenu = currentPanel.querySelector(".registered-menu-container");
-  const registerableMenu = currentPanel.querySelector(".registerable-menu-container");
-
-  const registeredMenuRows = registeredMenu.querySelectorAll("tbody tr");
-  const registerableMenuRows = registerableMenu.querySelectorAll("tbody tr");
-
-  registeredMenuRows.forEach((row) => {
+  rows.forEach((row) => {
     row.addEventListener("click", function (e) {
+      e.stopPropagation();
+
       if (selectedRow === this) {
         this.classList.remove("selected");
         selectedRow = null;
@@ -40,6 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
       this.classList.add("selected");
       selectedRow = this;
       updateArrowVisibility(this);
+
+      row.addEventListener("mouseleave", function () {
+        if (selectedRow) {
+          clearArrowVisibility(selectedRow);
+          selectedRow.classList.remove("selected");
+          selectedRow = null;
+        }
+      });
     });
   });
 
@@ -50,8 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const rows = Array.from(tbody.querySelectorAll("tr"));
     const selectedIndex = rows.indexOf(selectedRow);
 
-    var upBtn = selectedRow.querySelector(".arrow-up");
-    var downBtn = selectedRow.querySelector(".arrow-down");
+    const upBtn = selectedRow.querySelector(".arrow-up");
+    const downBtn = selectedRow.querySelector(".arrow-down");
+    const rightBtn = selectedRow.querySelector(".arrow-right");
+    const leftBtn = selectedRow.querySelector(".arrow-left");
+
+    rows.forEach((row) => {
+      clearArrowVisibility(row);
+    });
+
+    if (isRegisterableRow(selectedRow)) {
+      leftBtn.style.display = "flex";
+      return;
+    }
 
     if (selectedIndex === 0) {
       upBtn.style.display = "none";
@@ -64,6 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       downBtn.style.display = "flex";
     }
+
+    rightBtn.style.display = "flex";
+  }
+
+  function isRegisterableRow(tr) {
+    return tr.closest(".registerable-menu-container") !== null;
+  }
+
+  function clearArrowVisibility(row) {
+    row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left").forEach((btn) => {
+      btn.style.display = "none";
+    });
   }
 
   updateArrowVisibility();
