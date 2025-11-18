@@ -445,37 +445,37 @@ body {
 
 .menu-large-btns {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .menu-large-btn {
   width: 100%;
   height: 30vh;
-  min-height: 150px;
+  min-height: 200px;
   max-height: 300px;
   font-size: 45px;
-  grid-column: span 6;
+  grid-column: span 1;
 }
 
 .menu-medium-btns {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .menu-medium-btn {
   width: 100%;
   height: 30vh;
-  min-height: 150px;
+  min-height: 200px;
   max-height: 250px;
   font-size: 34px;
-  grid-column: span 4;
+  grid-column: span 1;
 }
 
 .menu-small-btns {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -483,7 +483,6 @@ body {
   width: 188px;
   height: 150px;
   font-size: 20px;
-  grid-column: span 1;
 }
 
 .product-management-menu-btns {
@@ -1910,15 +1909,18 @@ dialog::backdrop {
 
   .menu-large-btn {
     font-size: 26px;
+    min-height: 150px;
     height: 150px;
   }
 
-  .menu-medium-btns {
+  .menu-medium-btns,
+  .product-management-menu-btns {
     gap: 10px;
   }
 
   .menu-medium-btn {
     font-size: 18px;
+    min-height: 150px;
     height: 150px;
   }
 
@@ -1998,11 +2000,18 @@ dialog::backdrop {
   }
 
   .menu-small-btns {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
   .menu-small-btn {
     width: auto;
     height: auto;
+  }
+
+  .product-management-menu-btns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
   }
 }
