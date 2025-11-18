@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
               tbody.insertBefore(tr, prev);
               tr.classList.remove("selected");
               clearArrowVisibility(tr);
+              updateArrowVisibility(tr);
               onSort({ item: tr });
             }
           }
@@ -115,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
               tbody.insertBefore(next, tr);
               tr.classList.remove("selected");
               clearArrowVisibility(tr);
+              updateArrowVisibility(tr);
               onSort({ item: tr });
             }
           }
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
               registerableTbody.appendChild(tr);
               tr.classList.remove("selected");
               clearArrowVisibility(tr);
+              updateArrowVisibility(tr);
               onSort({ item: tr });
             }
           }
@@ -141,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
               registeredTbody.appendChild(tr);
               tr.classList.remove("selected");
               clearArrowVisibility(tr);
+              updateArrowVisibility(tr);
               onSort({ item: tr });
             }
           }
@@ -149,12 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ソート完了時の処理(ここでAPIコールや重複制御などを行う)
+  // D&D ソート完了時の処理(ここでAPIコールや重複制御などを行う)
   function onSort(e) {
     console.log("Sorted:", e);
   }
 
-  // ドラッグ終了時の処理
+  // D&D ドラッグ終了時の処理
   function onEnd(e) {
     console.log("Drag Ended:", e);
     clearArrowVisibility(e.item);
