@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // D&Dによる並び替え
-  let selectedRow = null;
+  let selectedRowRegistered = null;
+  let selectedRowRegisterable = null;
+
   let registeredMenuSortable = null;
   let registerableMenuSortable = null;
 
   initSortableTable();
-
-  updateArrowVisibility();
 
   function initSortableTable() {
     const currentPanel = document.querySelector(".tab-panel.active");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     registerableMenuSortable = new Sortable(registerableMenuTbody, {
-      group: "shared",
+      group: { name: "shared", pull: "clone" },
       animation: 150,
       onSort: onSort,
     });
@@ -53,132 +53,160 @@ document.addEventListener("DOMContentLoaded", () => {
       row.addEventListener("click", function (e) {
         e.stopPropagation();
 
-        if (selectedRow === this) {
-          this.classList.remove("selected");
-          selectedRow = null;
-          updateArrowVisibility(this);
-          return;
-        }
+        const isRegisterable = isRegisterableRow(this);
 
-        if (selectedRow) {
-          selectedRow.classList.remove("selected");
-          clearArrowVisibility(selectedRow);
-        }
+        if (isRegisterable) {
+          if (selectedRowRegisterable === this) {
+            this.classList.remove("selected");
+            selectedRowRegisterable = null;
+            // updateArrowVisibility(this);
+            return;
+          }
 
-        this.classList.add("selected");
-        selectedRow = this;
-        updateArrowVisibility(this);
+          if (selectedRowRegisterable) {
+            selectedRowRegisterable.classList.remove("selected");
+            // clearArrowVisibility(selectedRowRegisterable);
+          }
+
+          this.classList.add("selected");
+          selectedRowRegisterable = this;
+          // updateArrowVisibility(this);
+        } else {
+          if (selectedRowRegistered === this) {
+            this.classList.remove("selected");
+            selectedRowRegistered = null;
+            // updateArrowVisibility(this);
+            return;
+          }
+
+          if (selectedRowRegistered) {
+            selectedRowRegistered.classList.remove("selected");
+            // clearArrowVisibility(selectedRowRegistered);
+          }
+
+          this.classList.add("selected");
+          selectedRowRegistered = this;
+          // updateArrowVisibility(this);
+        }
       });
 
-      arrowBtns.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
+      // arrowBtns.forEach((btn) => {
+      //   btn.addEventListener("click", (e) => {
+      //     e.stopPropagation();
 
-          const tr = btn.closest("tr");
-          const tbody = tr.parentElement;
+      //     const tr = btn.closest("tr");
+      //     const tbody = tr.parentElement;
 
-          if (btn.classList.contains("arrow-up")) {
-            const prev = tr.previousElementSibling;
-            if (prev) {
-              tbody.insertBefore(tr, prev);
-              updateArrowVisibility(tr);
-              onSort({ item: tr });
-            }
-          }
+      //     if (btn.classList.contains("arrow-up")) {
+      //       const prev = tr.previousElementSibling;
+      //       if (prev) {
+      //         tbody.insertBefore(tr, prev);
+      //         updateArrowVisibility(tr);
+      //         onSort({ item: tr });
+      //       }
+      //     }
 
-          if (btn.classList.contains("arrow-down")) {
-            const next = tr.nextElementSibling;
-            if (next) {
-              tbody.insertBefore(next, tr);
-              updateArrowVisibility(tr);
-              onSort({ item: tr });
-            }
-          }
+      //     if (btn.classList.contains("arrow-down")) {
+      //       const next = tr.nextElementSibling;
+      //       if (next) {
+      //         tbody.insertBefore(next, tr);
+      //         updateArrowVisibility(tr);
+      //         onSort({ item: tr });
+      //       }
+      //     }
 
-          // 右ボタン：登録済み→登録可能へ
-          if (btn.classList.contains("arrow-right")) {
-            const registerableTbody =
-              document.querySelector(".registerable-menu-container.active tbody") ||
-              document.querySelector(".registerable-menu-container tbody");
-            if (registerableTbody) {
-              registerableTbody.appendChild(tr);
-              updateArrowVisibility(tr);
-              onSort({ item: tr });
-            }
-          }
+      //     // 右ボタン：登録済み→登録可能へ
+      //     if (btn.classList.contains("arrow-right")) {
+      //       const registerableTbody =
+      //         document.querySelector(".registerable-menu-container.active tbody") ||
+      //         document.querySelector(".registerable-menu-container tbody");
+      //       if (registerableTbody) {
+      //         registerableTbody.appendChild(tr);
+      //         updateArrowVisibility(tr);
+      //         onSort({ item: tr });
+      //       }
+      //     }
 
-          // 左ボタン：登録可能→登録済みへ
-          if (btn.classList.contains("arrow-left")) {
-            const registeredTbody =
-              document.querySelector(".registered-menu-container.active tbody") ||
-              document.querySelector(".registered-menu-container tbody");
-            if (registeredTbody) {
-              registeredTbody.appendChild(tr);
-              updateArrowVisibility(tr);
-              onSort({ item: tr });
-            }
-          }
-        });
-      });
+      //     // 左ボタン：登録可能→登録済みへ
+      //     if (btn.classList.contains("arrow-left")) {
+      //       const registeredTbody =
+      //         document.querySelector(".registered-menu-container.active tbody") ||
+      //         document.querySelector(".registered-menu-container tbody");
+      //       if (registeredTbody) {
+      //         registeredTbody.appendChild(tr);
+      //         updateArrowVisibility(tr);
+      //         onSort({ item: tr });
+      //       }
+      //     }
+      //   });
+      // });
     });
   }
 
-  // ソート完了時の処理(ここでAPIコールなどを行う)
+  // ソート完了時の処理(ここでAPIコールや重複制御などを行う)
   function onSort(e) {
     console.log("Sorted:", e);
   }
 
-  function updateArrowVisibility(tr) {
-    if (!selectedRow) return;
+  // function updateArrowVisibility(tr) {
+  //   const isRegisterable = isRegisterableRow(tr);
+  //   const selectedRow = isRegisterable ? selectedRowRegisterable : selectedRowRegistered;
+  //   if (!selectedRow) return;
 
-    const tbody = tr.parentElement;
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-    const selectedIndex = rows.indexOf(selectedRow);
+  //   const tbody = tr.parentElement;
+  //   const rows = Array.from(tbody.querySelectorAll("tr"));
+  //   const selectedIndex = rows.indexOf(selectedRow);
 
-    const upBtn = selectedRow.querySelector(".arrow-up");
-    const downBtn = selectedRow.querySelector(".arrow-down");
-    const rightBtn = selectedRow.querySelector(".arrow-right");
-    const leftBtn = selectedRow.querySelector(".arrow-left");
+  //   const upBtn = selectedRow.querySelector(".arrow-up");
+  //   const downBtn = selectedRow.querySelector(".arrow-down");
+  //   const rightBtn = selectedRow.querySelector(".arrow-right");
+  //   const leftBtn = selectedRow.querySelector(".arrow-left");
 
-    rows.forEach((row) => {
-      clearArrowVisibility(row);
-    });
+  //   rows.forEach((row) => {
+  //     clearArrowVisibility(row);
+  //   });
 
-    if (isRegisterableRow(selectedRow)) {
-      leftBtn?.classList.add("arrow-btn-visible");
-      return;
-    }
+  //   if (isRegisterableRow(selectedRow)) {
+  //     leftBtn?.classList.add("arrow-btn-visible");
+  //     return;
+  //   }
 
-    if (selectedIndex === 0) {
-      upBtn?.classList.remove("arrow-btn-visible");
-    } else {
-      upBtn?.classList.add("arrow-btn-visible");
-    }
+  //   if (selectedIndex === 0) {
+  //     upBtn?.classList.remove("arrow-btn-visible");
+  //   } else {
+  //     upBtn?.classList.add("arrow-btn-visible");
+  //   }
 
-    if (selectedIndex === rows.length - 1) {
-      downBtn?.classList.remove("arrow-btn-visible");
-    } else {
-      downBtn?.classList.add("arrow-btn-visible");
-    }
+  //   if (selectedIndex === rows.length - 1) {
+  //     downBtn?.classList.remove("arrow-btn-visible");
+  //   } else {
+  //     downBtn?.classList.add("arrow-btn-visible");
+  //   }
 
-    rightBtn?.classList.add("arrow-btn-visible");
-  }
+  //   rightBtn?.classList.add("arrow-btn-visible");
+  // }
 
   function isRegisterableRow(tr) {
     return tr.closest(".registerable-menu-container") !== null;
   }
 
-  function clearArrowVisibility(row) {
-    row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left").forEach((btn) => {
-      btn?.classList.remove("arrow-btn-visible");
-    });
-  }
+  // function clearArrowVisibility(row) {
+  //   row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left").forEach((btn) => {
+  //     btn?.classList.remove("arrow-btn-visible");
+  //   });
+  // }
 
-  document.addEventListener("click", function (e) {
-    if (selectedRow) {
-      clearArrowVisibility(selectedRow);
-      selectedRow.classList.remove("selected");
-      selectedRow = null;
-    }
-  });
+  // document.addEventListener("click", function () {
+  //   if (selectedRowRegistered) {
+  //     selectedRowRegistered.classList.remove("selected");
+  //     clearArrowVisibility(selectedRowRegistered);
+  //     selectedRowRegistered = null;
+  //   }
+
+  //   if (selectedRowRegisterable) {
+  //     selectedRowRegisterable.classList.remove("selected");
+  //     clearArrowVisibility(selectedRowRegisterable);
+  //     selectedRowRegisterable = null;
+  //   }
+  // });
 });
