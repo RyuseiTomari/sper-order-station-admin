@@ -63,11 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ハンバーガーメニューの制御
   const hamburgerBtn = document.querySelector(".hamburger-btn");
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const sidebar = document.querySelector(".sidebar");
 
   hamburgerBtn?.addEventListener("click", () => {
-    console.log("hamburger clicked");
     hamburgerBtn.classList.toggle("active");
+    sidebar.classList.toggle("active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (sidebar.classList.contains("active") && !sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+      sidebar.classList.remove("active");
+      hamburgerBtn.classList.remove("active");
+    }
   });
 
   // 多言語入力切り替えスイッチの制御
