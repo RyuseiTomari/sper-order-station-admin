@@ -1965,11 +1965,6 @@ dialog::backdrop {
     display: flex;
   }
 
-  .main-content {
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
-
   .navbar {
     left: 0 !important;
     width: 100% !important;
@@ -1977,6 +1972,15 @@ dialog::backdrop {
     .site-logo {
       display: none;
     }
+  }
+
+  .main-content {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .content-area {
+    padding: 20px 10px;
   }
 
   .user-menu-container {
