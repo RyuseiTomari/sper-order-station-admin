@@ -188,7 +188,62 @@ body {
 
 .navbar-right-content {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 20px;
+}
+
+.hamburger-btn {
+  display: none;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-left: 1px solid var(--primary-border-color);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 20px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--key-color);
+    display: inline-block;
+    transition: all 300ms;
+    box-sizing: border-box;
+
+    &:nth-of-type(1) {
+      top: 25px;
+    }
+
+    &:nth-of-type(2) {
+      top: 35px;
+    }
+
+    &:nth-of-type(3) {
+      top: 45px;
+    }
+  }
+}
+
+.hamburger-btn.active {
+  span {
+    &:nth-of-type(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:nth-of-type(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+.hamburger-menu {
+  display: none;
 }
 
 .user-menu-container {
@@ -1884,13 +1939,29 @@ dialog::backdrop {
     display: none !important;
   }
 
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
   .main-content {
     width: 100% !important;
     margin-left: 0 !important;
   }
+
   .navbar {
     left: 0 !important;
     width: 100% !important;
+  }
+
+  .user-menu-container {
+    .navbar-user-btn {
+      width: 130px;
+      margin-right: 0;
+    }
   }
 
   .menu-btns {

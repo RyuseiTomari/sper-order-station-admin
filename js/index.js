@@ -61,6 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
     history.forward();
   });
 
+  // ハンバーガーメニューの制御
+  const hamburgerBtn = document.querySelector(".hamburger-btn");
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+  hamburgerBtn?.addEventListener("click", () => {
+    console.log("hamburger clicked");
+    hamburgerBtn.classList.toggle("active");
+  });
+
   // 多言語入力切り替えスイッチの制御
   const toggleSwitches = document.querySelectorAll(".form-toggle-switch");
   toggleSwitches.forEach((toggle) => {
