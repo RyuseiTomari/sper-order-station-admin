@@ -18,6 +18,8 @@
   --attention-color: #ad2c2e;
   --attention-color-hover: #931114;
   --placeholder-color: #a7a7a7;
+  --box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+  --box-shadow-row: 0px 4px 4px 0px rgba(61, 75, 101, 0.08);
 }
 
 body {
@@ -306,7 +308,7 @@ body {
     line-height: 1;
     outline: 1px solid var(--primary-border-color);
     border-radius: 5px;
-    box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+    box-shadow: var(--box-shadow);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -457,7 +459,7 @@ body {
   font-weight: 500;
   outline: 1px solid var(--btn-border-color);
   outline-offset: -1px;
-  box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+  box-shadow: var(--box-shadow);
   transition: background-color 150ms ease-out;
 
   &:hover {
@@ -1258,7 +1260,7 @@ input:disabled {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
-  box-shadow: 0px 4px 4px 0px rgba(61, 75, 101, 0.08);
+  box-shadow: var(--box-shadow-row);
   transition: background-color 150ms ease-out;
 
   &:hover {
@@ -1699,7 +1701,7 @@ dialog::backdrop {
 
           tr.selected {
             transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
-            box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+            box-shadow: var(--box-shadow);
             background-color: var(--secondary-background-color);
             z-index: 10;
           }
@@ -1800,7 +1802,7 @@ dialog::backdrop {
   max-width: 70%;
   min-width: 350px;
   border-radius: 15px;
-  box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+  box-shadow: var(--box-shadow);
   padding: 0;
 
   .dummy-focusable-content {
@@ -1947,7 +1949,7 @@ dialog::backdrop {
     right: 0;
     height: fit-content;
     border-bottom-left-radius: 15px;
-    box-shadow: 0px 4px 10px 0px rgba(61, 75, 101, 0.08);
+    box-shadow: var(--box-shadow);
 
     .site-logo {
       display: none;
