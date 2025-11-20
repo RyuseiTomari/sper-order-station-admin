@@ -59,7 +59,6 @@ body {
   position: fixed;
   left: 0;
   top: 70px;
-  z-index: 10;
   transition: opacity 300ms ease-out;
   overflow-y: auto;
 }
@@ -141,14 +140,12 @@ body {
 
 .navbar {
   position: fixed;
-  /* left: var(--sidebar-width); */
   left: 0;
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: calc(100% - var(--sidebar-width)); */
   width: 100%;
   height: 70px;
   background-color: var(--primary-background-color);
@@ -337,13 +334,12 @@ body {
 
 .content-area {
   width: 100%;
-  padding: 20px 25px;
+  padding: 20px 25px 90px 25px;
   margin-top: 70px;
   height: calc(100vh - 70px);
   overflow-y: auto;
   position: relative;
   flex-direction: column;
-  padding-bottom: 90px;
 }
 
 .content-area-header {
@@ -850,6 +846,7 @@ input:disabled {
   font-weight: 400;
   line-height: 1.25;
   text-decoration: underline;
+  text-underline-offset: 2px;
   cursor: pointer;
 }
 
@@ -1172,7 +1169,7 @@ input:disabled {
   background-color: var(--primary-background-color);
   position: fixed;
   bottom: 0;
-  left: 188px;
+  left: var(--sidebar-width);
   right: 0;
   z-index: 20;
 }
@@ -1233,6 +1230,13 @@ input:disabled {
 .list-value-name {
   width: calc(100% / 3);
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .list-label-action,
@@ -1264,6 +1268,7 @@ input:disabled {
   line-height: 1.25;
   box-shadow: var(--box-shadow-row);
   transition: background-color 150ms ease-out;
+  overflow: hidden;
 
   &:hover {
     background-color: var(--btn-hover-background-color);
@@ -1332,7 +1337,7 @@ td {
   opacity: 0 !important;
 }
 
-.horizontal-input-container {
+.input-container-row {
   display: flex;
   align-items: center;
   width: 100%;
@@ -1416,6 +1421,13 @@ td {
   flex-direction: column;
   gap: 30px;
   flex: 4;
+}
+
+.area-layout-input-container-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
 }
 
 .area-layout-grid-container {
@@ -1959,6 +1971,7 @@ dialog::backdrop {
     height: auto;
     max-height: 100vh;
     overflow-y: auto;
+    z-index: 10;
   }
 
   .hamburger-btn {
@@ -1980,7 +1993,7 @@ dialog::backdrop {
   }
 
   .content-area {
-    padding: 20px 10px;
+    padding: 20px 10px 90px 10px;
   }
 
   .user-menu-container {
@@ -2049,6 +2062,54 @@ dialog::backdrop {
   .accent-btn {
     padding: 12px 10px;
   }
+
+  .search {
+    margin-top: 20px;
+  }
+
+  .input-container-row {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .input-container {
+      width: 100%;
+    }
+  }
+
+  .input-container > .input-label-container {
+    left: 10px;
+  }
+
+  .input-container input[type="text"],
+  .input-container input[type="time"],
+  .input-category input[type="text"],
+  .input-container input[type="number"],
+  .input-container select {
+    height: 58px;
+    font-size: 16px;
+    padding: 13px 10px 11px 15px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  .input-select-container::after {
+    width: 34px;
+    height: 34px;
+  }
+
+  .list-body-row {
+    height: 58px;
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+
+  .footer {
+    width: 100%;
+    left: 0;
+  }
+
   #tips-dialog {
     .dialog-header {
       padding: 17px 15px;
