@@ -1190,11 +1190,10 @@ input:disabled {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin-left: 25px;
-  margin-right: 25px;
+  padding: 15px 25px;
 
   .accent-btn {
-    width: 150px !important;
+    width: 120px;
   }
 }
 
@@ -2078,6 +2077,10 @@ dialog::backdrop {
 
   .input-container > .input-label-container {
     left: 10px;
+
+    label {
+      font-size: 14px;
+    }
   }
 
   .input-container input[type="text"],
@@ -2106,8 +2109,16 @@ dialog::backdrop {
   }
 
   .footer {
+    height: 60px;
     width: 100%;
     left: 0;
+  }
+
+  .footer-left {
+  }
+
+  .footer-right {
+    padding: 10px;
   }
 
   #tips-dialog {
