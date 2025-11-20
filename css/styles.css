@@ -374,7 +374,7 @@ body {
 
 .primary-btn {
   height: 40px;
-  width: fit-content;
+  min-width: fit-content;
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
   background-color: var(--key-color);
@@ -395,7 +395,7 @@ body {
 
 .attention-btn {
   height: 40px;
-  width: fit-content;
+  min-width: fit-content;
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
   background-color: var(--attention-color);
@@ -418,7 +418,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  min-width: fit-content;
   height: 40px;
   border-radius: 5px;
   padding: 12px 23px;
@@ -1165,7 +1165,6 @@ input:disabled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto;
   background-color: var(--primary-background-color);
   position: fixed;
   bottom: 0;
@@ -1179,17 +1178,17 @@ input:disabled {
   align-items: center;
   justify-content: flex-start;
   flex: 1;
+  flex-wrap: wrap;
   gap: 15px;
   border-right: 1px solid var(--primary-border-color);
   height: 100%;
-  margin-left: 25px;
+  padding: 15px 25px;
 }
 
 .footer-right {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   padding: 15px 25px;
 
   .accent-btn {
@@ -2115,6 +2114,8 @@ dialog::backdrop {
   }
 
   .footer-left {
+    padding: 10px;
+    gap: 10px;
   }
 
   .footer-right {
