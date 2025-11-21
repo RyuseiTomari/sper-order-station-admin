@@ -141,6 +141,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // 入力ヒントアイコンの制御
+  const hintIcons = document.querySelectorAll(".input-hint-icon");
+  hintIcons.forEach((icon) => {
+    icon.addEventListener("click", (e) => {
+      e.preventDefault();
+      const dialog = document.getElementById("tips-dialog");
+      if (dialog) {
+        dialog.showModal();
+      }
+    });
+  });
+
   // タイアログの閉じるボタン制御
   const tipsDialog = document.getElementById("tips-dialog");
   const closeBtn = tipsDialog?.querySelector(".dialog-close-btn");
