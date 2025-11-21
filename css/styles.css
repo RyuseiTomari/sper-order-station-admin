@@ -592,12 +592,6 @@ body {
   }
 }
 
-.input-container label img {
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
-}
-
 input:disabled {
   background-color: var(--primary-background-color) !important;
   cursor: not-allowed;
