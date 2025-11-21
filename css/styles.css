@@ -1151,7 +1151,7 @@ input:disabled {
   color: var(--key-color);
   font-size: 16px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .input-checkbox-container label img {
@@ -1372,13 +1372,14 @@ td {
 }
 
 .time-selection-input-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 20px;
 }
 
 .time-selection-input {
-  grid-column: span 3;
+  width: 100%;
 }
 
 .weekdays-checkbox-container {
@@ -1396,6 +1397,10 @@ td {
   display: flex;
   align-items: center;
   gap: 20px;
+
+  .input-container {
+    width: 100%;
+  }
 }
 
 .table-management-container {
@@ -2097,9 +2102,65 @@ dialog::backdrop {
     }
   }
 
+  .input-container textarea {
+    font-size: 16px;
+    padding: 20px 15px;
+  }
+
   .input-select-container::after {
     width: 34px;
     height: 34px;
+  }
+
+  .input-container .number-stepper button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .time-selection-input-container {
+    flex-direction: column;
+  }
+
+  .input-hierarchy-children {
+    margin-left: 0;
+
+    .input-hierarchy-child {
+      margin-left: 25px;
+
+      &:first-child:before {
+        width: 5px;
+        left: -10px;
+      }
+    }
+  }
+
+  .input-hierarchy-children-checkboxes {
+    margin-left: 25px;
+
+    .input-hierarchy-child-checkbox {
+      &:before {
+        width: 5px;
+        left: -10px;
+      }
+    }
+  }
+
+  .input-hierarchy-child {
+    margin-left: 25px;
+
+    &:has(input[type="checkbox"])::before {
+      width: 5px;
+      left: -10px;
+    }
+
+    &:has(input[type="text"]) {
+      margin-left: 45px;
+
+      ::before {
+        width: 20px;
+        left: -10px;
+      }
+    }
   }
 
   .list-body-row {
