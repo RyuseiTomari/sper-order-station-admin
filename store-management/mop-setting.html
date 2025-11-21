@@ -128,7 +128,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -146,7 +146,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="newMemberPoints" id="newMemberPoints" value="200.00" />
@@ -158,7 +158,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="reviewPoints" id="reviewPoints" value="20.00" />
@@ -170,7 +170,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="visitingPoints" id="visitingPoints" value="0.00" />
@@ -182,7 +182,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="currencyFormat" id="currencyFormat" value="¥ {0:#,0}" />
@@ -194,7 +194,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="input-select-container">
@@ -212,7 +212,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="urlPassword" id="urlPassword" />
@@ -224,7 +224,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="orderStaffCode" id="orderStaffCode" value="99" />
@@ -236,7 +236,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="partnerWebsite" id="partnerWebsite" value="#" />
@@ -249,7 +249,7 @@
                 <img
                   src="/images/input-hint-icon.png"
                   alt="input-hint-icon"
-                  onclick="document.getElementById('tips-dialog').showModal()"
+                  onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 />
               </div>
               <div class="input-multi-lang-input-container">
@@ -302,13 +302,19 @@
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="cloudOrderEnabled" id="cloudOrderEnabled" />
                   <label for="cloudOrderEnabled"
-                    >クラウドオーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >クラウドオーダーを有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-checkbox-container input-hierarchy-child">
                   <input type="checkbox" name="orderAdditionEnabled" id="orderAdditionEnabled" />
                   <label for="orderAdditionEnabled"
-                    >オーダーを追加する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >オーダーを追加する<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
               </div>
@@ -316,7 +322,10 @@
               <div class="input-checkbox-container">
                 <input type="checkbox" name="receiptQrCodeEnabled" id="receiptQrCodeEnabled" />
                 <label for="receiptQrCodeEnabled"
-                  >会計用のQRコードを印刷する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >会計用のQRコードを印刷する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -326,7 +335,7 @@
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <textarea name="customerSlipBottomCommercial" id="customerSlipBottomCommercial" rows="5">
@@ -344,7 +353,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="mqttServerNameIp" id="mqttServerNameIp" value="www.mobileorderonline.com" />
@@ -356,7 +365,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="mqttServerPort" id="mqttServerPort" value="1883" />
@@ -368,7 +377,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="mqttClientUsername" id="mqttClientUsername" value="sper01" />
@@ -380,7 +389,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="mqttClientPassword" id="mqttClientPassword" value="sper01" />
@@ -389,84 +398,120 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="simplifiedLoginEnabled" id="simplifiedLoginEnabled" />
                 <label for="simplifiedLoginEnabled"
-                  >簡易ログインを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >簡易ログインを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="useQrCodesForMemberInfo" id="useQrCodesForMemberInfo" />
                 <label for="useQrCodesForMemberInfo"
-                  >会員情報でQRを使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >会員情報でQRを使用する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="useQrCodeForMemberCodeOnly" id="useQrCodeForMemberCodeOnly" />
                 <label for="useQrCodeForMemberCodeOnly"
-                  >会員コードのみのQRを使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >会員コードのみのQRを使用する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="nameRequired" id="nameRequired" />
                 <label for="nameRequired"
-                  >名前必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >名前必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="zipCodeRequired" id="zipCodeRequired" />
                 <label for="zipCodeRequired"
-                  >郵便番号必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >郵便番号必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="addressRequired" id="addressRequired" />
                 <label for="addressRequired"
-                  >住所必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >住所必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="phoneNumberRequired" id="phoneNumberRequired" />
                 <label for="phoneNumberRequired"
-                  >電話番号必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >電話番号必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="emailRequired" id="emailRequired" />
                 <label for="emailRequired"
-                  >メール必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >メール必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="dateOfBirthRequired" id="dateOfBirthRequired" />
                 <label for="dateOfBirthRequired"
-                  >生年月日必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >生年月日必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="terminateService" id="terminateService" />
                 <label for="terminateService"
-                  >サービスを停止する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >サービスを停止する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="prepaymentEnable" id="prepaymentEnable" />
                 <label for="prepaymentEnable"
-                  >前払いを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >前払いを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="creditCardPaymentsEnable" id="creditCardPaymentsEnable" />
                 <label for="creditCardPaymentsEnable"
-                  >クレジット決済を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >クレジット決済を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -476,7 +521,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="input-select-container">
@@ -494,7 +539,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="creditCardPaymentSiteId" id="creditCardPaymentSiteId" value="0" />
@@ -506,7 +551,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="creditCardPaymentPassword" id="creditCardPaymentPassword" value="0" />
@@ -518,7 +563,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="creditCardPaymentApiServer" id="creditCardPaymentApiServer" value="" />
@@ -532,7 +577,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -554,14 +599,20 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="paymentMethodSelectionEnable" id="paymentMethodSelectionEnable" />
                 <label for="paymentMethodSelectionEnable"
-                  >支払い方法の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >支払い方法の選択を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="pointPaymentsEnable" id="pointPaymentsEnable" />
                 <label for="pointPaymentsEnable"
-                  >ポイント払いを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >ポイント払いを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -569,7 +620,10 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="lineFriendsRequired" id="lineFriendsRequired" />
                   <label for="lineFriendsRequired"
-                    >LINE友だち必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >LINE友だち必須<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-hierarchy-child">
@@ -579,7 +633,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="text" name="lineFriendsAddUrl" id="lineFriendsAddUrl" value="" />
@@ -593,7 +647,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="lineLiffId" id="lineLiffId" value="" />
@@ -605,7 +659,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="lineChannelId" id="lineChannelId" value="" />
@@ -618,7 +672,7 @@ www.sper.jp
                     <img
                       src="/images/input-hint-icon.png"
                       alt="input-hint-icon"
-                      onclick="document.getElementById('tips-dialog').showModal()"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     />
                   </div>
                   <input type="text" name="lineNotifyAccessToken" id="lineNotifyAccessToken" value="" />
@@ -632,7 +686,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="lineMessagingApiAccessToken" id="lineMessagingApiAccessToken" value="" />
@@ -645,7 +699,7 @@ www.sper.jp
                     <img
                       src="/images/input-hint-icon.png"
                       alt="input-hint-icon"
-                      onclick="document.getElementById('tips-dialog').showModal()"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     />
                   </div>
                   <input type="text" name="lineOrderReceptionMessage" id="lineOrderReceptionMessage" value="" />
@@ -659,7 +713,10 @@ www.sper.jp
                       id="lineOrderReceptionMessageAfterPayment"
                     />
                     <label for="lineOrderReceptionMessageAfterPayment"
-                      >会計後<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >会計後<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                 </div>
@@ -672,7 +729,7 @@ www.sper.jp
                     <img
                       src="/images/input-hint-icon.png"
                       alt="input-hint-icon"
-                      onclick="document.getElementById('tips-dialog').showModal()"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     />
                   </div>
                   <input type="text" name="lineOrderCompletionMessage" id="lineOrderCompletionMessage" value="" />
@@ -686,7 +743,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="countryCode" id="countryCode" value="JP" />
@@ -698,7 +755,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -716,7 +773,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -731,7 +788,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="productImageDisabled" id="productImageDisabled" />
                 <label for="productImageDisabled"
-                  >商品写真を無効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >商品写真を無効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -741,7 +801,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="welcomeCode" id="welcomeCode" value="" />
@@ -750,14 +810,20 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="membershipRequired" id="membershipRequired" />
                 <label for="membershipRequired"
-                  >会員登録必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >会員登録必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="orderTypeEnabled" id="orderTypeEnabled" />
                 <label for="orderTypeEnabled"
-                  >オーダー種類を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >オーダー種類を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -767,13 +833,17 @@ www.sper.jp
                   >カテゴリーをフォルダとして扱うことを有効にする<img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="twoColumnDisplayEnabled" id="twoColumnDisplayEnabled" />
                 <label for="twoColumnDisplayEnabled"
-                  >2列表示を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >2列表示を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -781,13 +851,19 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="productInfoEnabled" id="productInfoEnabled" />
                   <label for="productInfoEnabled"
-                    >商品情報を表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >商品情報を表示する<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-checkbox-container input-hierarchy-child">
                   <input type="checkbox" name="displayUnderProductName" id="displayUnderProductName" />
                   <label for="displayUnderProductName"
-                    >商品名称の下に表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >商品名称の下に表示<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
               </div>
@@ -799,14 +875,20 @@ www.sper.jp
                   id="setProductTwoColumnDisplayEnabled"
                 />
                 <label for="setProductTwoColumnDisplayEnabled"
-                  >セット商品の2列表示を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >セット商品の2列表示を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="displayTableEnabled" id="displayTableEnabled" />
                 <label for="displayTableEnabled"
-                  >テーブルを表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >テーブルを表示する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -814,14 +896,20 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="callEnabled" id="callEnabled" />
                   <label for="callEnabled"
-                    >呼出を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >呼出を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-hierarchy-children">
                   <div class="input-checkbox-container input-hierarchy-child">
                     <input type="checkbox" name="newOrderCallEnabled" id="newOrderCallEnabled" />
                     <label for="newOrderCallEnabled"
-                      >新規オーダー時も呼出を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >新規オーダー時も呼出を有効にする<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                   <div class="input-container input-hierarchy-child">
@@ -830,7 +918,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="text" name="callProductCode" id="callProductCode" value="" />
@@ -841,14 +929,20 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="startPageEnabled" id="startPageEnabled" />
                 <label for="startPageEnabled"
-                  >スタートページを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >スタートページを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="newOrderEnabled" id="newOrderEnabled" />
                 <label for="newOrderEnabled"
-                  >新規オーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >新規オーダーを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -858,6 +952,7 @@ www.sper.jp
                   >新規オーダーまたは追加オーダーの選択を有効にする<img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -867,7 +962,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="newOrderTableId" id="newOrderTableId" value="0" />
@@ -876,14 +971,20 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="tableIdRequired" id="tableIdRequired" />
                 <label for="tableIdRequired"
-                  >テーブルID必須<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >テーブルID必須<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="nameInputEnabled" id="nameInputEnabled" />
                 <label for="nameInputEnabled"
-                  >名前入力欄<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >名前入力欄<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -893,6 +994,7 @@ www.sper.jp
                   >オーダー種類を最初に選択することを有効にする<img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -902,7 +1004,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="storeEntryProductCode" id="storeEntryProductCode" value="" />
@@ -911,35 +1013,50 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryPersonCountEnabled" id="storeEntryPersonCountEnabled" />
                 <label for="storeEntryPersonCountEnabled"
-                  >入店人数を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >入店人数を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryPersonCountDisplayType" id="storeEntryPersonCountDisplayType" />
                 <label for="storeEntryPersonCountDisplayType"
-                  >人数を「大人・子供」表示にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >人数を「大人・子供」表示にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryRoomSearchEnabled" id="storeEntryRoomSearchEnabled" />
                 <label for="storeEntryRoomSearchEnabled"
-                  >入店部屋検索を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >入店部屋検索を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryTableStatusEnabled" id="storeEntryTableStatusEnabled" />
                 <label for="storeEntryTableStatusEnabled"
-                  >入店テーブル状況表示を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >入店テーブル状況表示を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryOutOfStockEnabled" id="storeEntryOutOfStockEnabled" />
                 <label for="storeEntryOutOfStockEnabled"
-                  >品切れを非表示にすることを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >品切れを非表示にすることを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -950,7 +1067,10 @@ www.sper.jp
                   id="storeEntryOutOfStockHighlightEnabled"
                 />
                 <label for="storeEntryOutOfStockHighlightEnabled"
-                  >品切れを強調して表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >品切れを強調して表示する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -961,7 +1081,10 @@ www.sper.jp
                   id="storeEntryHierarchyItemCountEnabled"
                 />
                 <label for="storeEntryHierarchyItemCountEnabled"
-                  >階層商品の数量カウンターを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >階層商品の数量カウンターを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -975,6 +1098,7 @@ www.sper.jp
                   >階層商品の数量カウンター上のキャプションを無効にする<img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -985,14 +1109,20 @@ www.sper.jp
                   id="storeEntryPhoneNumberInputEnabled"
                 />
                 <label for="storeEntryPhoneNumberInputEnabled"
-                  >電話番号の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >電話番号の入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryZipCodeInputEnabled" id="storeEntryZipCodeInputEnabled" />
                 <label for="storeEntryZipCodeInputEnabled"
-                  >郵便番号の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >郵便番号の入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -1002,7 +1132,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="deliveryAreaZipCode" id="deliveryAreaZipCode" value="" />
@@ -1011,7 +1141,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="storeEntryAddressInputEnabled" id="storeEntryAddressInputEnabled" />
                 <label for="storeEntryAddressInputEnabled"
-                  >住所の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >住所の入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -1021,7 +1154,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="deliveryAreaAddress" id="deliveryAreaAddress" value="" />
@@ -1033,7 +1166,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="deliveryAreaDistance" id="deliveryAreaDistance" value="" />
@@ -1045,7 +1178,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="googleMapsApiKey" id="googleMapsApiKey" value="" />
@@ -1055,13 +1188,19 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="emailAddressInputEnabled" id="emailAddressInputEnabled" />
                   <label for="emailAddressInputEnabled"
-                    >メールアドレスの入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >メールアドレスの入力を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-checkbox-container input-hierarchy-child">
                   <input type="checkbox" name="orderCompletionEmailEnabled" id="orderCompletionEmailEnabled" />
                   <label for="orderCompletionEmailEnabled"
-                    >注文完了メールを送信する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >注文完了メールを送信する<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
               </div>
@@ -1072,7 +1211,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="emailHostName" id="emailHostName" value="" />
@@ -1084,7 +1223,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="emailHostPort" id="emailHostPort" value="" />
@@ -1096,7 +1235,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="emailUserName" id="emailUserName" value="" />
@@ -1108,7 +1247,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="emailUserPassword" id="emailUserPassword" value="" />
@@ -1120,7 +1259,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="emailAddress" id="emailAddress" value="" />
@@ -1132,7 +1271,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -1153,21 +1292,30 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="customOrdersQuantityInputEnabled" id="customOrdersQuantityInputEnabled" />
                 <label for="customOrdersQuantityInputEnabled"
-                  >オーダー商品の数量入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >オーダー商品の数量入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="displayOrderCountAtTheTop" id="displayOrderCountAtTheTop" />
                 <label for="displayOrderCountAtTheTop"
-                  >注文数を上部に表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >注文数を上部に表示する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="quantityChangeEnabled" id="quantityChangeEnabled" />
                 <label for="quantityChangeEnabled"
-                  >注文確認画面で数量変更を使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >注文確認画面で数量変更を使用する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -1177,7 +1325,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="availableDaysForBooking" id="availableDaysForBooking" value="0" />
@@ -1187,13 +1335,19 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="emailAddressInputEnabled2" id="emailAddressInputEnabled2" />
                   <label for="emailAddressInputEnabled2"
-                    >メールアドレスの入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >メールアドレスの入力を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-checkbox-container input-hierarchy-child">
                   <input type="checkbox" name="orderCompletionEmailEnabled2" id="orderCompletionEmailEnabled2" />
                   <label for="orderCompletionEmailEnabled2"
-                    >注文完了メールを送信する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >注文完了メールを送信する<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
               </div>
@@ -1204,7 +1358,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -1229,21 +1383,30 @@ www.sper.jp
                   id="customOrdersQuantityInputEnabled2"
                 />
                 <label for="customOrdersQuantityInputEnabled2"
-                  >オーダー商品の数量入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >オーダー商品の数量入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="displayOrderCountAtTheTop2" id="displayOrderCountAtTheTop2" />
                 <label for="displayOrderCountAtTheTop2"
-                  >注文数を上部に表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >注文数を上部に表示する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="quantityChangeEnabled2" id="quantityChangeEnabled2" />
                 <label for="quantityChangeEnabled2"
-                  >注文確認画面で数量変更を使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >注文確認画面で数量変更を使用する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -1253,7 +1416,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="availableDaysForBooking2" id="availableDaysForBooking2" value="0" />
@@ -1263,13 +1426,19 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="timeSelectionEnabled" id="timeSelectionEnabled" />
                   <label for="timeSelectionEnabled"
-                    >時間の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >時間の選択を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-checkbox-container input-hierarchy-child">
                   <input type="checkbox" name="highlightTimeSelection" id="highlightTimeSelection" />
                   <label for="highlightTimeSelection"
-                    >時間選択を強調表示する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >時間選択を強調表示する<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
               </div>
@@ -1280,7 +1449,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -1306,7 +1475,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
 
@@ -1317,7 +1486,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="startTime1" id="startTime1" value="" />
@@ -1329,7 +1498,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="endTime1" id="endTime1" value="" />
@@ -1341,7 +1510,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <div class="number-input-container">
@@ -1359,7 +1528,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <div class="number-input-container">
@@ -1381,7 +1550,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="time-selection-input-container">
@@ -1391,7 +1560,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="startTime2" id="startTime2" value="" />
@@ -1403,7 +1572,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="endTime2" id="endTime2" value="" />
@@ -1415,7 +1584,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <div class="number-input-container">
@@ -1433,7 +1602,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <div class="number-input-container">
@@ -1455,7 +1624,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
 
@@ -1466,7 +1635,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="startTime3" id="startTime3" value="" />
@@ -1478,7 +1647,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="endTime3" id="endTime3" value="" />
@@ -1490,7 +1659,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <div class="number-input-container">
@@ -1508,7 +1677,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <div class="number-input-container">
@@ -1530,7 +1699,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="weekdays-checkbox-container">
@@ -1570,7 +1739,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="serviceUsageTimeEnabled" id="serviceUsageTimeEnabled" />
                 <label for="serviceUsageTimeEnabled"
-                  >サービス利用時間を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >サービス利用時間を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
             </div>
@@ -1585,7 +1757,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeMonday1" id="serviceUsageStartTimeMonday1" value="" />
@@ -1596,7 +1768,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeMonday1" id="serviceUsageEndTimeMonday1" value="" />
@@ -1610,7 +1782,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeMonday2" id="serviceUsageStartTimeMonday2" value="" />
@@ -1621,7 +1793,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeMonday2" id="serviceUsageEndTimeMonday2" value="" />
@@ -1635,7 +1807,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeMonday3" id="serviceUsageStartTimeMonday3" value="" />
@@ -1646,7 +1818,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeMonday3" id="serviceUsageEndTimeMonday3" value="" />
@@ -1665,7 +1837,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1681,7 +1853,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeTuesday1" id="serviceUsageEndTimeTuesday1" value="" />
@@ -1695,7 +1867,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1711,7 +1883,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeTuesday2" id="serviceUsageEndTimeTuesday2" value="" />
@@ -1725,7 +1897,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1741,7 +1913,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeTuesday3" id="serviceUsageEndTimeTuesday3" value="" />
@@ -1760,7 +1932,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1776,7 +1948,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1795,7 +1967,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1811,7 +1983,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1830,7 +2002,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1846,7 +2018,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1870,7 +2042,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1886,7 +2058,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeThursday1" id="serviceUsageEndTimeThursday1" value="" />
@@ -1900,7 +2072,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1916,7 +2088,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeThursday2" id="serviceUsageEndTimeThursday2" value="" />
@@ -1930,7 +2102,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -1946,7 +2118,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeThursday3" id="serviceUsageEndTimeThursday3" value="" />
@@ -1965,7 +2137,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeFriday1" id="serviceUsageStartTimeFriday1" value="" />
@@ -1976,7 +2148,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeFriday1" id="serviceUsageEndTimeFriday1" value="" />
@@ -1990,7 +2162,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeFriday2" id="serviceUsageStartTimeFriday2" value="" />
@@ -2001,7 +2173,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeFriday2" id="serviceUsageEndTimeFriday2" value="" />
@@ -2015,7 +2187,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeFriday3" id="serviceUsageStartTimeFriday3" value="" />
@@ -2026,7 +2198,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeFriday3" id="serviceUsageEndTimeFriday3" value="" />
@@ -2045,7 +2217,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -2061,7 +2233,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeSaturday1" id="serviceUsageEndTimeSaturday1" value="" />
@@ -2075,7 +2247,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -2091,7 +2263,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeSaturday2" id="serviceUsageEndTimeSaturday2" value="" />
@@ -2105,7 +2277,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input
@@ -2121,7 +2293,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeSaturday3" id="serviceUsageEndTimeSaturday3" value="" />
@@ -2140,7 +2312,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeSunday1" id="serviceUsageStartTimeSunday1" value="" />
@@ -2151,7 +2323,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeSunday1" id="serviceUsageEndTimeSunday1" value="" />
@@ -2165,7 +2337,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeSunday2" id="serviceUsageStartTimeSunday2" value="" />
@@ -2176,7 +2348,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeSunday2" id="serviceUsageEndTimeSunday2" value="" />
@@ -2190,7 +2362,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageStartTimeSunday3" id="serviceUsageStartTimeSunday3" value="" />
@@ -2201,7 +2373,7 @@ www.sper.jp
                       <img
                         src="/images/input-hint-icon.png"
                         alt="input-hint-icon"
-                        onclick="document.getElementById('tips-dialog').showModal()"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                       />
                     </div>
                     <input type="time" name="serviceUsageEndTimeSunday3" id="serviceUsageEndTimeSunday3" value="" />
@@ -2215,26 +2387,38 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="orderHistoryEnabled" id="orderHistoryEnabled" />
                   <label for="orderHistoryEnabled"
-                    >注文履歴を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >注文履歴を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-hierarchy-children-checkboxes">
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="hideEmptyOrderHistory" id="hideEmptyOrderHistory" />
                     <label for="hideEmptyOrderHistory"
-                      >注文履歴の0件商品を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >注文履歴の0件商品を非表示<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="hidePaymentBarcode" id="hidePaymentBarcode" />
                     <label for="hidePaymentBarcode"
-                      >注文履歴の会計用バーコードを非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >注文履歴の会計用バーコードを非表示<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="hideFirstOrderOnHistory" id="hideFirstOrderOnHistory" />
                     <label for="hideFirstOrderOnHistory"
-                      >注文履歴に最初の注文を表示しない<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >注文履歴に最初の注文を表示しない<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                 </div>
@@ -2247,7 +2431,10 @@ www.sper.jp
                   id="hideOrderTotalInCompletionMessage"
                 />
                 <label for="hideOrderTotalInCompletionMessage"
-                  >注文完了メッセージの合計金額を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >注文完了メッセージの合計金額を非表示<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2258,14 +2445,20 @@ www.sper.jp
                   id="hideOrderTotalInConfirmationMessage"
                 />
                 <label for="hideOrderTotalInConfirmationMessage"
-                  >注文確認画面の注文合計を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >注文確認画面の注文合計を非表示<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="hideHierarchicalProductImages" id="hideHierarchicalProductImages" />
                 <label for="hideHierarchicalProductImages"
-                  >階層商品の画像を非表示<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >階層商品の画像を非表示<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2275,7 +2468,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="orderCompletionMessage" id="orderCompletionMessage" value="" />
@@ -2287,7 +2480,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="number-input-container">
@@ -2308,7 +2501,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="paymentBarcodeButtonEnabled" id="paymentBarcodeButtonEnabled" />
                 <label for="paymentBarcodeButtonEnabled"
-                  >会計用バーコードボタンを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >会計用バーコードボタンを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2318,7 +2514,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input type="text" name="paymentBarcodeMessage" id="paymentBarcodeMessage" value="" />
@@ -2327,7 +2523,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="oneTimeOrderEnabled" id="oneTimeOrderEnabled" />
                 <label for="oneTimeOrderEnabled"
-                  >ワンタイムオーダーを有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >ワンタイムオーダーを有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2341,20 +2540,27 @@ www.sper.jp
                   >(予約注文)オーダー種類を最初に選択することを有効にする<img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="orderTypeFirstEnabled" id="orderTypeFirstEnabled" />
                 <label for="orderTypeFirstEnabled"
-                  >(予約注文)オーダー種類を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >(予約注文)オーダー種類を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
               <div class="input-checkbox-container">
                 <input type="checkbox" name="reservationNameInputEnabled" id="reservationNameInputEnabled" />
                 <label for="reservationNameInputEnabled"
-                  >(予約注文)名前入力欄<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >(予約注文)名前入力欄<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2365,7 +2571,10 @@ www.sper.jp
                   id="reservationEntryPhoneNumberInputEnabled"
                 />
                 <label for="reservationEntryPhoneNumberInputEnabled"
-                  >(予約注文)電話番号の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >(予約注文)電話番号の入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2376,7 +2585,10 @@ www.sper.jp
                   id="reservationEntryAddressInputEnabled"
                 />
                 <label for="reservationEntryAddressInputEnabled"
-                  >(予約注文)住所の入力を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >(予約注文)住所の入力を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2391,6 +2603,7 @@ www.sper.jp
                     >(予約注文)メールアドレスの入力を有効にする<img
                       src="/images/input-hint-icon.png"
                       alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-checkbox-container input-hierarchy-child">
@@ -2400,7 +2613,10 @@ www.sper.jp
                     id="reservationOrderCompletionEmailEnabled"
                   />
                   <label for="reservationOrderCompletionEmailEnabled"
-                    >(予約注文)注文完了メールを送信する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >(予約注文)注文完了メールを送信する<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
               </div>
@@ -2408,7 +2624,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="reservationTimeSelectionEnabled" id="reservationTimeSelectionEnabled" />
                 <label for="reservationTimeSelectionEnabled"
-                  >(予約注文)時間の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >(予約注文)時間の選択を有効にする<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2418,7 +2637,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <input
@@ -2433,32 +2652,47 @@ www.sper.jp
                 <div class="input-checkbox-container input-hierarchy-parent">
                   <input type="checkbox" name="languageSelectionEnabled" id="languageSelectionEnabled" />
                   <label for="languageSelectionEnabled"
-                    >言語の選択を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                    >言語の選択を有効にする<img
+                      src="/images/input-hint-icon.png"
+                      alt="input-hint-icon"
+                      onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   /></label>
                 </div>
                 <div class="input-hierarchy-children-checkboxes">
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="japaneseEnabled" id="japaneseEnabled" />
                     <label for="japaneseEnabled"
-                      >日本語を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >日本語を有効にする<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="englishEnabled" id="englishEnabled" />
                     <label for="englishEnabled"
-                      >英語を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >英語を有効にする<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="simplifiedChineseEnabled" id="simplifiedChineseEnabled" />
                     <label for="simplifiedChineseEnabled"
-                      >中国語（簡体）を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >中国語（簡体）を有効にする<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                   <div class="input-checkbox-container input-hierarchy-child-checkbox">
                     <input type="checkbox" name="koreanEnabled" id="koreanEnabled" />
                     <label for="koreanEnabled"
-                      >韓国語を有効にする<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                      >韓国語を有効にする<img
+                        src="/images/input-hint-icon.png"
+                        alt="input-hint-icon"
+                        onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                     /></label>
                   </div>
                 </div>
@@ -2467,7 +2701,10 @@ www.sper.jp
               <div class="input-checkbox-container">
                 <input type="checkbox" name="useMomCloudRp" id="useMomCloudRp" />
                 <label for="useMomCloudRp"
-                  >MOMクラウドRPを使用する<img src="/images/input-hint-icon.png" alt="input-hint-icon"
+                  >MOMクラウドRPを使用する<img
+                    src="/images/input-hint-icon.png"
+                    alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
 
@@ -2477,6 +2714,7 @@ www.sper.jp
                   >CloudPrinterオンラインチェックを無効にする<img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                 /></label>
               </div>
             </div>
@@ -2488,7 +2726,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="vertical-btn-container">
@@ -2508,7 +2746,7 @@ www.sper.jp
                   <img
                     src="/images/input-hint-icon.png"
                     alt="input-hint-icon"
-                    onclick="document.getElementById('tips-dialog').showModal()"
+                    onclick="event.preventDefault(); document.getElementById('tips-dialog').showModal()"
                   />
                 </div>
                 <div class="vertical-btn-container">
