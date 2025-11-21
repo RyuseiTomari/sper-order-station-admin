@@ -1347,22 +1347,33 @@ td {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  p {
+    font-family: var(--primary-font-family);
+    color: var(--key-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
 }
 
-.vertical-input-container p {
-  font-family: var(--primary-font-family);
-  color: var(--key-color);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.25;
+.section-label-container {
   display: flex;
   align-items: center;
-}
+  gap: 4px;
 
-.vertical-input-container p img {
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
+  p {
+    font-family: var(--primary-font-family);
+    color: var(--key-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .vertical-btn-container {
