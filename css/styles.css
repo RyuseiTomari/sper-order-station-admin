@@ -334,7 +334,7 @@ body {
 
 .content-area {
   width: 100%;
-  padding: 20px 25px 90px 25px;
+  padding: 20px 25px 100px 25px;
   margin-top: 70px;
   height: calc(100vh - 70px);
   overflow-y: auto;
@@ -375,7 +375,7 @@ body {
 
 .primary-btn {
   height: 40px;
-  min-width: fit-content;
+  width: fit-content;
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
   background-color: var(--key-color);
@@ -396,7 +396,7 @@ body {
 
 .attention-btn {
   height: 40px;
-  min-width: fit-content;
+  width: fit-content;
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
   background-color: var(--attention-color);
@@ -419,7 +419,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: fit-content;
+  width: fit-content;
   height: 40px;
   border-radius: 5px;
   padding: 12px 23px;
@@ -1164,7 +1164,7 @@ input:disabled {
   width: calc(100% - var(--sidebar-width));
   height: 70px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: var(--primary-background-color);
   position: fixed;
@@ -1193,7 +1193,7 @@ input:disabled {
   padding: 15px 25px;
 
   .accent-btn {
-    width: 120px;
+    width: 150px;
   }
 }
 
@@ -1992,7 +1992,7 @@ dialog::backdrop {
   }
 
   .content-area {
-    padding: 20px 10px 90px 10px;
+    padding: 20px 10px 100px 10px;
   }
 
   .user-menu-container {
@@ -2109,7 +2109,8 @@ dialog::backdrop {
   }
 
   .footer {
-    height: 60px;
+    min-height: 60px;
+    height: fit-content;
     width: 100%;
     left: 0;
   }
@@ -2121,6 +2122,10 @@ dialog::backdrop {
 
   .footer-right {
     padding: 10px;
+
+    .accent-btn {
+      width: 120px;
+    }
   }
 
   #tips-dialog {
