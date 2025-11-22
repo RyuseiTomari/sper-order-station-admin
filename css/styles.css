@@ -14,6 +14,7 @@
   --btn-border-color: #fff;
   --colored-btn-text-color: #fbfbfc;
   --btn-hover-border-color: #fafbff;
+  --navbar-height: 70px;
   --sidebar-width: 188px;
   --attention-color: #ad2c2e;
   --attention-color-hover: #931114;
@@ -58,7 +59,7 @@ body {
   justify-content: flex-start;
   position: fixed;
   left: 0;
-  top: 70px;
+  top: var(--navbar-height);
   transition: opacity 300ms ease-out;
   overflow-y: auto;
 }
@@ -147,7 +148,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
+  height: var(--navbar-height);
   background-color: var(--primary-background-color);
   z-index: 100;
 }
@@ -157,7 +158,7 @@ body {
 }
 
 .site-logo {
-  min-height: 70px;
+  min-height: var(--navbar-height);
   width: var(--sidebar-width);
   display: flex;
   align-items: center;
@@ -335,8 +336,8 @@ body {
 .content-area {
   width: 100%;
   padding: 20px 25px 100px 25px;
-  margin-top: 70px;
-  height: calc(100vh - 70px);
+  margin-top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
   overflow-y: auto;
   position: relative;
   flex-direction: column;
@@ -1971,18 +1972,19 @@ dialog::backdrop {
     opacity: 0;
     height: 0;
     position: absolute;
-    top: 70px;
+    top: var(--navbar-height);
     left: auto;
     right: 0;
     height: fit-content;
     border-bottom-left-radius: 15px;
     box-shadow: var(--box-shadow);
+    position: fixed;
   }
 
   .sidebar.active {
     opacity: 1;
     height: auto;
-    max-height: 100vh;
+    max-height: calc(100dvh - (var(--navbar-height) + 10px));
     overflow-y: auto;
     z-index: 10;
   }
