@@ -346,6 +346,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  button {
+    min-width: fit-content;
+  }
 }
 
 .breadcrumb {
@@ -1223,7 +1227,6 @@ input:disabled {
 .list-label-name,
 .list-value-name {
   width: calc(100% / 3);
-  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
@@ -1998,12 +2001,13 @@ dialog::backdrop {
   }
 
   .main-content {
-    width: 100% !important;
-    margin-left: 0 !important;
+    width: 100%;
+    margin-left: 0;
+    height: 100dvh;
   }
 
   .content-area {
-    padding: 20px 10px 100px 10px;
+    padding: 20px 10px 150px 10px;
   }
 
   .user-menu-container {
@@ -2177,7 +2181,7 @@ dialog::backdrop {
 
   .footer {
     min-height: 60px;
-    height: fit-content;
+    height: auto;
     width: 100%;
     left: 0;
   }
