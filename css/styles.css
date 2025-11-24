@@ -1590,8 +1590,13 @@ dialog::backdrop {
     gap: 50px;
     list-style: none;
     border-bottom: 1px solid var(--key-color);
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 
     .tab-button {
+      flex: 0 0 auto;
+
       &:first-child {
         margin-left: 50px;
       }
@@ -1986,7 +1991,7 @@ dialog::backdrop {
     height: auto;
     max-height: calc(100dvh - (var(--navbar-height) + 10px));
     overflow-y: auto;
-    z-index: 10;
+    z-index: 100;
   }
 
   .hamburger-btn {
@@ -2179,6 +2184,42 @@ dialog::backdrop {
     height: 58px;
     padding: 20px 10px;
     font-size: 16px;
+  }
+
+  .tab-container {
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .tab-list {
+      .tab-button {
+        &:first-child {
+          margin-left: 35px;
+        }
+
+        &:last-child {
+          margin-right: 35px;
+        }
+
+        button {
+          padding: 14.5px 0;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .tab-content {
+      padding: 20px 10px;
+
+      .tab-panel.active {
+        gap: 20px;
+
+        .registerable-menu-container {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
   }
 
   .footer {
