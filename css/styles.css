@@ -2221,6 +2221,13 @@ dialog::backdrop {
           padding-left: 10px;
           padding-right: 10px;
         }
+
+        table {
+          th.img-th,
+          td.img-td {
+            display: none;
+          }
+        }
       }
     }
   }
