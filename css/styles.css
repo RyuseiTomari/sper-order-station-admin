@@ -2122,6 +2122,10 @@ dialog::backdrop {
     }
   }
 
+  .input-container select {
+    padding: 13px 54px 11px 15px;
+  }
+
   .input-container textarea {
     font-size: 16px;
     padding: 20px 15px;
@@ -2227,9 +2231,24 @@ dialog::backdrop {
           td.img-td {
             display: none;
           }
+
+          tbody {
+            td {
+              padding: 10px 5px;
+            }
+
+            .table-text {
+              min-width: auto;
+              max-width: 68px;
+            }
+          }
         }
       }
     }
+  }
+
+  .table-text {
+    font-size: 16px;
   }
 
   .footer {
