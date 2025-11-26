@@ -1287,8 +1287,9 @@ th {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.25;
-  padding: 20px 0;
+  padding: 20px 10px;
   border-bottom: 1px solid var(--primary-border-color);
+  white-space: nowrap;
 }
 
 tbody {
