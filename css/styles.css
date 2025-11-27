@@ -127,6 +127,7 @@ body {
 }
 
 .sidebar .sidebar-btn.active img {
+  -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
 
@@ -349,11 +350,15 @@ body {
   justify-content: space-between;
 
   button {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
     min-width: fit-content;
   }
 }
 
 .breadcrumb {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -364,6 +369,8 @@ body {
 .breadcrumb-link {
   display: flex;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   gap: 10px;
   color: var(--key-color);
@@ -380,6 +387,8 @@ body {
 
 .primary-btn {
   height: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
@@ -401,6 +410,8 @@ body {
 
 .attention-btn {
   height: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   color: var(--colored-btn-text-color);
   font-family: var(--primary-font-family);
@@ -424,6 +435,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 40px;
   border-radius: 5px;
@@ -627,6 +640,38 @@ input:disabled {
     outline: none;
     border: 2px solid var(--key-color);
     background-color: var(--secondary-background-color) !important;
+  }
+
+  &::-webkit-input-placeholder {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--placeholder-color);
+  }
+
+  &::-moz-placeholder {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--placeholder-color);
+  }
+
+  &:-ms-input-placeholder {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--placeholder-color);
+  }
+
+  &::-ms-input-placeholder {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--placeholder-color);
   }
 
   &::placeholder {
@@ -855,11 +900,13 @@ input:disabled {
 }
 
 .input-details-content.fade-in {
+  -webkit-animation: inputFieldFadeIn 0.3s ease-out forwards;
   animation: inputFieldFadeIn 0.3s ease-out forwards;
   display: block !important;
 }
 
 .input-details-content.fade-out {
+  -webkit-animation: inputFieldFadeOut 0.3s ease-out forwards;
   animation: inputFieldFadeOut 0.3s ease-out forwards;
   display: block !important;
 }
@@ -1583,12 +1630,21 @@ td {
 }
 
 dialog.closing {
+  -webkit-animation: backdropFadeOut 150ms ease-out;
   animation: backdropFadeOut 150ms ease-out;
+}
+
+dialog::-webkit-backdrop {
+  background-color: var(--key-color-hover);
+  opacity: 0.95;
+  -webkit-animation: backdropFadeIn 150ms ease-in;
+  animation: backdropFadeIn 150ms ease-in;
 }
 
 dialog::backdrop {
   background-color: var(--key-color-hover);
   opacity: 0.95;
+  -webkit-animation: backdropFadeIn 150ms ease-in;
   animation: backdropFadeIn 150ms ease-in;
 }
 
@@ -1619,6 +1675,8 @@ dialog::backdrop {
 
       button {
         position: relative;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         height: 45px;
         padding: 14.5px 10px;
@@ -1639,6 +1697,7 @@ dialog::backdrop {
           height: 45px;
           background-color: var(--secondary-background-color);
           transition: background-color 150ms ease-out;
+          -webkit-clip-path: path("M25 46H0L11.15 11.5375C13.48 4.55 18.94 0 25 0V46Z");
           clip-path: path("M25 46H0L11.15 11.5375C13.48 4.55 18.94 0 25 0V46Z");
         }
 
@@ -1651,6 +1710,7 @@ dialog::backdrop {
           height: 45px;
           background-color: var(--secondary-background-color);
           transition: background-color 150ms ease-out;
+          -webkit-clip-path: path("M0 46H25L13.85 11.5375C11.52 4.55 6.06 0 0 0V46Z");
           clip-path: path("M0 46H25L13.85 11.5375C11.52 4.55 6.06 0 0 0V46Z");
         }
 
@@ -1832,12 +1892,30 @@ dialog::backdrop {
   }
 }
 
+@-webkit-keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes backdropFadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -1950,6 +2028,17 @@ dialog::backdrop {
   }
 }
 
+@-webkit-keyframes inputFieldFadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
 @keyframes inputFieldFadeIn {
   from {
     opacity: 0;
@@ -1958,6 +2047,17 @@ dialog::backdrop {
   to {
     opacity: 1;
     max-height: 1000px;
+  }
+}
+
+@-webkit-keyframes inputFieldFadeOut {
+  from {
+    opacity: 1;
+    max-height: 1000px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
   }
 }
 
@@ -1972,25 +2072,6 @@ dialog::backdrop {
   }
 }
 
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  .menu-small-btns {
-    grid-template-columns: repeat(2, 188px);
-  }
-
-  .menu-small-btn {
-    width: 188px;
-    grid-column: auto;
-  }
-
-  .time-selection-input {
-    grid-column: span 6;
-  }
-
-  .weekdays-checkbox {
-    grid-column: span 3;
-  }
-} */
-
 @media (max-width: 764px) {
   .sidebar {
     opacity: 0;
@@ -1999,6 +2080,8 @@ dialog::backdrop {
     top: var(--navbar-height);
     left: auto;
     right: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-bottom-left-radius: 15px;
     box-shadow: var(--box-shadow);
@@ -2133,6 +2216,22 @@ dialog::backdrop {
     height: 58px;
     font-size: 16px;
     padding: 13px 10px 11px 15px;
+
+    &::-webkit-input-placeholder {
+      font-size: 16px;
+    }
+
+    &::-moz-placeholder {
+      font-size: 16px;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 16px;
+    }
+
+    &::-ms-input-placeholder {
+      font-size: 16px;
+    }
 
     &::placeholder {
       font-size: 16px;
