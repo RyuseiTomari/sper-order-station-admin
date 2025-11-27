@@ -1464,8 +1464,9 @@ td {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  aspect-ratio: 1 / 1;
   width: 617px;
-  height: 617px;
+  height: auto;
 }
 
 .area-layout-reset-btn {
@@ -2308,6 +2309,32 @@ dialog::backdrop {
         }
       }
     }
+  }
+
+  .area-layout-container {
+    padding: 20px 0;
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .area-layout-input-container {
+    flex: none;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .area-layout-input-container-row {
+    gap: 10px;
+
+    &:last-child {
+      gap: 20px;
+    }
+  }
+
+  .area-layout-grid-container {
+    flex: none;
+    width: 100%;
   }
 
   .footer {
