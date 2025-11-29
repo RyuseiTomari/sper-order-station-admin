@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         this.classList.add("selected");
         selectedRow = this;
-        updateArrowVisibility(this);
+        updateArrowVisibility();
       });
 
       arrowBtns.forEach((btn) => {
@@ -82,9 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const prev = tr.previousElementSibling;
             if (prev) {
               tbody.insertBefore(tr, prev);
-              tr.classList.remove("selected");
               clearArrowVisibility(tr);
-              updateArrowVisibility(tr);
+              updateArrowVisibility();
               onSort({ item: tr });
               tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
@@ -94,9 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const next = tr.nextElementSibling;
             if (next) {
               tbody.insertBefore(next, tr);
-              tr.classList.remove("selected");
               clearArrowVisibility(tr);
-              updateArrowVisibility(tr);
+              updateArrowVisibility();
               onSort({ item: tr });
               tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
@@ -109,9 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
               document.querySelector(".registerable-menu-container tbody");
             if (registerableTbody) {
               registerableTbody.appendChild(tr);
-              tr.classList.remove("selected");
               clearArrowVisibility(tr);
-              updateArrowVisibility(tr);
+              updateArrowVisibility();
               onSort({ item: tr });
               tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
@@ -124,9 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
               document.querySelector(".registered-menu-container tbody");
             if (registeredTbody) {
               registeredTbody.appendChild(tr);
-              tr.classList.remove("selected");
               clearArrowVisibility(tr);
-              updateArrowVisibility(tr);
+              updateArrowVisibility();
               onSort({ item: tr });
               tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
@@ -147,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clearArrowVisibility(e.item);
   }
 
-  function updateArrowVisibility(tr) {
+  function updateArrowVisibility() {
     if (!selectedRow) return;
 
     const tbody = selectedRow.parentElement;
