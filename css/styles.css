@@ -1883,7 +1883,7 @@ dialog::backdrop {
 
           .arrow-left {
             top: 50%;
-            left: -50px;
+            left: -130px;
             transform: translateY(-50%);
           }
         }
@@ -2371,6 +2371,15 @@ dialog::backdrop {
             .table-text {
               min-width: auto;
               max-width: 68px;
+            }
+
+            .arrow-btn-visible {
+              width: 34px;
+              height: 34px;
+            }
+
+            .arrow-left {
+              left: -45px;
             }
           }
         }
