@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // D&Dによる並び替え
-  let selectedRowRegistered = null;
-  let selectedRowRegisterable = null;
+  let selectedRow = null;
 
   let registeredMenuSortable = null;
   let registerableMenuSortable = null;
@@ -55,41 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
       row.addEventListener("click", function (e) {
         e.stopPropagation();
 
-        const isRegisterable = isRegisterableRow(this);
-
-        if (isRegisterable) {
-          if (selectedRowRegisterable === this) {
-            this.classList.remove("selected");
-            selectedRowRegisterable = null;
-            clearArrowVisibility(this);
-            return;
-          }
-
-          if (selectedRowRegisterable) {
-            selectedRowRegisterable.classList.remove("selected");
-            clearArrowVisibility(selectedRowRegisterable);
-          }
-
-          this.classList.add("selected");
-          selectedRowRegisterable = this;
-          updateArrowVisibility(this);
-        } else {
-          if (selectedRowRegistered === this) {
-            this.classList.remove("selected");
-            selectedRowRegistered = null;
-            clearArrowVisibility(this);
-            return;
-          }
-
-          if (selectedRowRegistered) {
-            selectedRowRegistered.classList.remove("selected");
-            clearArrowVisibility(selectedRowRegistered);
-          }
-
-          this.classList.add("selected");
-          selectedRowRegistered = this;
-          updateArrowVisibility(this);
+        if (selectedRow === this) {
+          this.classList.remove("selected");
+          clearArrowVisibility(this);
+          selectedRow = null;
+          return;
         }
+
+        if (selectedRow) {
+          selectedRow.classList.remove("selected");
+          clearArrowVisibility(selectedRow);
+        }
+
+        this.classList.add("selected");
+        selectedRow = this;
+        updateArrowVisibility(this);
       });
 
       arrowBtns.forEach((btn) => {
@@ -165,11 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateArrowVisibility(tr) {
-    const isRegisterable = isRegisterableRow(tr);
-    const selectedRow = isRegisterable ? selectedRowRegisterable : selectedRowRegistered;
     if (!selectedRow) return;
 
-    const tbody = tr.parentElement;
+    const tbody = selectedRow.parentElement;
     const rows = Array.from(tbody.querySelectorAll("tr"));
     const selectedIndex = rows.indexOf(selectedRow);
 
@@ -213,16 +190,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("click", function () {
-    if (selectedRowRegistered) {
-      selectedRowRegistered.classList.remove("selected");
-      clearArrowVisibility(selectedRowRegistered);
-      selectedRowRegistered = null;
-    }
-
-    if (selectedRowRegisterable) {
-      selectedRowRegisterable.classList.remove("selected");
-      clearArrowVisibility(selectedRowRegisterable);
-      selectedRowRegisterable = null;
+    if (selectedRow) {
+      selectedRow.classList.remove("selected");
+      clearArrowVisibility(selectedRow);
+      selectedRow = null;
     }
   });
 });
