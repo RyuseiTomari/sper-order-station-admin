@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
               clearArrowVisibility(tr);
               updateArrowVisibility(tr);
               onSort({ item: tr });
+              tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
           }
 
@@ -97,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
               clearArrowVisibility(tr);
               updateArrowVisibility(tr);
               onSort({ item: tr });
+              tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
           }
 
@@ -111,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
               clearArrowVisibility(tr);
               updateArrowVisibility(tr);
               onSort({ item: tr });
+              tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
           }
 
@@ -125,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
               clearArrowVisibility(tr);
               updateArrowVisibility(tr);
               onSort({ item: tr });
+              tr.scrollIntoView({ behavior: "smooth", block: "center" });
             }
           }
         });
