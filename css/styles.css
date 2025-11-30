@@ -25,6 +25,12 @@
 
 body {
   background-color: var(--primary-background-color);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .container {
@@ -1798,9 +1804,18 @@ dialog::backdrop {
           tr {
             transition: background-color 300ms ease-out;
 
-            &:hover {
-              background-color: var(--btn-hover-background-color);
-              cursor: pointer;
+            @media (hover: none) {
+              &:active {
+                background-color: var(--btn-hover-background-color);
+                cursor: pointer;
+              }
+            }
+
+            @media (hover: hover) {
+              &:hover {
+                background-color: var(--btn-hover-background-color);
+                cursor: pointer;
+              }
             }
           }
 

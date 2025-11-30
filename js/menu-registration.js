@@ -39,13 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
       animation: 150,
       onSort: onSort,
       onEnd: onEnd,
+      delay: isTouchDevice() ? 300 : 0,
+      touchStartThreshold: 5,
     });
 
     registerableMenuSortable = new Sortable(registerableMenuTbody, {
-      group: { name: "shared", pull: "clone" },
+      group: "shared",
       animation: 150,
       onSort: onSort,
       onEnd: onEnd,
+      delay: isTouchDevice() ? 300 : 0,
+      touchStartThreshold: 5,
     });
 
     rows.forEach((row) => {
@@ -187,6 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
     row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left").forEach((btn) => {
       btn?.classList.remove("arrow-btn-visible");
     });
+  }
+
+  // タッチデバイスかどうかを判定
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
   }
 
   document.addEventListener("click", function () {
