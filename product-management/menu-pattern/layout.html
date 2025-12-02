@@ -141,56 +141,139 @@
 
             <div class="tab-content menu-pattern-layout-tab-content">
               <div class="tab-panel active" data-panel="1">
-                <div class="category-select-menu-container">
-                  <div class="vertical-input-container">
-                    <div class="section-label-container">
-                      <p>階層</p>
-                      <img
-                        src="/images/input-hint-icon.png"
-                        alt="input-hint-icon"
-                        class="input-hint-icon"
-                        class="input-hint-icon"
-                      />
-                    </div>
-                    <div class="input-hierarchy">
-                      <div class="input-container">
-                        <div class="input-label-container">
-                          <label for="categorySelect1">カテゴリー</label>
-                        </div>
-                        <div class="input-select-container">
-                          <select name="categoryName" id="categorySelect1" required>
-                            <option value="1">肉</option>
-                            <option value="2">食物</option>
-                            <option value="3">飲物</option>
-                          </select>
-                        </div>
+                <div class="operation-menu-container">
+                  <div class="category-select-menu-container">
+                    <div class="vertical-input-container">
+                      <div class="section-label-container">
+                        <p>階層</p>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          class="input-hint-icon"
+                          class="input-hint-icon"
+                        />
                       </div>
-
-                      <div class="input-hierarchy-child">
+                      <div class="input-hierarchy">
                         <div class="input-container">
                           <div class="input-label-container">
-                            <label for="categorySelect1-1">LV1</label>
+                            <label for="categorySelect1">カテゴリー</label>
                           </div>
                           <div class="input-select-container">
-                            <select name="categoryName" id="categorySelect1-1" required>
-                              <option value="1">鹿児島黒牛</option>
-                              <option value="2">鹿児島黒ブタ</option>
-                              <option value="3">鶏肉</option>
-                              <option value="4">牛肉</option>
-                              <option value="5">牛ホルモン</option>
-                              <option value="6">豚ホルモン</option>
+                            <select name="categoryName" id="categorySelect1" required>
+                              <option value="1">肉</option>
+                              <option value="2">食物</option>
+                              <option value="3">飲物</option>
                             </select>
                           </div>
                         </div>
+
+                        <div class="input-hierarchy-child">
+                          <div class="input-container">
+                            <div class="input-label-container">
+                              <label for="categorySelect1-1">LV1</label>
+                            </div>
+                            <div class="input-select-container">
+                              <select name="categoryName" id="categorySelect1-1" required>
+                                <option value="1">鹿児島黒牛</option>
+                                <option value="2">鹿児島黒ブタ</option>
+                                <option value="3">鶏肉</option>
+                                <option value="4">牛肉</option>
+                                <option value="5">牛ホルモン</option>
+                                <option value="6">豚ホルモン</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="input-hierarchy-child">
+                          <div class="input-container">
+                            <div class="input-label-container">
+                              <label for="categorySelect1-2">LV2</label>
+                            </div>
+                            <div class="input-select-container">
+                              <select name="categoryName" id="categorySelect1-2" required></select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="link-menu-container">
+                    <div class="vertical-input-container">
+                      <div class="section-label-container">
+                        <p>個別にリンクを登録する</p>
+                        <img
+                          src="/images/input-hint-icon.png"
+                          alt="input-hint-icon"
+                          class="input-hint-icon"
+                          class="input-hint-icon"
+                        />
                       </div>
 
-                      <div class="input-hierarchy-child">
-                        <div class="input-container">
-                          <div class="input-label-container">
-                            <label for="categorySelect1-2">LV2</label>
+                      <div class="link-menu-input-container-row">
+                        <div class="link-menu-input-container">
+                          <div class="input-container">
+                            <div class="input-select-container">
+                              <select name="menu" id="menu" required>
+                                <option value="1">サーロイン</option>
+                                <option value="2">上カルビ</option>
+                                <option value="3">並カルビ</option>
+                              </select>
+                            </div>
                           </div>
-                          <div class="input-select-container">
-                            <select name="categoryName" id="categorySelect1-2" required></select>
+
+                          <div class="link-menu-btn-container">
+                            <button class="primary-btn">追加</button>
+                            <button class="attention-btn">削除</button>
+                          </div>
+                        </div>
+
+                        <div class="link-menu-input-container">
+                          <div class="section-label-container">
+                            <p>一括でリンクを登録する</p>
+                            <img
+                              src="/images/input-hint-icon.png"
+                              alt="input-hint-icon"
+                              class="input-hint-icon"
+                              class="input-hint-icon"
+                            />
+                          </div>
+
+                          <div class="link-menu-btn-container">
+                            <button class="primary-btn">一括追加</button>
+                            <button class="attention-btn">一括削除</button>
+                          </div>
+                        </div>
+
+                        <div class="link-menu-input-container">
+                          <div class="section-label-container">
+                            <p>背景画像をアップロード</p>
+                            <img
+                              src="/images/input-hint-icon.png"
+                              alt="input-hint-icon"
+                              class="input-hint-icon"
+                              class="input-hint-icon"
+                            />
+                          </div>
+
+                          <div class="link-menu-upload-container">
+                            <div class="input-container">
+                              <div class="input-label-container">
+                                <label for="language">多言語を登録</label>
+                              </div>
+                              <div class="input-select-container">
+                                <select name="language" id="language" required></select>
+                              </div>
+                            </div>
+
+                            <div class="upload-btn-container">
+                              <label class="primary-btn">
+                                ファイルを選択
+                                <input type="file" name="backGroundImage" style="display: none" />
+                              </label>
+                              <p class="file-name"></p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -198,82 +281,8 @@
                   </div>
                 </div>
 
-                <div class="link-menu-container">
-                  <div class="vertical-input-container">
-                    <div class="section-label-container">
-                      <p>個別にリンクを登録する</p>
-                      <img
-                        src="/images/input-hint-icon.png"
-                        alt="input-hint-icon"
-                        class="input-hint-icon"
-                        class="input-hint-icon"
-                      />
-                    </div>
-
-                    <div class="link-menu-input-container-row">
-                      <div class="link-menu-input-container">
-                        <div class="input-container">
-                          <div class="input-select-container">
-                            <select name="departmentName" id="departmentSelect1" required>
-                              <option value="1">サーロイン</option>
-                              <option value="2">上カルビ</option>
-                              <option value="3">並カルビ</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div class="link-menu-btn-container">
-                          <button class="primary-btn">追加</button>
-                          <button class="attention-btn">削除</button>
-                        </div>
-                      </div>
-
-                      <div class="link-menu-input-container">
-                        <div class="section-label-container">
-                          <p>一括でリンクを登録する</p>
-                          <img
-                            src="/images/input-hint-icon.png"
-                            alt="input-hint-icon"
-                            class="input-hint-icon"
-                            class="input-hint-icon"
-                          />
-                        </div>
-
-                        <div class="link-menu-btn-container">
-                          <button class="primary-btn">一括追加</button>
-                          <button class="attention-btn">一括削除</button>
-                        </div>
-                      </div>
-
-                      <div class="link-menu-input-container">
-                        <div class="section-label-container">
-                          <p>背景画像をアップロード</p>
-                          <img
-                            src="/images/input-hint-icon.png"
-                            alt="input-hint-icon"
-                            class="input-hint-icon"
-                            class="input-hint-icon"
-                          />
-                        </div>
-
-                        <div class="link-menu-upload-container">
-                          <div class="input-container">
-                            <div class="input-label-container">
-                              <label for="categorySelect2">多言語を登録</label>
-                            </div>
-                            <div class="input-select-container">
-                              <select name="departmentName" id="departmentSelect1" required></select>
-                            </div>
-                          </div>
-
-                          <label class="primary-btn">
-                            ファイルを選択
-                            <input type="file" name="logoImage" style="display: none" />
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="layout-container">
+                  <img src="/images/menu-pattern-layout.png" alt="menu-pattern-layout" />
                 </div>
               </div>
 

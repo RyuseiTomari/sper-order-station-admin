@@ -193,4 +193,12 @@ document.addEventListener("DOMContentLoaded", () => {
       document.dispatchEvent(new CustomEvent("tabChanged", { detail: { targetTab } }));
     });
   });
+
+  const container = document.querySelector(".upload-btn-container");
+  const fileInput = container.querySelector('input[type="file"]');
+  const fileNameSpan = container.querySelector(".file-name");
+  fileInput?.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    fileNameSpan.textContent = file ? file.name : "";
+  });
 });

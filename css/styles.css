@@ -461,6 +461,18 @@ body {
   }
 }
 
+.upload-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    font-weight: 400 !important;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
+
 .menu-btns {
   display: flex;
   flex-direction: column;
@@ -1909,47 +1921,65 @@ dialog::backdrop {
   .menu-pattern-layout-tab-content {
     .tab-panel.active {
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 40px;
-    }
+      flex-direction: column;
+      gap: 30px;
 
-    .category-select-menu-container,
-    .link-menu-container {
-      flex: 1;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+      .operation-menu-container {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 40px;
 
-    .link-menu-container {
-      .vertical-input-container {
-        padding-left: 40px;
-        border-left: 1px solid var(--primary-border-color);
+        .category-select-menu-container,
+        .link-menu-container {
+          flex: 1;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
 
-        .link-menu-input-container-row {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
+        .link-menu-container {
+          .vertical-input-container {
+            padding-left: 40px;
+            border-left: 1px solid var(--primary-border-color);
 
-          .link-menu-input-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            .link-menu-btn-container {
+            .link-menu-input-container-row {
               display: flex;
-              gap: 10px;
-            }
-
-            .link-menu-upload-container {
-              display: flex;
+              flex-direction: column;
               gap: 30px;
 
-              .input-container {
-                max-width: 160px;
+              .link-menu-input-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .link-menu-btn-container {
+                  display: flex;
+                  gap: 10px;
+                }
+
+                .link-menu-upload-container {
+                  display: flex;
+                  gap: 30px;
+
+                  .input-container {
+                    max-width: 160px;
+                  }
+                }
               }
             }
           }
+        }
+      }
+
+      .layout-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 75%;
+          height: auto;
         }
       }
     }
