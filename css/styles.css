@@ -1980,6 +1980,7 @@ dialog::backdrop {
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
           max-width: 75%;
           height: auto;
@@ -2477,6 +2478,46 @@ dialog::backdrop {
             .arrow-left {
               left: -45px;
             }
+          }
+        }
+      }
+    }
+
+    .menu-pattern-layout-tab-content {
+      .tab-panel.active {
+        gap: 30px;
+
+        .operation-menu-container {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          .category-select-menu-container,
+          .link-menu-container {
+            width: 100%;
+            padding-bottom: 0;
+          }
+
+          .link-menu-container {
+            border-top: 1px solid var(--primary-border-color);
+
+            .vertical-input-container {
+              border-left: none;
+              padding-left: 0;
+
+              .link-menu-input-container-row {
+                .link-menu-input-container {
+                  gap: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        .layout-container {
+          img {
+            max-width: 100%;
+            height: auto;
           }
         }
       }
