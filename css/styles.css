@@ -2136,7 +2136,7 @@ dialog::backdrop {
   }
 }
 
-@media (max-width: 764px) {
+@media (max-width: 800px) {
   .sidebar {
     opacity: 0;
     height: 0;
