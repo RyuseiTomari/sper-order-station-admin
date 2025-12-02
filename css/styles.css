@@ -466,6 +466,10 @@ body {
   flex-direction: column;
   gap: 10px;
 
+  input {
+    display: none;
+  }
+
   p {
     font-weight: 400 !important;
     word-break: break-all;
@@ -1445,7 +1449,6 @@ td {
 
 .vertical-btn-container {
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 

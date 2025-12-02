@@ -194,11 +194,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const container = document.querySelector(".upload-btn-container");
-  const fileInput = container.querySelector('input[type="file"]');
-  const fileNameSpan = container.querySelector(".file-name");
-  fileInput?.addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    fileNameSpan.textContent = file ? file.name : "";
+  // ファイルアップロードボタンの制御
+  document.querySelectorAll(".upload-btn-container").forEach((container) => {
+    const fileInput = container.querySelector('input[type="file"]');
+    const fileNameSpan = container.querySelector(".file-name");
+    fileInput?.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      fileNameSpan.textContent = file ? file.name : "";
+    });
   });
 });
