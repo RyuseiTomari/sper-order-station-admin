@@ -263,13 +263,19 @@
                                 <label for="language">多言語を登録</label>
                               </div>
                               <div class="input-select-container">
-                                <select name="language" id="language" required></select>
+                                <select name="language" id="language" required>
+                                  <option value="">---</option>
+                                  <option value="ja">ja</option>
+                                  <option value="en">en</option>
+                                  <option value="zh">zh</option>
+                                  <option value="ko">ko</option>
+                                </select>
                               </div>
                             </div>
 
                             <div class="upload-btn-container">
                               <label class="primary-btn">
-                                ファイルを選択
+                                ファイル選択
                                 <input type="file" name="backGroundImage" />
                               </label>
                               <p class="file-name"></p>

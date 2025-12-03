@@ -465,6 +465,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 150px;
 
   input {
     display: none;
@@ -1966,7 +1967,12 @@ dialog::backdrop {
                   gap: 30px;
 
                   .input-container {
+                    min-width: 160px;
                     max-width: 160px;
+                  }
+
+                  .upload-btn-container {
+                    max-width: 70%;
                   }
                 }
               }
@@ -2507,7 +2513,27 @@ dialog::backdrop {
 
               .link-menu-input-container-row {
                 .link-menu-input-container {
-                  gap: 15px;
+                  .link-menu-upload-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    .input-container {
+                      min-width: 100%;
+                    }
+
+                    .upload-btn-container {
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      gap: 15px;
+                      max-width: 100%;
+
+                      .file-name {
+                        max-width: 60%;
+                      }
+                    }
+                  }
                 }
               }
             }
