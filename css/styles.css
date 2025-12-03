@@ -1798,12 +1798,31 @@ dialog::backdrop {
 
       .registered-menu-container,
       .registerable-menu-container {
-        flex: 1;
         padding-top: 20px;
         padding-bottom: 20px;
+        max-width: calc(50% - 30px);
+        min-width: calc(50% - 30px);
 
         .vertical-input-container {
           gap: 30px;
+
+          .input-container {
+            display: flex;
+            align-items: center;
+
+            .bulk-release-btn,
+            .bulk-register-btn {
+              min-width: fit-content;
+            }
+          }
+        }
+      }
+
+      .registered-menu-container {
+        .vertical-input-container {
+          .input-container {
+            gap: 20px;
+          }
         }
       }
 
@@ -1813,6 +1832,12 @@ dialog::backdrop {
         border: 1px solid var(--primary-border-color);
         border-radius: 15px;
         background-color: rgba(194, 198, 207, 0.1);
+
+        .vertical-input-container {
+          .input-container {
+            gap: 10px;
+          }
+        }
       }
 
       table {
