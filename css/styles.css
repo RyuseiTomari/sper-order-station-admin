@@ -2472,6 +2472,9 @@ dialog::backdrop {
             &::before {
               left: -10px;
               width: 5px;
+              height: 45px;
+              bottom: auto;
+              top: -15px;
             }
 
             &:nth-child(3) {
