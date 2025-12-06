@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function initSortableTable() {
     const currentPanel = document.querySelector(".tab-panel.active");
-    const registeredMenuTbody = currentPanel.querySelector(".registered-menu-container tbody");
-    const registerableMenuTbody = currentPanel.querySelector(".registerable-menu-container tbody");
-    const rows = currentPanel.querySelectorAll("tbody tr");
+    const registeredMenuTbody = currentPanel.querySelector(".registered-menu-container .tbody");
+    const registerableMenuTbody = currentPanel.querySelector(".registerable-menu-container .tbody");
+    const rows = currentPanel.querySelectorAll(".tbody .tr");
 
     if (registeredMenuSortable) registeredMenuSortable.destroy();
     if (registerableMenuSortable) registerableMenuSortable.destroy();
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", (e) => {
           e.stopPropagation();
 
-          const tr = btn.closest("tr");
+          const tr = btn.closest(".tr");
           const tbody = tr.parentElement;
 
           if (btn.classList.contains("arrow-up")) {
@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
           // 右ボタン：登録済み→登録可能へ
           if (btn.classList.contains("arrow-right")) {
             const registerableTbody =
-              document.querySelector(".registerable-menu-container.active tbody") ||
-              document.querySelector(".registerable-menu-container tbody");
+              document.querySelector(".registerable-menu-container.active .tbody") ||
+              document.querySelector(".registerable-menu-container .tbody");
             if (registerableTbody) {
               registerableTbody.appendChild(tr);
               clearArrowVisibility(tr);
@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
           // 左ボタン：登録可能→登録済みへ
           if (btn.classList.contains("arrow-left")) {
             const registeredTbody =
-              document.querySelector(".registered-menu-container.active tbody") ||
-              document.querySelector(".registered-menu-container tbody");
+              document.querySelector(".registered-menu-container.active .tbody") ||
+              document.querySelector(".registered-menu-container .tbody");
             if (registeredTbody) {
               registeredTbody.appendChild(tr);
               clearArrowVisibility(tr);
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!selectedRow) return;
 
     const tbody = selectedRow.parentElement;
-    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const rows = Array.from(tbody.querySelectorAll(".tr"));
     const selectedIndex = rows.indexOf(selectedRow);
 
     const upBtn = selectedRow.querySelector(".arrow-up");
