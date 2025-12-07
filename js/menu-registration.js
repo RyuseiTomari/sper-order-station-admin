@@ -41,83 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     rows.forEach((row) => {
       const arrowBtns = row.querySelectorAll(".arrow-up, .arrow-down, .arrow-right, .arrow-left");
 
-      row.addEventListener("click", function (e) {
-        e.stopPropagation();
-
-        if (selectedRow === this) {
-          this.classList.remove("selected");
-          clearArrowVisibility(this);
-          selectedRow = null;
-          return;
-        }
-
-        if (selectedRow) {
-          selectedRow.classList.remove("selected");
-          clearArrowVisibility(selectedRow);
-        }
-
-        this.classList.add("selected");
-        selectedRow = this;
-        updateArrowVisibility();
-      });
+      row.removeEventListener("click", handleRowClick);
+      row.addEventListener("click", handleRowClick);
 
       arrowBtns.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-
-          const tr = btn.closest(".tr");
-          const tbody = tr.parentElement;
-
-          if (btn.classList.contains("arrow-up")) {
-            const prev = tr.previousElementSibling;
-            if (prev) {
-              tbody.insertBefore(tr, prev);
-              clearArrowVisibility(tr);
-              updateArrowVisibility();
-              onSort({ item: tr });
-              tr.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
-          }
-
-          if (btn.classList.contains("arrow-down")) {
-            const next = tr.nextElementSibling;
-            if (next) {
-              tbody.insertBefore(next, tr);
-              clearArrowVisibility(tr);
-              updateArrowVisibility();
-              onSort({ item: tr });
-              tr.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
-          }
-
-          // 右ボタン：登録済み→登録可能へ
-          if (btn.classList.contains("arrow-right")) {
-            const registerableTbody =
-              document.querySelector(".registerable-menu-container.active .tbody") ||
-              document.querySelector(".registerable-menu-container .tbody");
-            if (registerableTbody) {
-              registerableTbody.appendChild(tr);
-              clearArrowVisibility(tr);
-              updateArrowVisibility();
-              onSort({ item: tr });
-              tr.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
-          }
-
-          // 左ボタン：登録可能→登録済みへ
-          if (btn.classList.contains("arrow-left")) {
-            const registeredTbody =
-              document.querySelector(".registered-menu-container.active .tbody") ||
-              document.querySelector(".registered-menu-container .tbody");
-            if (registeredTbody) {
-              registeredTbody.appendChild(tr);
-              clearArrowVisibility(tr);
-              updateArrowVisibility();
-              onSort({ item: tr });
-              tr.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
-          }
-        });
+        btn.removeEventListener("click", handleArrowBtnClick);
+        btn.addEventListener("click", handleArrowBtnClick);
       });
     });
   }
@@ -131,6 +60,82 @@ document.addEventListener("DOMContentLoaded", () => {
   function onEnd(e) {
     console.log("Drag Ended:", e);
     clearArrowVisibility(e.item);
+  }
+
+  function handleRowClick(e) {
+    e.stopPropagation();
+
+    if (selectedRow === this) {
+      this.classList.remove("selected");
+      clearArrowVisibility(this);
+      selectedRow = null;
+      return;
+    }
+
+    if (selectedRow) {
+      selectedRow.classList.remove("selected");
+      clearArrowVisibility(selectedRow);
+    }
+
+    this.classList.add("selected");
+    selectedRow = this;
+    updateArrowVisibility();
+  }
+
+  function handleArrowBtnClick(e) {
+    e.stopPropagation();
+
+    const btn = e.currentTarget;
+    const tr = btn.closest(".tr");
+    const tbody = tr.parentElement;
+
+    if (btn.classList.contains("arrow-up")) {
+      const prev = tr.previousElementSibling;
+      if (prev) {
+        tbody.insertBefore(tr, prev);
+        clearArrowVisibility(tr);
+        updateArrowVisibility();
+        onSort({ item: tr });
+        tr.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    if (btn.classList.contains("arrow-down")) {
+      const next = tr.nextElementSibling;
+      if (next) {
+        tbody.insertBefore(next, tr);
+        clearArrowVisibility(tr);
+        updateArrowVisibility();
+        onSort({ item: tr });
+        tr.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    if (btn.classList.contains("arrow-right")) {
+      const registerableTbody =
+        document.querySelector(".registerable-menu-container.active .tbody") ||
+        document.querySelector(".registerable-menu-container .tbody");
+      if (registerableTbody) {
+        registerableTbody.appendChild(tr);
+        clearArrowVisibility(tr);
+        updateArrowVisibility();
+        onSort({ item: tr });
+        tr.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    if (btn.classList.contains("arrow-left")) {
+      const registeredTbody =
+        document.querySelector(".registered-menu-container.active .tbody") ||
+        document.querySelector(".registered-menu-container .tbody");
+      if (registeredTbody) {
+        registeredTbody.appendChild(tr);
+        clearArrowVisibility(tr);
+        updateArrowVisibility();
+        onSort({ item: tr });
+        tr.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
   }
 
   function updateArrowVisibility() {
