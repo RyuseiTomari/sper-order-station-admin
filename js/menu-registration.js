@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onEnd: onEnd,
       delay: isTouchDevice() ? 300 : 0,
       touchStartThreshold: 5,
+      chosenClass: "dragging",
+      scroll: true,
+      scrollSensitivity: 100,
     });
 
     registerableMenuSortable = new Sortable(registerableMenuTbody, {
@@ -36,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onEnd: onEnd,
       delay: isTouchDevice() ? 300 : 0,
       touchStartThreshold: 5,
+      chosenClass: "dragging",
+      scroll: true,
+      scrollSensitivity: 100,
     });
 
     rows.forEach((row) => {

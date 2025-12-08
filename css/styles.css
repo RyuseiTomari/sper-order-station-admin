@@ -2236,6 +2236,13 @@ dialog::backdrop {
   }
 }
 
+.dragging {
+  transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
+  box-shadow: var(--box-shadow);
+  background-color: var(--secondary-background-color) !important;
+  z-index: 10;
+}
+
 @-webkit-keyframes inputFieldFadeIn {
   from {
     opacity: 0;
@@ -2643,6 +2650,30 @@ dialog::backdrop {
               .arrow-btn-visible {
                 width: 34px;
                 height: 34px;
+              }
+
+              .arrow-up {
+                top: -25px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+
+              .arrow-down {
+                bottom: -25px;
+                left: 50%;
+                transform: translate(-50%, 50%);
+              }
+
+              .arrow-right {
+                top: 50%;
+                right: -45px;
+                transform: translateY(-50%);
+              }
+
+              .arrow-left {
+                top: 50%;
+                left: -45px;
+                transform: translateY(-50%);
               }
             }
           }
