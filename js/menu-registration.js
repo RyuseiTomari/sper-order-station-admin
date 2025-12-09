@@ -24,24 +24,22 @@ document.addEventListener("DOMContentLoaded", () => {
       group: "shared",
       animation: 150,
       onSort: onSort,
+      onChange: onChange,
       onEnd: onEnd,
       delay: isTouchDevice() ? 300 : 0,
       touchStartThreshold: 5,
       chosenClass: "dragging",
-      scroll: true,
-      scrollSensitivity: 100,
     });
 
     registerableMenuSortable = new Sortable(registerableMenuTbody, {
       group: "shared",
       animation: 150,
       onSort: onSort,
+      onChange: onChange,
       onEnd: onEnd,
       delay: isTouchDevice() ? 300 : 0,
       touchStartThreshold: 5,
       chosenClass: "dragging",
-      scroll: true,
-      scrollSensitivity: 100,
     });
 
     rows.forEach((row) => {
@@ -66,6 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function onEnd(e) {
     console.log("Drag Ended:", e);
     clearArrowVisibility(e.item);
+  }
+
+  // D&D ドラッグ中の処理(自動スクロール)
+  function onChange(e) {
+    const contentHeight = document.querySelector(".content-area").clientHeight;
+    const itemRect = e.item.getBoundingClientRect();
+
+    if (itemRect.bottom > contentHeight || itemRect.top < 80) {
+      e.item.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   }
 
   function handleRowClick(e) {
