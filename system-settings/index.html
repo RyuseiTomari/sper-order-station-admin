@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ORDERSTATION | テーブル管理</title>
+    <title>ORDERSTATION | ホーム</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -109,46 +109,33 @@
 
       <div class="main-content">
         <div class="content-area">
-          <div class="content-area-header">
-            <div class="breadcrumb">
-              <a class="breadcrumb-link" href="/"
-                ><img class="sidebar-btn-icon" src="/images/sidemenu-home-icon.png" alt="home-icon" />
-                <p>ホーム</p></a
-              >
-              <img class="breadcrumb-arrow" src="/images//breadcrumb-arrow.png" alt="breadcrumb-arrow" />
-
-              <a class="breadcrumb-link" href="/table-management/index.html"> <p>テーブル管理</p></a>
-            </div>
-            <button class="primary-btn">新規追加</button>
+          <div class="breadcrumb">
+            <a class="breadcrumb-link" href="/system-settings/index.html"
+              ><img class="sidebar-btn-icon" src="/images/sidemenu-setting-icon.png" alt="setting-icon" />
+              <p>システム設定</p></a
+            >
           </div>
-          <div class="list">
-            <div class="list-header">
-              <div class="list-label-code">コード</div>
-              <div class="list-label-name">名称</div>
-              <div class="list-label-action"></div>
-            </div>
-            <div class="list-body">
-              <a class="list-body-row" href="/table-management/edit.html">
-                <div class="list-value-code">1</div>
-                <div class="list-value-name">1F</div>
-                <div class="list-value-action">
-                  <button class="primary-btn">編集</button>
+
+          <div class="form-inputs">
+            <div class="vertical-input-container">
+              <div class="section-label-container">
+                <p>文字サイズ設定</p>
+              </div>
+
+              <div class="input-radio-container">
+                <div>
+                  <input type="radio" name="fontSizeSetting" id="fontSizeLarge" value="large" checked /><label
+                    for="fontSizeLarge"
+                    >大</label
+                  >
                 </div>
-              </a>
-              <a class="list-body-row" href="/table-management/edit.html">
-                <div class="list-value-code">2</div>
-                <div class="list-value-name">2F</div>
-                <div class="list-value-action">
-                  <button class="primary-btn">編集</button>
+                <div>
+                  <input type="radio" name="fontSizeSetting" id="fontSizeMedium" value="medium" /><label
+                    for="fontSizeMedium"
+                    >中(デフォルト)</label
+                  >
                 </div>
-              </a>
-              <a class="list-body-row" href="/table-management/edit.html">
-                <div class="list-value-code">3</div>
-                <div class="list-value-name">3F</div>
-                <div class="list-value-action">
-                  <button class="primary-btn">編集</button>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
