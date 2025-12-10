@@ -203,4 +203,32 @@ document.addEventListener("DOMContentLoaded", () => {
       fileNameSpan.textContent = file ? file.name : "";
     });
   });
+
+  // フォントサイズ設定の制御
+  const fontSizeRadioButtons = document.querySelectorAll('input[name="fontSizeSetting"]');
+  const body = document.body;
+  const FONT_SIZE_STORAGE_KEY = "preferredFontSize";
+
+  fontSizeRadioButtons.forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      const selectedSize = e.target.value;
+      localStorage.setItem(FONT_SIZE_STORAGE_KEY, selectedSize);
+      body.classList.remove("font-size-large");
+      body.classList.add(`font-size-${selectedSize}`);
+    });
+  });
+
+  function loadFontSize() {
+    const savedSize = localStorage.getItem(FONT_SIZE_STORAGE_KEY) || "medium";
+
+    body.classList.remove("size-medium", "size-large");
+    body.classList.add(`font-size-${savedSize}`);
+
+    const targetRadio = document.querySelector(`input[value="${savedSize}"]`);
+    if (targetRadio) {
+      targetRadio.checked = true;
+    }
+  }
+
+  loadFontSize();
 });
