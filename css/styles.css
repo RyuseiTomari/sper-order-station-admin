@@ -946,6 +946,38 @@ input:disabled {
   display: block !important;
 }
 
+.monolingual-input.fade-in {
+  -webkit-animation: inputFieldFadeIn 0.5s ease-out forwards;
+  animation: inputFieldFadeIn 0.5s ease-out forwards;
+  display: block !important;
+}
+
+.monolingual-input.fade-out {
+  -webkit-animation: inputFieldFadeOut 0.01s ease-out forwards;
+  animation: inputFieldFadeOut 0.01s ease-out forwards;
+  display: block !important;
+}
+
+.monolingual-input.hidden {
+  display: none !important;
+}
+
+.multi-lang-input-container.fade-in {
+  -webkit-animation: inputFieldFadeIn 0.5s ease-out forwards;
+  animation: inputFieldFadeIn 0.5s ease-out forwards;
+  display: flex !important;
+}
+
+.multi-lang-input-container.fade-out {
+  -webkit-animation: inputFieldFadeOut 0.01s ease-out forwards;
+  animation: inputFieldFadeOut 0.01s ease-out forwards;
+  display: flex !important;
+}
+
+.multi-lang-input-container.hidden {
+  display: none !important;
+}
+
 .input-details-content.hidden {
   display: none !important;
 }
@@ -1058,7 +1090,7 @@ input:disabled {
     left: 4px;
     bottom: 3px;
     background-color: var(--input-border-color);
-    transition: 0.5s;
+    transition: 0.3s;
     border-radius: 50%;
   }
 }
