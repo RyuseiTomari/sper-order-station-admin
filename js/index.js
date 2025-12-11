@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // 詳細設定の表示制御
   const formDetailsToggleLink = document.querySelector(".input-details-toggle-link");
   formDetailsToggleLink?.addEventListener("click", (e) => {
     const formDetailsContent = document.querySelector(".input-details-content");
