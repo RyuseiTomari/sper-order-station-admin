@@ -13,8 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function initSortableTable() {
     const currentPanel = document.querySelector(".tab-panel.active");
+    if (!currentPanel) throw new Error("No active tab panel found.");
+
     const registeredMenuTbody = currentPanel.querySelector(".registered-menu-container .tbody");
+    if (!registeredMenuTbody) throw new Error("No registered menu tbody found.");
+
     const registerableMenuTbody = currentPanel.querySelector(".registerable-menu-container .tbody");
+    if (!registerableMenuTbody) throw new Error("No registerable menu tbody found.");
+
     const rows = currentPanel.querySelectorAll(".tbody .tr");
 
     if (registeredMenuSortable) registeredMenuSortable.destroy();
@@ -50,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       arrowBtns.forEach((btn) => {
         btn.removeEventListener("click", handleArrowBtnClick);
-        btn.addEventListener("click", handleArrowBtnClick);
+        btn.addEventListener("click", (e) => handleArrowBtnClick(e, registeredMenuTbody, registerableMenuTbody));
       });
     });
   }
@@ -96,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateArrowVisibility();
   }
 
-  function handleArrowBtnClick(e) {
+  function handleArrowBtnClick(e, registeredMenuTbody, registerableMenuTbody) {
     e.stopPropagation();
 
     const btn = e.currentTarget;
@@ -126,29 +132,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (btn.classList.contains("arrow-right")) {
-      const registerableTbody =
-        document.querySelector(".registerable-menu-container.active .tbody") ||
-        document.querySelector(".registerable-menu-container .tbody");
-      if (registerableTbody) {
-        registerableTbody.appendChild(tr);
-        clearArrowVisibility(tr);
-        updateArrowVisibility();
-        onSort({ item: tr });
-        tr.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+      registerableMenuTbody.appendChild(tr);
+      clearArrowVisibility(tr);
+      updateArrowVisibility();
+      onSort({ item: tr });
+      tr.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     if (btn.classList.contains("arrow-left")) {
-      const registeredTbody =
-        document.querySelector(".registered-menu-container.active .tbody") ||
-        document.querySelector(".registered-menu-container .tbody");
-      if (registeredTbody) {
-        registeredTbody.appendChild(tr);
-        clearArrowVisibility(tr);
-        updateArrowVisibility();
-        onSort({ item: tr });
-        tr.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+      registeredMenuTbody.appendChild(tr);
+      clearArrowVisibility(tr);
+      updateArrowVisibility();
+      onSort({ item: tr });
+      tr.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }
 
