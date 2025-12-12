@@ -2313,7 +2313,7 @@ dialog::backdrop {
     }
   }
 
-  .menu-btn {
+  .menu-btns {
     gap: 10px;
     margin: 20px 0;
   }
