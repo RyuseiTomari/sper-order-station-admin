@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const multiLangInputs = categoryContainer.querySelector(".multi-lang-input-container");
       const monolingualInput = categoryContainer.querySelector(".monolingual-input");
 
-      multiLangInputs.classList.toggle("expanded");
-      monolingualInput.classList.toggle("expanded");
+      multiLangInputs.classList.toggle("hidden");
+      monolingualInput.classList.toggle("hidden");
     });
   });
 

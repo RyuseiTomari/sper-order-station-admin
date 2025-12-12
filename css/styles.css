@@ -893,8 +893,30 @@ input:disabled {
 }
 
 .input-multi-lang-input-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
+  & > * {
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  & > *.hidden {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .monolingual-input {
+    grid-area: 1 / 1;
+  }
+
+  .multi-lang-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-area: 1 / 1;
+  }
 }
 
 .input-details {
@@ -1060,30 +1082,6 @@ input:disabled {
     transition: 0.3s;
     border-radius: 50%;
   }
-}
-
-.monolingual-input {
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: max-height 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-
-.multi-lang-input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: max-height 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-
-.expanded {
-  max-height: 1000px;
-  opacity: 1;
 }
 
 .input-with-btn {
