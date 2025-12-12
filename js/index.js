@@ -81,36 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleSwitches = document.querySelectorAll(".form-toggle-switch");
   toggleSwitches.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
-      const checked = toggle.checked;
       const categoryContainer = toggle.closest(".input-multi-lang-input-container");
       const multiLangInputs = categoryContainer.querySelector(".multi-lang-input-container");
       const monolingualInput = categoryContainer.querySelector(".monolingual-input");
 
-      if (checked) {
-        monolingualInput.classList.remove("fade-in");
-        monolingualInput.classList.add("fade-out");
-        monolingualInput.addEventListener("animationend", function handler() {
-          monolingualInput.classList.add("hidden");
-          monolingualInput.classList.remove("fade-in");
-          monolingualInput.removeEventListener("animationend", handler);
-        });
-
-        multiLangInputs.classList.remove("hidden");
-        multiLangInputs.classList.remove("fade-out");
-        multiLangInputs.classList.add("fade-in");
-      } else {
-        multiLangInputs.classList.remove("fade-in");
-        multiLangInputs.classList.add("fade-out");
-        multiLangInputs.addEventListener("animationend", function handler() {
-          multiLangInputs.classList.add("hidden");
-          multiLangInputs.classList.remove("fade-out");
-          multiLangInputs.removeEventListener("animationend", handler);
-        });
-
-        monolingualInput.classList.remove("hidden");
-        monolingualInput.classList.remove("fade-out");
-        monolingualInput.classList.add("fade-in");
-      }
+      multiLangInputs.classList.toggle("expanded");
+      monolingualInput.classList.toggle("expanded");
     });
   });
 
