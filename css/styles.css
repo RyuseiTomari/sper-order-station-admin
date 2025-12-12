@@ -896,7 +896,7 @@ input:disabled {
   display: grid;
 
   & > * {
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    transition: max-height 500ms ease-out, opacity 500ms ease-out;
     max-height: 1000px;
     opacity: 1;
   }
@@ -951,7 +951,7 @@ input:disabled {
 }
 
 .input-details-content {
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  transition: max-height 300ms ease-out, opacity 300ms ease-out;
   opacity: 1;
   max-height: 1000px;
 
@@ -1079,7 +1079,7 @@ input:disabled {
     left: 4px;
     bottom: 3px;
     background-color: var(--input-border-color);
-    transition: 0.3s;
+    transition: 500ms;
     border-radius: 50%;
   }
 }
@@ -2313,7 +2313,7 @@ dialog::backdrop {
     }
   }
 
-  .menu-btns {
+  .menu-btn {
     gap: 10px;
     margin: 20px 0;
   }
