@@ -92,24 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 詳細設定の表示制御
   const formDetailsToggleLink = document.querySelector(".input-details-toggle-link");
-  formDetailsToggleLink?.addEventListener("click", (e) => {
+  formDetailsToggleLink?.addEventListener("click", () => {
     const formDetailsContent = document.querySelector(".input-details-content");
-    if (formDetailsContent.classList.contains("hidden")) {
-      // 表示
-      formDetailsContent.classList.remove("hidden", "fade-out");
-      formDetailsContent.classList.add("fade-in");
-      formDetailsToggleLink.textContent = "[ 詳細を非表示 ]";
-    } else {
-      // 非表示アニメーション
-      formDetailsContent.classList.remove("fade-in");
-      formDetailsContent.classList.add("fade-out");
-      formDetailsToggleLink.textContent = "[ 詳細を表示 ]";
-      formDetailsContent.addEventListener("animationend", function handler() {
-        formDetailsContent.classList.add("hidden");
-        formDetailsContent.classList.remove("fade-out");
-        formDetailsContent.removeEventListener("animationend", handler);
-      });
-    }
+    formDetailsContent?.classList.toggle("hidden");
   });
 
   // 数値inputの+-ボタン制御

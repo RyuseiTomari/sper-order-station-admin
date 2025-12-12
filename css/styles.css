@@ -929,20 +929,15 @@ input:disabled {
 }
 
 .input-details-content {
-  overflow: hidden;
-  transition: none;
-}
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 1;
+  max-height: 1000px;
 
-.input-details-content.fade-in {
-  -webkit-animation: inputFieldFadeIn 0.3s ease-out forwards;
-  animation: inputFieldFadeIn 0.3s ease-out forwards;
-  display: block !important;
-}
-
-.input-details-content.fade-out {
-  -webkit-animation: inputFieldFadeOut 0.3s ease-out forwards;
-  animation: inputFieldFadeOut 0.3s ease-out forwards;
-  display: block !important;
+  &.hidden {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
 }
 
 .input-details-tax-container {
@@ -1427,11 +1422,6 @@ input:disabled {
   font-size: var(--font-size-base);
   font-weight: 600;
   line-height: 1.25;
-}
-
-.hidden {
-  max-height: 0 !important;
-  opacity: 0 !important;
 }
 
 .input-container-row {
@@ -2269,50 +2259,6 @@ dialog::backdrop {
   box-shadow: var(--box-shadow);
   background-color: var(--secondary-background-color) !important;
   z-index: 10;
-}
-
-@-webkit-keyframes inputFieldFadeIn {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 1000px;
-  }
-}
-
-@keyframes inputFieldFadeIn {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 1000px;
-  }
-}
-
-@-webkit-keyframes inputFieldFadeOut {
-  from {
-    opacity: 1;
-    max-height: 1000px;
-  }
-  to {
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
-@keyframes inputFieldFadeOut {
-  from {
-    opacity: 1;
-    max-height: 1000px;
-  }
-  to {
-    opacity: 0;
-    max-height: 0;
-  }
 }
 
 @media (max-width: 800px) {
